@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="BreathAI mark — phase">
+  
+  <path d="M 32 8 A 24 24 0 0 1 56 30 L 32 30 Z" fill="#111113"></path>
+  <path d="M 32 56 A 24 24 0 0 1 8 34 L 32 34 Z" fill="#111113"></path>
+  <path d="M 32 8 A 24 24 0 0 0 8 30 L 32 30 Z" fill="none"></path>
+  <path d="M 32 8 A 24 24 0 0 0 8 30" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
+  <path d="M 32 56 A 24 24 0 0 0 56 34" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
+</svg>

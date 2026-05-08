@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_preview.css">
+<style>body { padding: 24px; }
+.row { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+.box { background: #fff; border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); width: 92px; height: 92px; }
+.lab { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 6px; display: block; text-align: center; }
+.unit { display: flex; flex-direction: column; align-items: center; }
+.note { font-family: var(--font-sans); font-size: 12px; color: var(--ink-soft); margin: 16px 0 0; max-width: 600px; }
+.note b { color: var(--ink); font-weight: 700; }
+</style></head>
+<body>
+  <div class="row">
+    <div class="unit"><div class="box" style="border-radius: 0;">0</div><span class="lab">sharp</span></div>
+    <div class="unit"><div class="box" style="border-radius: 6px;">6</div><span class="lab">--r-sm</span></div>
+    <div class="unit"><div class="box" style="border-radius: 8px;">8</div><span class="lab">--r · default</span></div>
+    <div class="unit"><div class="box" style="border-radius: 999px; width: 130px; height: 36px;">pill</div><span class="lab">--r-pill</span></div>
+  </div>
+  <p class="note"><b>Just three radii.</b> 8 for everything (cards, buttons, inputs, photos). 6 for nested controls inside a filter group. 999 for tags and the active-filter chip. No 12, 16, 24.</p>
+</body></html>

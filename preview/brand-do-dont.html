@@ -1,0 +1,78 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_preview.css">
+<style>
+  body { padding: 22px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card { padding: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  .card.do { border-left: 3px solid #00a887; }
+  .card.dont { border-left: 3px solid #e4583f; }
+  .label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+  .do .label { color: var(--signal-dark); }
+  .dont .label { color: var(--coral); }
+  .card strong { display: block; font-size: 12.5px; color: var(--ink); margin-bottom: 8px; font-weight: 650; font-family: var(--font-serif); }
+  .card em { font-style: normal; color: var(--ink-soft); font-size: 11.5px; line-height: 1.45; display: block; margin-top: 8px; }
+
+  /* Specimens */
+  .quote-good { font-family: var(--font-serif); font-size: 13px; color: var(--ink); line-height: 1.4; }
+  .quote-bad  { font-family: var(--font-serif); font-size: 13px; color: var(--ink); line-height: 1.4; font-style: italic; }
+  .quote-bad b { background: linear-gradient(90deg, #6157d8, #00a887); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
+
+  .btn-good { display: inline-block; padding: 6px 12px; border-radius: 4px; background: var(--ink); color: #fbfbfb; font-family: var(--font-sans); font-size: 12px; font-weight: 600; }
+  .btn-bad  { display: inline-block; padding: 6px 14px; border-radius: 999px; background: linear-gradient(135deg, #6157d8, #00a887); color: #fff; font-family: var(--font-sans); font-size: 12px; font-weight: 700; box-shadow: 0 6px 18px rgba(97,87,216,0.35); }
+
+  .tag { display: inline-block; padding: 3px 9px; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-family: var(--font-sans); font-size: 11px; color: var(--ink-soft); margin-right: 4px; }
+  .tag-bad { display: inline-block; padding: 3px 9px; border-radius: 6px; background: #fff; font-size: 14px; margin-right: 4px; border: 1px solid var(--line); }
+
+  .row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+</style></head>
+<body>
+  <div class="grid">
+    <div class="card do">
+      <span class="label">Do · Voice</span>
+      <strong>Plain, specific, falsifiable.</strong>
+      <p class="quote-good">"BreathAI is a new NLP lab at NTU. We work on language models, evaluation, and agents — open by default."</p>
+      <em>Concrete nouns. No verbs that could mean anything.</em>
+    </div>
+    <div class="card dont">
+      <span class="label">Don't · Voice</span>
+      <strong>Vendor-deck adjectives.</strong>
+      <p class="quote-bad">"We <b>supercharge revolutionary AI breakthroughs</b> at the bleeding edge of cognitive intelligence."</p>
+      <em>"Supercharge", "revolutionary", "bleeding edge" — cut all of them.</em>
+    </div>
+
+    <div class="card do">
+      <span class="label">Do · Buttons</span>
+      <strong>Square, ink, single accent.</strong>
+      <div class="row">
+        <span class="btn-good">Read paper</span>
+        <span class="btn-good" style="background:#fff; color:var(--ink); border:1px solid var(--line);">View code</span>
+      </div>
+      <em>4px radius, 1px borders, no shadows on default state.</em>
+    </div>
+    <div class="card dont">
+      <span class="label">Don't · Buttons</span>
+      <strong>Pill gradients with glow.</strong>
+      <div class="row">
+        <span class="btn-bad">Supercharge research</span>
+      </div>
+      <em>No bluish-purple gradients. No colored drop shadows. No 999 radius on CTAs.</em>
+    </div>
+
+    <div class="card do">
+      <span class="label">Do · Tags</span>
+      <strong>Word, lowercase, hairline pill.</strong>
+      <div class="row">
+        <span class="tag">models</span><span class="tag">agents</span><span class="tag">evaluation</span><span class="tag">multilingual</span>
+      </div>
+      <em>One word per tag. No icon. No fill. No emoji.</em>
+    </div>
+    <div class="card dont">
+      <span class="label">Don't · Tags</span>
+      <strong>Emoji-led category cards.</strong>
+      <div class="row">
+        <span class="tag-bad">🚀 Models</span><span class="tag-bad">🤖 Agents</span><span class="tag-bad">📊 Evaluation</span>
+      </div>
+      <em>No emoji as iconography. No "🚀" for "shipping" anywhere on a lab site.</em>
+    </div>
+  </div>
+</body></html>

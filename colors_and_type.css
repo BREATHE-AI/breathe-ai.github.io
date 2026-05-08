@@ -1,0 +1,348 @@
+/* ============================================================
+   BreathAI — Design Tokens + Semantic Type
+   Import this file once and you have the system.
+
+   Fonts are loaded from Google Fonts. If the host page hasn't
+   imported them, add the @import below or a <link> in <head>.
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap");
+
+:root {
+  /* ---- Color: paper + ink ---- */
+  --paper:        #fbfbfb;
+  --paper-soft:   #f1f3f2;
+  --paper-ivory:  #f6f2ea;
+  --ink:          #111113;
+  --ink-soft:     #3f4247;
+  --muted:        #72777f;
+  --line:         #dedfdd;
+
+  /* ---- Color: signal + accents ---- */
+  --signal:       #00a887;
+  --signal-dark:  #006d5b;
+  --signal-tint:  #7df0d0;     /* legible on --ink */
+  --coral:        #e4583f;
+  --violet:       #6157d8;
+  --amber:        #b47700;
+
+  /* ---- Color: semantic ---- */
+  --bg:           var(--paper);
+  --bg-alt:       var(--paper-soft);
+  --bg-invert:    var(--ink);
+  --fg:           var(--ink);
+  --fg-soft:      var(--ink-soft);
+  --fg-muted:     var(--muted);
+  --border:       var(--line);
+  --link:         var(--signal-dark);
+  --focus-ring:   var(--signal);
+
+  /* ---- Type ---- */
+  --font-sans:   "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif:  "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono:   "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  /* Type scale (modular, slightly editorial) */
+  --fs-eyebrow:  0.74rem;
+  --fs-caption:  0.78rem;
+  --fs-body-sm:  0.88rem;
+  --fs-body:     1rem;
+  --fs-body-lg:  1.18rem;
+  --fs-h4:       1rem;
+  --fs-h3:       1.25rem;
+  --fs-h2-min:   2.35rem;
+  --fs-h2-max:   5.5rem;
+  --fs-h1-min:   4.6rem;
+  --fs-h1-max:   8.8rem;
+  --fs-lede-min: 1.5rem;
+  --fs-lede-max: 2.7rem;
+
+  /* Tracking */
+  --track-eyebrow: 0.12em;
+  --track-tight:   -0.005em;
+  --track-flat:    0;
+
+  /* ---- Spacing ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --gutter:   4vw;
+
+  /* ---- Radius ---- */
+  --r-sm: 6px;
+  --r:    8px;        /* default for cards, buttons, inputs */
+  --r-pill: 999px;
+
+  /* ---- Borders ---- */
+  --bw: 1px;          /* hairline. the system's primary structural device. */
+
+  /* ---- Shadow (used sparingly) ---- */
+  --shadow:    0 24px 80px rgba(17, 17, 19, 0.12);
+  --shadow-sm: 0 4px 16px rgba(17, 17, 19, 0.06);
+
+  /* ---- Motion ---- */
+  --dur-fast: 160ms;
+  --dur:      200ms;
+  --ease:     cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ============================================================
+   Base reset + body defaults
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ============================================================
+   Semantic typography classes
+   Use these instead of styling raw tags whenever possible.
+   ============================================================ */
+
+.h1, h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-h1-min), 10vw, var(--fs-h1-max));
+  font-weight: 650;
+  letter-spacing: var(--track-flat);
+  line-height: 0.86;
+  text-wrap: balance;
+  margin: 0 0 1.45rem;
+}
+
+.h2, h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(var(--fs-h2-min), 5vw, var(--fs-h2-max));
+  font-weight: 650;
+  letter-spacing: var(--track-flat);
+  line-height: 0.95;
+  text-wrap: balance;
+  margin: 0 0 1.2rem;
+}
+
+.h3, h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 0.45rem;
+}
+
+.h4, h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.4rem;
+}
+
+.lede {
+  font-size: clamp(var(--fs-lede-min), 2.6vw, var(--fs-lede-max));
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: var(--track-tight);
+  margin: 0 0 1.35rem;
+  text-wrap: balance;
+}
+
+.body-lg, .p-lg {
+  color: var(--fg-soft);
+  font-size: var(--fs-body-lg);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.body, p {
+  color: var(--fg-soft);
+  font-size: var(--fs-body);
+  line-height: 1.55;
+  text-wrap: pretty;
+  margin: 0 0 1rem;
+}
+
+.caption {
+  color: var(--fg-muted);
+  font-size: var(--fs-caption);
+  font-weight: 800;
+}
+
+.eyebrow {
+  color: var(--signal-dark);
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: 800;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.kicker {
+  color: var(--coral);
+  font-family: var(--font-sans);
+  font-size: var(--fs-eyebrow);
+  font-weight: 850;
+  letter-spacing: var(--track-eyebrow);
+  text-transform: uppercase;
+}
+
+.mono, code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 0.94em;
+}
+
+/* Inverted block (CTA section, dark slides) */
+.invert {
+  background: var(--bg-invert);
+  color: #ffffff;
+}
+.invert .body, .invert p { color: rgba(255,255,255,0.74); }
+.invert .eyebrow { color: var(--signal-tint); }
+
+/* ============================================================
+   Layout primitives
+   ============================================================ */
+
+.stack > * + * { margin-top: var(--space-4); }
+.stack-lg > * + * { margin-top: var(--space-8); }
+
+.row { display: flex; gap: var(--space-3); align-items: center; flex-wrap: wrap; }
+.row-tight { display: flex; gap: var(--space-2); align-items: center; }
+
+.section { padding: clamp(5rem, 8vw, 8.5rem) var(--gutter); }
+
+.divider {
+  border: 0;
+  border-top: var(--bw) solid var(--border);
+  margin: 0;
+}
+
+/* ============================================================
+   Card
+   ============================================================ */
+
+.card {
+  background: #ffffff;
+  border: var(--bw) solid var(--border);
+  border-radius: var(--r);
+  padding: var(--space-5);
+}
+
+/* ============================================================
+   Button
+   ============================================================ */
+
+.button {
+  align-items: center;
+  border: 0;
+  border-radius: var(--r);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 760;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.75rem 1rem;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.button:hover, .button:focus-visible { transform: translateY(-1px); }
+
+.button-primary {
+  background: var(--ink);
+  color: #ffffff;
+}
+.button-primary:hover, .button-primary:focus-visible { background: #2b2d30; }
+
+.button-quiet {
+  background: transparent;
+  border: var(--bw) solid var(--border);
+  color: var(--ink);
+}
+.button-quiet:hover, .button-quiet:focus-visible { border-color: var(--ink); }
+
+/* On --ink surfaces the primary inverts */
+.invert .button-primary { background: #ffffff; color: var(--ink); }
+.invert .button-primary:hover { background: #f1f3f2; }
+
+/* ============================================================
+   Tag / chip
+   ============================================================ */
+
+.tag {
+  border: var(--bw) solid var(--border);
+  border-radius: var(--r-pill);
+  color: var(--fg-soft);
+  font-size: 0.72rem;
+  font-weight: 760;
+  padding: 0.25rem 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+}
+
+/* ============================================================
+   Input
+   ============================================================ */
+
+.input {
+  background: #ffffff;
+  border: var(--bw) solid var(--border);
+  border-radius: var(--r);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  min-height: 44px;
+  padding: 0 0.85rem;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.input:focus {
+  border-color: var(--ink);
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Focus ring (a11y)
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   Reduced motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

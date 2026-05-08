@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_preview.css">
+<style>body { padding: 28px; background: var(--paper-soft); }
+.row { display: flex; gap: 28px; align-items: flex-end; flex-wrap: wrap; }
+.tile { background: #fff; border: 1px solid var(--line); border-radius: 8px; width: 140px; height: 88px; display: grid; place-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft); }
+.tile.shadow { box-shadow: 0 24px 80px rgba(17,17,19,0.12); }
+.tile.smshadow { box-shadow: 0 4px 16px rgba(17,17,19,0.06); }
+.lab { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 8px; display: block; text-align: center; }
+.unit { display: flex; flex-direction: column; align-items: center; }
+.note { font-family: var(--font-sans); font-size: 12px; color: var(--ink-soft); margin-top: 18px; max-width: 600px; }
+.note b { color: var(--ink); font-weight: 700; }
+</style></head>
+<body>
+  <div class="row">
+    <div class="unit"><div class="tile">flat</div><span class="lab">card · default</span></div>
+    <div class="unit"><div class="tile smshadow">--shadow-sm</div><span class="lab">subtle lift</span></div>
+    <div class="unit"><div class="tile shadow">--shadow</div><span class="lab">overlay</span></div>
+  </div>
+  <p class="note"><b>Mostly flat.</b> Cards use a 1px border, never a shadow. Shadows are reserved for sticky overlays and modal-equivalents. Buttons lift on hover with translateY(−1px), not a shadow change.</p>
+</body></html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_preview.css">
+<style>body { padding: 0; width: 700px; }
+.bar { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+.cell { padding: 28px 24px; border-right: 1px solid var(--line); }
+.cell:last-child { border-right: 0; }
+.kicker { color: var(--coral); font-size: 11px; font-weight: 850; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 14px; }
+.cell strong { display: block; font-size: 14px; margin-bottom: 6px; color: var(--ink); }
+.cell p { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
+.frame { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.head { padding: 14px 24px 0; }
+.note { padding: 10px 24px 18px 24px; font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+</style></head>
+<body>
+  <div class="head"><span style="font-family: var(--font-mono); font-size: 11px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;">Color in use · signal band</span></div>
+  <div class="frame bar">
+    <div class="cell">
+      <p class="kicker">01</p>
+      <strong>Open by default</strong>
+      <p>Code, data, and reproducible artifacts whenever research permits.</p>
+    </div>
+    <div class="cell">
+      <p class="kicker">02</p>
+      <strong>Systems with taste</strong>
+      <p>Models that work outside the paper setting and remain inspectable.</p>
+    </div>
+    <div class="cell">
+      <p class="kicker">03</p>
+      <strong>Global language intelligence</strong>
+      <p>NLP that respects multilingual, multicultural, and local contexts.</p>
+    </div>
+  </div>
+  <div class="note">paper bg · 1px line dividers · coral kickers · ink heading · ink-soft body</div>
+</body></html>

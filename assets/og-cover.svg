@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="BreathAI — Language, reasoning, and agents.">
+  <rect width="1200" height="630" fill="#FBFBFB"></rect>
+  <line x1="80" y1="120" x2="1120" y2="120" stroke="#DEDFDD" stroke-width="1"></line>
+  <line x1="80" y1="510" x2="1120" y2="510" stroke="#DEDFDD" stroke-width="1"></line>
+
+  <text x="80" y="103" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="800" fill="#006D5B" letter-spacing="2.4">NATURAL LANGUAGE PROCESSING · NTU</text>
+  <text x="1120" y="103" text-anchor="end" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="16" font-weight="800" fill="#72777f" letter-spacing="2">SINGAPORE · 2026</text>
+
+  <g transform="translate(80 180) scale(1.9)">
+    <path d="M 7 32 Q 32 6, 57 32" fill="none" stroke="#111113" stroke-width="2.6" stroke-linecap="round"></path>
+    <path d="M 7 32 Q 32 58, 57 32" fill="none" stroke="#111113" stroke-width="2.6" stroke-linecap="round"></path>
+    <circle cx="32" cy="32" r="3" fill="#00A887"></circle>
+  </g>
+
+  <text x="80" y="430" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="120" font-weight="650" fill="#111113" letter-spacing="-2">BreathAI</text>
+  <text x="80" y="478" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="32" font-weight="500" fill="#3F4247" font-style="italic">
+    A new NLP lab at NTU — language, reasoning, agents, and beyond.
+  </text>
+
+  <text x="80" y="555" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="18" font-weight="700" fill="#72777f">
+    Nanyang Technological University · Singapore
+  </text>
+</svg>

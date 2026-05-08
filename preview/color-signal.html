@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="_preview.css">
+<style>body { padding: 24px; }
+.row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.s { border: 1px solid var(--line); border-radius: 8px; height: 96px; padding: 10px; display: flex; flex-direction: column; justify-content: space-between; font-family: var(--font-mono); font-size: 11px; }
+.s .n { font-weight: 700; }
+.s .h { opacity: 0.65; }
+.dark { color: #fff; }
+.dark .h { opacity: 0.8; }
+.note { font-family: var(--font-sans); font-size: 12px; color: var(--ink-soft); margin: 0; max-width: 600px; line-height: 1.5; }
+.note b { color: var(--ink); font-weight: 700; }
+</style></head>
+<body>
+  <div class="row">
+    <div class="s dark" style="background: #00a887;"><span class="n">signal</span><span class="h">#00A887</span></div>
+    <div class="s dark" style="background: #006d5b;"><span class="n">signal-dark</span><span class="h">#006D5B</span></div>
+    <div class="s" style="background: #7df0d0;"><span class="n">signal-tint</span><span class="h">#7DF0D0</span></div>
+  </div>
+  <p class="note"><b>One signal at a time.</b> Use <b>signal-dark</b> for eyebrows + accessible link text on paper, <b>signal</b> for live elements (mark, nav-underline), <b>signal-tint</b> only on the inverted ink band.</p>
+</body></html>

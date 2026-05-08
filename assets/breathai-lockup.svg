@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 40" width="240" height="40" role="img" aria-label="BreathAI">
+  <g transform="translate(2 4) scale(0.5)">
+    <path d="M 7 32 Q 32 6, 57 32" fill="none" stroke="#111113" stroke-width="3" stroke-linecap="round"></path>
+    <path d="M 7 32 Q 32 58, 57 32" fill="none" stroke="#111113" stroke-width="3" stroke-linecap="round"></path>
+    <circle cx="32" cy="32" r="3" fill="#00A887"></circle>
+  </g>
+  <text x="42" y="28" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="24" font-weight="650" fill="#111113" letter-spacing="-0.2">BreathAI</text>
+</svg>

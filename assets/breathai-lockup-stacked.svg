@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 140" width="240" height="140" role="img" aria-label="BreathAI">
+  <g transform="translate(88 8) scale(1.2)">
+    <path d="M 7 32 Q 32 6, 57 32" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
+    <path d="M 7 32 Q 32 58, 57 32" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
+    <circle cx="32" cy="32" r="2.6" fill="#00A887"></circle>
+  </g>
+  <text x="120" y="116" text-anchor="middle" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="30" font-weight="650" fill="#111113" letter-spacing="-0.3">BreathAI</text>
+  <text x="120" y="134" text-anchor="middle" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="9" font-weight="800" fill="#72777f" letter-spacing="1.4">NTU · NATURAL LANGUAGE PROCESSING</text>
+</svg>
