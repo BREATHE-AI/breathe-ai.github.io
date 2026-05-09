@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Faculty",
+    "members": [
+      {
+        "name": "Lab Director",
+        "initials": "B",
+        "role": "Principal Investigator",
+        "focus": "Large language models, language agents, evaluation, and NLP systems.",
+        "links": [
+          { "label": "Email", "url": "mailto:breathai@ntu.edu.sg" }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Open Roles",
+    "members": [
+      {
+        "name": "Open PhD Position",
+        "initials": "P",
+        "role": "PhD · AY26/27",
+        "focus": "Language model reasoning, evaluation, and multilingual NLP.",
+        "links": [{ "label": "Apply", "url": "join.html" }]
+      },
+      {
+        "name": "Open Research Assistant",
+        "initials": "R",
+        "role": "Research Assistant",
+        "focus": "Evaluation infrastructure and reproducible NLP benchmarks.",
+        "links": [{ "label": "Details", "url": "join.html" }]
+      },
+      {
+        "name": "Open Visiting Scholar",
+        "initials": "·",
+        "role": "Visiting Scholar",
+        "focus": "Multilingual NLP and regional language technologies.",
+        "links": [{ "label": "Enquire", "url": "join.html" }]
+      }
+    ]
+  }
+]

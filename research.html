@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="BreathAI research — language reasoning, language agents, evaluation, and multilingual NLP." />
+  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml" />
+  <title>Research — BreathAI</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <a class="brand-lockup" href="index.html" aria-label="BreathAI home">
+      <img src="assets/img/mark.svg" width="28" height="28" alt="" />
+      <span>BreathAI</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="people.html" class="nav-link">People</a>
+      <a href="join.html" class="nav-link">Join</a>
+      <a href="https://github.com/breathai-lab" class="nav-link nav-github-mobile" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/breathai-lab" class="nav-icon" target="_blank" rel="noreferrer" aria-label="GitHub repository">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+          <path d="M9 18c-4.51 2-5-2-7-2"></path>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Page header -->
+    <div class="page-header" data-screen-label="01 Research · Header">
+      <p class="eyebrow">Research</p>
+      <h1>Built around four questions.</h1>
+      <p>Our work sits at the intersection of language model reasoning, agentic systems, rigorous evaluation, and multilingual NLP. We care about research that holds up outside the paper setting.</p>
+    </div>
+
+    <!-- Research areas -->
+    <section class="section" data-screen-label="02 Research · Areas" aria-labelledby="areas-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Research Areas</p>
+          <h2 id="areas-heading">What we work on</h2>
+        </div>
+      </div>
+      <div class="research-grid">
+        <article class="research-card">
+          <span class="card-index">A</span>
+          <h3>Language Reasoning</h3>
+          <p>Training, adapting, and evaluating models for compositional reasoning, multi-step planning, and reliable decision-making. We study how language models acquire reasoning capabilities, where systematic failures occur, and how to make model outputs verifiable.</p>
+          <p class="topics">Chain-of-thought · Multi-hop QA · Planning · Verifiable inference</p>
+        </article>
+        <article class="research-card">
+          <span class="card-index">B</span>
+          <h3>Language Agents</h3>
+          <p>Designing and evaluating agents that use tools, write and execute code, retrieve structured knowledge, and coordinate with other agents to complete complex, open-ended tasks. We focus on reliability, interpretability, and graceful failure recovery.</p>
+          <p class="topics">Tool use · Code generation · Multi-agent · Agentic evaluation</p>
+        </article>
+        <article class="research-card">
+          <span class="card-index">C</span>
+          <h3>Evaluation and Alignment</h3>
+          <p>Building benchmarks, auditing methods, and safety-oriented frameworks that reveal model behavior at fine granularity, well before deployment. We prioritize evaluations that are hard to game and that surface the failure modes practitioners actually care about.</p>
+          <p class="topics">Behavioral auditing · Fine-grained benchmarks · Safety · Human annotation</p>
+        </article>
+        <article class="research-card">
+          <span class="card-index">D</span>
+          <h3>Multilingual NLP</h3>
+          <p>Extending language technology to underserved communities through cross-lingual transfer, low-resource language modeling, and grounded multilingual datasets. We pay particular attention to Southeast Asian languages and to evaluation that goes beyond translation.</p>
+          <p class="topics">Cross-lingual transfer · Low-resource · SEA languages · Multilingual benchmarks</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Publications -->
+    <section class="section section-alt" id="publications" data-screen-label="03 Research · Publications" aria-labelledby="pub-heading">
+      <div class="section-heading compact">
+        <div>
+          <p class="eyebrow">Publications</p>
+          <h2 id="pub-heading">Papers and artifacts</h2>
+        </div>
+        <div class="filter-group" role="group" aria-label="Filter publications">
+          <button class="filter-button is-active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="models">Models</button>
+          <button class="filter-button" type="button" data-filter="agents">Agents</button>
+          <button class="filter-button" type="button" data-filter="eval">Evaluation</button>
+        </div>
+      </div>
+      <div class="publication-list" data-pub-list aria-live="polite">
+        <p class="empty-state">Loading…</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- Open source -->
+    <section class="section two-column" id="projects" data-screen-label="04 Research · Open Source" aria-labelledby="proj-heading">
+      <div class="section-intro">
+        <p class="eyebrow">Open Source</p>
+        <h2 id="proj-heading">Repos as research infrastructure.</h2>
+        <p>Code, datasets, and evaluation toolkits released alongside papers. We aim to make our work reproducible from day one.</p>
+      </div>
+      <div class="project-list" data-project-list aria-live="polite">
+        <p class="empty-state">Loading…</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="assets/img/mark.svg" width="28" height="28" alt="" />
+      <div>
+        <strong>BreathAI</strong>
+        <p>Language, reasoning, and agents at NTU.</p>
+        <p class="footer-colophon">© 2026 · Nanyang Technological University · Singapore</p>
+      </div>
+    </div>
+    <nav class="footer-links" aria-label="Footer links">
+      <a href="https://github.com/breathai-lab" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="mailto:breathai@ntu.edu.sg">Email</a>
+      <a href="index.html">Home</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    var allPubs = [];
+
+    function el(tag, cls, html) {
+      var node = document.createElement(tag);
+      if (cls) node.className = cls;
+      if (html) node.innerHTML = html;
+      return node;
+    }
+
+    function renderLinks(links) {
+      if (!links || !links.length) return null;
+      var row = el('div', 'link-row');
+      links.forEach(function(l) {
+        var a = el('a', '', l.label + ' ↗');
+        a.href = l.url;
+        if (l.url.startsWith('http')) a.rel = 'noreferrer';
+        row.appendChild(a);
+      });
+      return row;
+    }
+
+    function renderPubs(filter) {
+      var list = document.querySelector('[data-pub-list]');
+      list.innerHTML = '';
+      var items = filter === 'all' ? allPubs : allPubs.filter(function(p) { return p.tags.indexOf(filter) > -1; });
+      if (!items.length) {
+        list.appendChild(el('p', 'empty-state', 'No publications in this category yet.'));
+        return;
+      }
+      items.forEach(function(p) {
+        var article = el('article', 'publication-item');
+        article.innerHTML = '<div class="publication-year">' + p.year + '</div>';
+        var body = el('div');
+        body.appendChild(el('h3', '', p.title));
+        body.appendChild(el('p', 'pub-summary', p.summary));
+        body.appendChild(el('div', 'publication-meta', p.authors + ' · ' + p.venue));
+        var links = renderLinks(p.links);
+        if (links) body.appendChild(links);
+        var tags = el('div', 'tag-list');
+        p.tags.forEach(function(t) { tags.appendChild(el('span', '', t)); });
+        article.appendChild(body);
+        article.appendChild(tags);
+        list.appendChild(article);
+      });
+    }
+
+    document.querySelectorAll('[data-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('[data-filter]').forEach(function(b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        renderPubs(btn.dataset.filter);
+      });
+    });
+
+    Promise.all([
+      fetch('assets/data/publications.json').then(function(r) { return r.json(); }),
+      fetch('assets/data/projects.json').then(function(r) { return r.json(); })
+    ]).then(function(results) {
+      allPubs = results[0];
+      renderPubs('all');
+
+      var projList = document.querySelector('[data-project-list]');
+      projList.innerHTML = '';
+      results[1].forEach(function(p) {
+        var article = el('article', 'project-item' + (p.status === 'Active' ? ' is-active' : ''));
+        article.appendChild(el('span', 'project-status', p.status));
+        article.appendChild(el('h3', '', p.name));
+        article.appendChild(el('p', '', p.description));
+        var links = renderLinks(p.links);
+        if (links) article.appendChild(links);
+        projList.appendChild(article);
+      });
+    }).catch(function() {
+      document.querySelector('[data-pub-list]').innerHTML = '<p class="empty-state">Papers will be added as they are released.</p>';
+      document.querySelector('[data-project-list]').innerHTML = '<p class="empty-state">Projects will appear here.</p>';
+    });
+  </script>
+</body>
+</html>
