@@ -1,9 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56" role="img" aria-label="BreathAI · NTU">
-  <g transform="translate(2 4) scale(0.5)">
-    <path d="M 7 32 Q 32 6, 57 32" fill="none" stroke="#111113" stroke-width="3" stroke-linecap="round"></path>
-    <path d="M 7 32 Q 32 58, 57 32" fill="none" stroke="#111113" stroke-width="3" stroke-linecap="round"></path>
-    <circle cx="32" cy="32" r="3" fill="#00A887"></circle>
-  </g>
-  <text x="44" y="22" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="20" font-weight="650" fill="#111113" letter-spacing="-0.2">BreathAI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56" role="img" aria-label="BreatheAI · NTU">
+  <path d="M 4 20 C 8.5 10.7, 15.25 10.7, 20 20 C 24.75 29.3, 31.5 29.3, 36 20" fill="none" stroke="#111113" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 4 20 C 8.5 29.3, 15.25 29.3, 20 20 C 24.75 10.7, 31.5 10.7, 36 20" fill="none" stroke="#111113" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 18 20 C 19.2 18.3, 20.8 18.3, 22 20 C 20.8 21.7, 19.2 21.7, 18 20 Z" fill="#00A887"></path>
+  <text x="44" y="22" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="20" font-weight="650" fill="#111113" letter-spacing="-0.2">BreatheAI</text>
   <text x="44" y="40" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="10" font-weight="700" fill="#72777f" letter-spacing="0.4">Nanyang Technological University · Singapore</text>
 </svg>

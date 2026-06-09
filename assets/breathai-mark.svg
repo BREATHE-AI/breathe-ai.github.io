@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="BreathAI mark">
-  <path d="M 7 32 Q 32 6, 57 32" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
-  <path d="M 7 32 Q 32 58, 57 32" fill="none" stroke="#111113" stroke-width="2.4" stroke-linecap="round"></path>
-  <circle cx="32" cy="32" r="2.4" fill="#00A887"></circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="BreatheAI mark">
+  <path d="M 8 32 C 15 17.5, 25.5 17.5, 32 32 C 38.5 46.5, 49 46.5, 56 32" fill="none" stroke="#111113" stroke-width="2.45" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 8 32 C 15 46.5, 25.5 46.5, 32 32 C 38.5 17.5, 49 17.5, 56 32" fill="none" stroke="#111113" stroke-width="2.45" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M 28.9 32 C 30.7 29.4, 33.3 29.4, 35.1 32 C 33.3 34.6, 30.7 34.6, 28.9 32 Z" fill="#00A887"></path>
 </svg>
