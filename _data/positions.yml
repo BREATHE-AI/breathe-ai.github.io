@@ -1,0 +1,24 @@
+- type: PhD Student
+  status: To be confirmed
+  title: PhD in NLP / Machine Learning
+  body: Confirm the number of positions, funding status, research topics, application cycle, and admission route before publishing.
+  deadline: Deadline to be confirmed
+  closed: false
+- type: Research Assistant
+  status: To be confirmed
+  title: Research Assistant
+  body: Use this card for a confirmed full-time or part-time RA role, including scope, required skills, start date, and application materials.
+  deadline: Timeline to be confirmed
+  closed: false
+- type: Visiting Scholar
+  status: Open enquiry
+  title: Visiting Researcher
+  body: Use this card only if the lab wants to publicly invite visitors, collaborators, or exchange students.
+  deadline: Enquiry process to be confirmed
+  closed: false
+- type: Intern
+  status: Not yet open
+  title: Research Intern
+  body: Hide or mark this role as closed until the lab is ready to host undergraduate or master's interns.
+  deadline: Not yet open
+  closed: true

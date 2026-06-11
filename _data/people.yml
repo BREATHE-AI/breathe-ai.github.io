@@ -1,0 +1,25 @@
+- name: Faculty
+  members:
+    - name: Principal Investigator
+      initials: PI
+      role: Profile to be added
+      focus: Add the PI's confirmed research interests, homepage, and contact links here.
+      links: []
+- name: Students & Researchers
+  members: []
+- name: Open Roles
+  members:
+    - name: PhD Positions
+      initials: PhD
+      role: To be confirmed
+      focus: Confirmed PhD topics, application cycles, and funding details can be linked here.
+      links:
+        - label: Join
+          url: join.html
+    - name: Research Assistant
+      initials: RA
+      role: To be confirmed
+      focus: Add RA openings only after scope, start date, and funding are confirmed.
+      links:
+        - label: Join
+          url: join.html

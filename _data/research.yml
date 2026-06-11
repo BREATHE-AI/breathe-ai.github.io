@@ -1,0 +1,47 @@
+agenda:
+  - index: "01"
+    title: Language Reasoning
+    summary: Compositional inference, multi-step planning, and verifiable reasoning in language models.
+  - index: "02"
+    title: Language Agents
+    summary: Tool-augmented systems and autonomous agents for complex, open-ended research tasks.
+  - index: "03"
+    title: Evaluation and Alignment
+    summary: Rigorous behavioral auditing and benchmarks for reliable model assessment.
+  - index: "04"
+    title: Multilingual NLP
+    summary: Cross-lingual transfer, low-resource modeling, and NLP for underserved language communities.
+
+areas:
+  - index: A
+    title: Language Reasoning
+    body: Training, adapting, and evaluating models for compositional reasoning, multi-step planning, and reliable decision-making. This description should be refined by the PI.
+    topics:
+      - Chain-of-thought
+      - Multi-hop QA
+      - Planning
+      - Verifiable inference
+  - index: B
+    title: Language Agents
+    body: Designing and evaluating agents that use tools, write and execute code, retrieve structured knowledge, and coordinate with other agents to complete complex tasks.
+    topics:
+      - Tool use
+      - Code generation
+      - Multi-agent systems
+      - Agentic evaluation
+  - index: C
+    title: Evaluation and Alignment
+    body: Building benchmarks, auditing methods, and safety-oriented frameworks that reveal model behavior at fine granularity before deployment.
+    topics:
+      - Behavioral auditing
+      - Fine-grained benchmarks
+      - Safety
+      - Human annotation
+  - index: D
+    title: Multilingual NLP
+    body: Extending language technology through cross-lingual transfer, low-resource language modeling, and grounded multilingual datasets.
+    topics:
+      - Cross-lingual transfer
+      - Low-resource NLP
+      - Southeast Asian languages
+      - Multilingual benchmarks

@@ -1,0 +1,12 @@
+title: BreatheAI
+description: Frontier AI and NLP lab website template for NTU.
+markdown: kramdown
+
+exclude:
+  - tmp
+  - ui_kits
+  - preview
+  - README.md
+  - SKILL.md
+  - colors_and_type.css
+  - .gitignore

@@ -1,0 +1,28 @@
+{% assign data = site.data.site %}
+{% assign title = page.title | default: data.meta.default_title %}
+{% assign description = page.description | default: data.meta.default_description %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="{{ description | escape }}" />
+  <meta property="og:title" content="{{ page.og_title | default: data.meta.og_title | escape }}" />
+  <meta property="og:description" content="{{ page.og_description | default: data.meta.og_description | escape }}" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="{{ data.lab.logo }}" type="image/svg+xml" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

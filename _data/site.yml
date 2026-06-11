@@ -1,0 +1,98 @@
+lab:
+  name: BreatheAI
+  short_name: BreatheAI
+  institution: Nanyang Technological University
+  location: Singapore
+  field: Frontier AI · NLP · Language Agents
+  email: breatheai@ntu.edu.sg
+  github: https://github.com/breatheai-lab
+  logo: assets/img/mark.svg
+
+meta:
+  default_title: BreatheAI | NTU Frontier AI Lab
+  default_description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on language, reasoning, agents, evaluation, and multilingual intelligence.
+  og_title: BreatheAI | NTU Frontier AI Lab
+  og_description: A new NTU lab for language, reasoning, agents, and frontier AI systems.
+
+home:
+  status:
+    show: true
+    text: Launching at NTU · Details to be confirmed
+  eyebrow: Nanyang Technological University · Singapore
+  title: BreatheAI
+  lede: A frontier AI lab for language, reasoning, and agents.
+  body: BreatheAI is being prepared as an NTU research lab focused on language intelligence, reasoning systems, autonomous agents, rigorous evaluation, and multilingual NLP.
+  primary_action:
+    label: Explore research
+    url: research.html
+  secondary_action:
+    label: Join the lab
+    url: join.html
+  news_intro:
+    eyebrow: Now
+    title: News
+    body: Launch milestones, selected papers, software releases, and open positions will appear here as they are confirmed.
+  recruiting:
+    show: true
+    eyebrow: Join
+    title: Open roles will be announced after confirmation
+    body: This section is ready for PhD, research assistant, intern, and visiting scholar opportunities once the PI confirms details.
+    action:
+      label: See join page
+      url: join.html
+
+research_page:
+  eyebrow: Research
+  title: Built around open questions.
+  body: Our work sits at the intersection of language model reasoning, agentic systems, rigorous evaluation, and multilingual NLP. The final agenda can be edited in one YAML file.
+  areas_eyebrow: Research Areas
+  areas_title: What we work on
+  publications:
+    eyebrow: Publications
+    title: Papers and artifacts
+    empty: Selected publications will be added here after they are confirmed.
+  projects:
+    eyebrow: Open Source
+    title: Repos as research infrastructure.
+    body: Code, datasets, and evaluation toolkits can be listed here alongside papers and project pages.
+
+people_page:
+  eyebrow: People
+  title: People shaping the lab.
+  body: BreatheAI is preparing to launch at NTU. Confirmed member profiles, collaborators, and open roles can be maintained from the people data file.
+  join_label: Join
+
+join_page:
+  eyebrow: Join
+  title: Help build the lab from its first chapter.
+  body: This page is structured for PhD students, research assistants, interns, and visiting scholars. Exact openings, deadlines, and application instructions should be confirmed by the PI before publication.
+  positions_eyebrow: Open Positions
+  positions_title: Current openings
+  positions_empty: Confirmed openings will appear here.
+  qualities_eyebrow: What we look for
+  qualities_title: Qualities to discuss with applicants.
+  qualities_intro: These points are editable placeholders. Keep only the expectations the PI wants to make public.
+  qualities:
+    - title: Clear thinking about language and knowledge.
+      body: Interest in how models represent meaning, reason, fail, and improve.
+    - title: Strong engineering judgment.
+      body: Ability to build experiments and systems that are reliable, readable, and reproducible.
+    - title: Research taste.
+      body: A sense for questions that matter and results that are worth trusting.
+    - title: Comfort with uncertainty.
+      body: Early-stage labs need people who can work before every direction is obvious.
+  apply_eyebrow: How to apply
+  apply_title: Getting in touch.
+  apply_intro: Replace this section with the PI's preferred application process before launch.
+  apply_block:
+    eyebrow: By email
+    title: Send a short introduction after the contact address is confirmed
+    paragraphs:
+      - "Suggested subject lines: [PhD Application], [RA Application], [Visiting Scholar], or [Collaboration]."
+      - "Include a CV, a short note on what you want to work on, and links to prior work such as code, papers, or project pages."
+      - "For PhD applicants, add formal NTU admissions instructions once they are confirmed."
+    action_label: Email us
+
+footer:
+  tagline: Language, reasoning, and agents at NTU.
+  colophon: © 2026 · Nanyang Technological University · Singapore

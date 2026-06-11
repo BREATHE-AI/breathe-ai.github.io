@@ -1,133 +1,66 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Join BreathAI — open PhD, research assistant, and visiting scholar positions at NTU." />
-  <link rel="icon" href="assets/img/mark.svg" type="image/svg+xml" />
-  <title>Join — BreathAI</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
+---
+layout: default
+nav: join
+title: Join — BreatheAI
+description: Join BreatheAI — PhD, research assistant, intern, and visiting scholar opportunities at NTU.
+---
+{% assign page_data = site.data.site.join_page %}
+{% assign positions = site.data.positions %}
 
-  <header class="site-header" data-header>
-    <a class="brand-lockup" href="index.html" aria-label="BreathAI home">
-      <img src="assets/img/mark.svg" width="28" height="28" alt="" />
-      <span>BreathAI</span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
-      <span class="nav-toggle-line"></span>
-      <span class="nav-toggle-line"></span>
-      <span class="nav-toggle-line"></span>
-    </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="research.html" class="nav-link">Research</a>
-      <a href="people.html" class="nav-link">People</a>
-      <a href="join.html" class="nav-link">Join</a>
-      <a href="https://github.com/breathai-lab" class="nav-link nav-github-mobile" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://github.com/breathai-lab" class="nav-icon" target="_blank" rel="noreferrer" aria-label="GitHub repository">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-          <path d="M9 18c-4.51 2-5-2-7-2"></path>
-        </svg>
-      </a>
-    </nav>
-  </header>
+<!-- Intro -->
+<div class="join-intro" data-screen-label="01 Join · Intro">
+  <p class="eyebrow">{{ page_data.eyebrow }}</p>
+  <h1>{{ page_data.title }}</h1>
+  <p>{{ page_data.body }}</p>
+</div>
 
-  <main id="main">
-
-    <!-- Intro -->
-    <div class="join-intro" data-screen-label="01 Join · Intro">
-      <p class="eyebrow">Join</p>
-      <h1>Help build the lab from its first chapter.</h1>
-      <p>We are looking for PhD students, research assistants, and visiting scholars who care about clear thinking, rigorous systems, and research taste. BreathAI is small and growing deliberately — every new member shapes the lab's direction.</p>
+<!-- Open positions -->
+<section class="section" data-screen-label="02 Join · Positions" aria-labelledby="positions-heading">
+  <p class="eyebrow">{{ page_data.positions_eyebrow }}</p>
+  <h2 id="positions-heading">{{ page_data.positions_title }}</h2>
+  {% if positions.size > 0 %}
+    <div class="positions-grid">
+      {% for position in positions %}
+        <article class="position-card{% if position.closed %} position-closed{% endif %}">
+          <span class="position-type">{{ position.type }} · {{ position.status }}</span>
+          <h3>{{ position.title }}</h3>
+          <p>{{ position.body }}</p>
+          <p class="deadline">{{ position.deadline }}</p>
+        </article>
+      {% endfor %}
     </div>
+  {% else %}
+    <p class="empty-state">{{ page_data.positions_empty }}</p>
+  {% endif %}
+</section>
 
-    <!-- Open positions -->
-    <section class="section" data-screen-label="02 Join · Positions" aria-labelledby="positions-heading">
-      <p class="eyebrow">Open Positions</p>
-      <h2 id="positions-heading">Current openings</h2>
-      <div class="positions-grid">
-        <article class="position-card">
-          <span class="position-type">PhD Student · 2 positions</span>
-          <h3>PhD in NLP / Machine Learning</h3>
-          <p>Full-funded positions for AY26/27. We are looking for students whose interests intersect with language reasoning, evaluation, or multilingual NLP. Strong programming skills required; prior publication is not required but exposure to ML research is expected.</p>
-          <p class="deadline">First-round deadline · September 2026 · NTU SCSE admission</p>
-        </article>
-        <article class="position-card">
-          <span class="position-type">Research Assistant · 1 position</span>
-          <h3>Research Assistant — Evaluation Infrastructure</h3>
-          <p>A full-time RA role focused on building evaluation pipelines, annotation tooling, and reproducibility infrastructure. Strong software engineering background required. Start date is flexible.</p>
-          <p class="deadline">Rolling applications · Estimated start Q3 2026</p>
-        </article>
-        <article class="position-card">
-          <span class="position-type">Visiting Scholar · Open enquiry</span>
-          <h3>Visiting Researcher</h3>
-          <p>Open to graduate students, postdocs, and faculty who want to work with BreathAI for a semester or longer. Particularly interested in visitors working on multilingual NLP, evaluation, or agent systems. We can sponsor academic visits but not independent immigration pathways.</p>
-          <p class="deadline">Enquire anytime · No set deadline</p>
-        </article>
-        <article class="position-card position-closed">
-          <span class="position-type">Intern · Closed for now</span>
-          <h3>Research Intern</h3>
-          <p>We plan to open undergraduate and master's intern positions once the lab is fully operational. Check back in early 2027 or enquire directly.</p>
-          <p class="deadline">Not yet open</p>
-        </article>
-      </div>
-    </section>
+<hr class="divider" />
 
-    <hr class="divider" />
+<!-- What we look for -->
+<section class="section" data-screen-label="03 Join · What we look for" aria-labelledby="qualities-heading">
+  <p class="eyebrow">{{ page_data.qualities_eyebrow }}</p>
+  <h2 id="qualities-heading">{{ page_data.qualities_title }}</h2>
+  <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">{{ page_data.qualities_intro }}</p>
+  <ul class="qualities-list">
+    {% for quality in page_data.qualities %}
+      <li><b>{{ quality.title }}</b> {{ quality.body }}</li>
+    {% endfor %}
+  </ul>
+</section>
 
-    <!-- What we look for -->
-    <section class="section" data-screen-label="03 Join · What we look for" aria-labelledby="qualities-heading">
-      <p class="eyebrow">What we look for</p>
-      <h2 id="qualities-heading">We care about a small number of things, deeply.</h2>
-      <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">We do not have a checklist. These are the qualities that consistently predict success in the lab.</p>
-      <ul class="qualities-list">
-        <li><b>Clear thinking about language and knowledge.</b> You are drawn to questions about how models represent meaning, how they fail to reason, and what it would actually mean to fix that.</li>
-        <li><b>Strong engineering judgment.</b> You can build experiments that are fast, correct, and readable. You know when to cut scope and when not to.</li>
-        <li><b>Research taste.</b> You have a sense of what makes a question interesting and what makes a result meaningful — and you are willing to defend it.</li>
-        <li><b>Comfort with uncertainty.</b> Early-stage labs require people who can work in conditions where the right direction is not yet obvious.</li>
-        <li><b>(Helpful but not required)</b> Prior exposure to NLP, ML, or systems programming. We are happy to train people whose foundations are strong.</li>
-      </ul>
-    </section>
+<hr class="divider" />
 
-    <hr class="divider" />
-
-    <!-- How to apply -->
-    <section class="section" data-screen-label="04 Join · How to apply" aria-labelledby="apply-heading">
-      <p class="eyebrow">How to apply</p>
-      <h2 id="apply-heading">Getting in touch.</h2>
-      <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">We read every message. We respond faster when the email makes it easy to understand what you want to work on and why.</p>
-      <div class="apply-block">
-        <p class="eyebrow">By email</p>
-        <h3>Send a short introduction to breathai@ntu.edu.sg</h3>
-        <p>Subject line: <code>[PhD 2026]</code>, <code>[RA Application]</code>, or <code>[Visiting — Your Institution]</code>.</p>
-        <p>Include: a CV, a brief paragraph on what you want to work on and why BreathAI, and links to prior work (code, preprints, project pages, GitHub). One page is enough.</p>
-        <p>For PhD applicants: also submit a formal application through the NTU SCSE PhD admissions portal, and mention BreathAI in your research statement.</p>
-        <a class="button button-primary" href="mailto:breathai@ntu.edu.sg?subject=[BreathAI Enquiry]">Email us</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-brand">
-      <img src="assets/img/mark.svg" width="28" height="28" alt="" />
-      <div>
-        <strong>BreathAI</strong>
-        <p>Language, reasoning, and agents at NTU.</p>
-        <p class="footer-colophon">© 2026 · Nanyang Technological University · Singapore</p>
-      </div>
-    </div>
-    <nav class="footer-links" aria-label="Footer links">
-      <a href="https://github.com/breathai-lab" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="mailto:breathai@ntu.edu.sg">Email</a>
-      <a href="index.html">Home</a>
-    </nav>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+<!-- How to apply -->
+<section class="section" data-screen-label="04 Join · How to apply" aria-labelledby="apply-heading">
+  <p class="eyebrow">{{ page_data.apply_eyebrow }}</p>
+  <h2 id="apply-heading">{{ page_data.apply_title }}</h2>
+  <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">{{ page_data.apply_intro }}</p>
+  <div class="apply-block">
+    <p class="eyebrow">{{ page_data.apply_block.eyebrow }}</p>
+    <h3>{{ page_data.apply_block.title }}</h3>
+    {% for paragraph in page_data.apply_block.paragraphs %}
+      <p>{{ paragraph }}</p>
+    {% endfor %}
+    <a class="button button-primary" href="mailto:{{ site.data.site.lab.email }}?subject=[{{ site.data.site.lab.name }} Enquiry]">{{ page_data.apply_block.action_label }}</a>
+  </div>
+</section>
