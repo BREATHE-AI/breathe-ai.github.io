@@ -4,12 +4,11 @@ nav: home
 ---
 {% assign home = site.data.home %}
 {% assign page_data = site.data.pages.home %}
-{% assign research = site.data.research %}
 {% assign ui = site.data.site.ui %}
 
 <!-- Hero -->
 <section class="hero" id="top" data-screen-label="{{ page_data.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
-  <div class="hero-copy">
+  <div class="hero-copy hero-copy-centered">
     {% if home.status.show %}
       <span class="hero-status">
         <span class="dot"></span>
@@ -17,7 +16,8 @@ nav: home
       </span>
     {% endif %}
     <p class="eyebrow">{{ home.eyebrow }}</p>
-    <h1 class="hero-h1"><span class="hero-mark" aria-hidden="true"><img src="{{ site.data.site.lab.logo }}" width="76" height="76" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" /></span><span>{{ home.title }}</span></h1>
+    <h1 class="hero-h1"><span class="hero-mark" aria-hidden="true"><img src="{{ site.data.site.lab.logo }}" width="76" height="76" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" /></span><span class="hero-title-main">{% assign title_words = home.title | split: ' ' %}{% for word in title_words %}<span class="hero-title-word">{{ word }}</span>{% endfor %}</span>{% if home.title_suffix %}<span class="hero-title-suffix">{{ home.title_suffix }}</span>{% endif %}</h1>
+    {% if home.expanded_name %}<p class="hero-expansion">{{ home.expanded_name }}</p>{% endif %}
     <p class="hero-lede">{{ home.lede }}</p>
     <p class="hero-text">{{ home.body }}</p>
     <div class="hero-actions">
@@ -25,33 +25,14 @@ nav: home
       <a class="button button-quiet" href="{{ home.secondary_action.url }}">{{ home.secondary_action.label }} →</a>
     </div>
   </div>
-  <aside class="hero-agenda" aria-label="{{ home.agenda.aria_label }}">
-    <div class="agenda-topline">
-      <span>{{ home.agenda.title }}</span>
-      <span>{{ home.agenda.subtitle }}</span>
-    </div>
-    <ol class="agenda-list">
-      {% for item in research.agenda %}
-        <li>
-          <span class="num">{{ item.index }}</span>
-          <div>
-            <strong>{{ item.title }}</strong>
-            <p>{{ item.summary }}</p>
-          </div>
-        </li>
-      {% endfor %}
-    </ol>
-  </aside>
 </section>
 
-<hr class="divider" />
-
 <!-- News -->
-<section class="section two-column" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
+<section class="section news-section" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
   <div class="section-intro">
-    <p class="eyebrow">{{ home.news_intro.eyebrow }}</p>
+    {% if home.news_intro.eyebrow %}<p class="eyebrow">{{ home.news_intro.eyebrow }}</p>{% endif %}
     <h2 id="news-heading">{{ home.news_intro.title }}</h2>
-    <p>{{ home.news_intro.body }}</p>
+    {% if home.news_intro.body %}<p>{{ home.news_intro.body }}</p>{% endif %}
   </div>
   <div class="news-list" aria-live="polite">
     {% if site.data.news.size > 0 %}
@@ -81,7 +62,7 @@ nav: home
   <!-- Recruiting strip -->
   <div class="recruiting-strip" data-screen-label="{{ page_data.screen_labels.recruiting }}">
     <div>
-      <p class="eyebrow">{{ home.recruiting.eyebrow }}</p>
+      {% if home.recruiting.eyebrow %}<p class="eyebrow">{{ home.recruiting.eyebrow }}</p>{% endif %}
       <strong>{{ home.recruiting.title }}</strong>
       <p>{{ home.recruiting.body }}</p>
     </div>

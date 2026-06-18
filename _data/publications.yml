@@ -1,8 +1,9 @@
-- year:
-  title: "Self-Evolving Language Agents"
-  authors: Replace with authors
-  venue: Example venue
-  summary: A short one-sentence description can go here when a paper has a project thumbnail or representative figure.
+- year: Preview
+  type: Agentic AI
+  title: "Learning to Improve: Self-Evolving Language Agents from Interaction Traces"
+  authors: Author One, Author Two, BREATHE AI Lab
+  venue: Preprint / Conference / Journal
+  summary: An example publication entry for work on agents that turn feedback, tool-use trajectories, and task outcomes into future improvements.
   image:
     src: assets/img/publications/example-agent.svg
     alt: Abstract thumbnail for an agent learning loop
@@ -20,11 +21,12 @@
     - label: Data
       url: "#"
       kind: data
-- year:
-  title: "Efficient Small Language Models"
-  authors: Replace with authors
-  venue: Example venue
-  summary: Use this pattern for model papers, system papers, or work with a project page.
+- year: Preview
+  type: Efficient models
+  title: "Compact Language Models as Controllable Components for AI Systems"
+  authors: Author One, Author Two, BREATHE AI Lab
+  venue: Preprint / Conference / Journal
+  summary: An example entry for papers on efficient training, specialization, distillation, and deployment-aware language intelligence.
   image:
     src: assets/img/publications/example-slm.svg
     alt: Abstract thumbnail for compact language models
@@ -38,11 +40,12 @@
     - label: Project
       url: "#"
       kind: html
-- year:
-  title: "Evaluation Beyond Benchmark Scores"
-  authors: Replace with authors
-  venue: Example venue
-  summary: Use this pattern for evaluation papers, benchmark releases, or analysis work with accompanying artifacts.
+- year: Preview
+  type: Evaluation
+  title: "Beyond Static Benchmarks: Evaluating Adaptive AI Systems"
+  authors: Author One, Author Two, BREATHE AI Lab
+  venue: Preprint / Conference / Journal
+  summary: An example entry for evaluation work that measures adaptation, robustness, failure modes, and practical usefulness under changing conditions.
   image:
     src: assets/img/publications/example-eval.svg
     alt: Abstract thumbnail for evaluation and analysis

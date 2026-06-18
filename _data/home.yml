@@ -1,30 +1,28 @@
 status:
-  show: true
+  show: false
   text: NTU Singapore
-eyebrow: Self-Evolving AI · Agents · Small Language Models
-title: BreatheAI
-lede: Advancing language intelligence through self-evolving models, capable agents, and efficient AI systems.
-body: BreatheAI Lab studies how language models can reason, adapt, and act in the world. Our work connects natural language processing, machine learning, and agentic systems, with a focus on models that improve through experience, operate reliably under constraints, and remain useful beyond benchmark settings.
+eyebrow: Nanyang Technological University · Singapore
+title: BREATHE AI
+title_suffix:
+expanded_name: AI Lab · Building Responsible and Effective AI Technologies for Humanity and Equity
+lede: A research lab for language intelligence, responsible AI, and systems that learn from experience.
+body: We study self-evolving AI, language agents, and small language models at NTU Singapore.
 primary_action:
-  label: Explore research
+  label: Research
   url: research.html
 secondary_action:
-  label: Join the lab
+  label: Join
   url: join.html
-agenda:
-  aria_label: Research agenda
-  title: Research agenda
-  subtitle: NTU · Singapore
 news_intro:
-  eyebrow: News
+  eyebrow:
   title: News
-  body: Lab news, papers, and openings.
+  body:
 news_empty: News will be posted here as updates are ready for public release.
 recruiting:
   show: true
-  eyebrow: Join
-  title: Work with us on frontier language intelligence.
-  body: We welcome strong students, researchers, and engineers interested in self-evolving AI, language agents, efficient models, and rigorous evaluation.
+  eyebrow:
+  title: Join BREATHE AI at NTU.
+  body: We welcome enquiries from self-motivated students, researchers, engineers, interns, and visitors.
   action:
-    label: See opportunities
+    label: Join
     url: join.html

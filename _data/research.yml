@@ -1,16 +1,16 @@
 agenda:
   - index: "01"
-    title: Self-evolving intelligence
-    summary: Models and agents that learn from feedback, experience, interaction, and their own trajectories.
+    title: Self-evolving AI
+    summary: Learning systems that improve from feedback, interaction, and experience.
   - index: "02"
-    title: Agentic language systems
-    summary: Language agents that plan, use tools, collaborate, and complete long-horizon tasks under real constraints.
+    title: Language agents
+    summary: Agents that reason, use tools, and act across realistic tasks.
   - index: "03"
-    title: Efficient and capable models
-    summary: Small and specialized language models that preserve capability while improving controllability and deployability.
+    title: Small language models
+    summary: Compact models for controllable, efficient, and deployable intelligence.
   - index: "04"
-    title: Evaluation beyond scores
-    summary: Measurements that expose reasoning, adaptation, robustness, and failure modes before systems are trusted.
+    title: Responsible evaluation
+    summary: Evidence for capability, robustness, adaptation, and failure modes.
 
 areas:
   - index: A

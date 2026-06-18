@@ -1,7 +1,7 @@
 home:
   meta:
-    title: BreatheAI | NTU Frontier AI Lab
-    description: BreatheAI Lab at NTU studies self-evolving AI, language agents, small language models, and rigorous evaluation for frontier language intelligence.
+    title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
+    description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, effective, and human-centered language technologies.
   screen_labels:
     hero: 01 Home · Hero
     news: 02 Home · News
@@ -9,24 +9,31 @@ home:
 
 research:
   meta:
-    title: Publications — BreatheAI
-    description: Publications from BreatheAI Lab at Nanyang Technological University.
-  header:
-    screen_label: 01 Research · Header
-    eyebrow: Publications
-    title: Publications
-    body: Selected papers and research artifacts from BreatheAI Lab.
-  areas:
-    screen_label: 02 Research · Areas
-    aria_label: Research areas
-    eyebrow: Research Areas
-    title: Research directions
+    title: Research — BREATHE AI Lab at NTU
+    description: Research and publications from BREATHE AI Lab at Nanyang Technological University.
+  statement:
+    screen_label: 01 Research · Statement
+    eyebrow: Research
+    title: Research
+    lead: We study AI systems that can learn from experience, reason through language, and act responsibly under real constraints.
+    body: BREATHE AI Lab works at the intersection of natural language processing, machine learning, and agentic systems. Our central question is how language models can move beyond static prediction toward systems that improve through interaction, use tools and feedback, remain efficient enough to deploy, and can be evaluated with evidence rather than impression.
+    closing: The public agenda is intentionally high level. It is meant to describe the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
+    themes:
+      - title: Self-evolving AI
+        body: Models and agents that adapt from feedback, trajectories, tool use, and experience.
+      - title: Language agents
+        body: Systems that plan, use tools, collaborate, and complete long-horizon tasks through language.
+      - title: Small language models
+        body: Compact models that remain capable, controllable, and useful under deployment constraints.
+      - title: Responsible evaluation
+        body: Measurements that expose capability, robustness, failure modes, and real-world usefulness.
   publications:
-    screen_label: 03 Research · Publications
+    screen_label: 02 Research · Publications
     aria_label: Publications
-    eyebrow: Publications
-    title: Selected papers
-    empty: Publications will be listed here as papers are released.
+    eyebrow:
+    title: Publications
+    intro: Selected papers, preprints, and artifacts will be listed here as they are ready for public release.
+    empty: Publications will be listed here as they are released.
     filter_aria_label: Filter publications
     filters: []
   projects:
@@ -39,13 +46,13 @@ research:
 
 people:
   meta:
-    title: People — BreatheAI
-    description: BreatheAI Lab members and collaborators at Nanyang Technological University.
+    title: People — BREATHE AI Lab at NTU
+    description: BREATHE AI Lab members and collaborators at Nanyang Technological University.
   header:
     screen_label: 01 People · Header
-    eyebrow: People
-    title: Researchers building BreatheAI.
-    body: BreatheAI brings together researchers working on language intelligence, learning systems, agents, and efficient AI.
+    eyebrow:
+    title: People
+    body:
     join_label: Join us
     join_url: join.html
   members:
@@ -54,36 +61,36 @@ people:
 
 join:
   meta:
-    title: Join — BreatheAI
-    description: Opportunities to work with BreatheAI Lab at NTU as a PhD student, research fellow, research associate, research engineer, intern, or visiting student.
+    title: Join — BREATHE AI Lab at NTU
+    description: Opportunities to work with BREATHE AI Lab at NTU as a PhD student, research fellow, research associate, research engineer, intern, or visiting student.
   intro:
     screen_label: 01 Join · Intro
-    eyebrow: Join
-    title: Join BreatheAI.
-    body: We are building a new team at NTU and welcome self-motivated PhD students, researchers, engineers, interns, and visiting students to contact us.
+    eyebrow:
+    title: Join
+    body: We are building a new team at NTU and welcome enquiries from self-motivated PhD students, researchers, engineers, interns, and visiting students.
+    note: If you are interested in joining the group, please contact us with a short introduction, CV, and links to relevant work.
   positions:
     screen_label: 02 Join · Positions
-    eyebrow: Open Roles
-    title: Open positions
-    body: 'Current roles include:'
+    eyebrow:
+    title: Open roles
+    body:
     empty: Confirmed openings will appear here.
   apply:
     screen_label: 04 Join · How to apply
     eyebrow: How to apply
-    email_subject: '[BreatheAI Enquiry]'
+    email_subject: '[BREATHE AI Enquiry]'
     block:
       eyebrow: By email
-      title: Contact us
+      title: Contact
       paragraphs:
-        - 'Please send a short email with your CV, intended role, research interests, and links to relevant work.'
-        - 'Suggested subject: [BreatheAI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
-        - 'Example email: breatheai@example.edu.sg.'
-      action_label: Email us
+        - 'Please include your intended role, a CV, a brief statement of research interests, and links to papers, code, or project pages if available.'
+        - 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
+      action_label: Email BREATHE AI
 
 logo_options:
   meta:
-    title: BreatheAI Logo Options
-    description: Compare the A, B, and C logo directions on the BreatheAI lab website.
+    title: BREATHE AI Logo Options
+    description: Compare the A, B, and C logo directions on the BREATHE AI lab website.
   header:
     screen_label: 01 Logo Options · Header
     eyebrow: Logo Preview

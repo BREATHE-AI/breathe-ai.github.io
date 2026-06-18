@@ -8,17 +8,18 @@ nav: join
 
 <!-- Intro -->
 <div class="join-intro" data-screen-label="{{ page_data.intro.screen_label }}">
-  <p class="eyebrow">{{ page_data.intro.eyebrow }}</p>
+  {% if page_data.intro.eyebrow %}<p class="eyebrow">{{ page_data.intro.eyebrow }}</p>{% endif %}
   <h1>{{ page_data.intro.title }}</h1>
-  <p>{{ page_data.intro.body }}</p>
+  {% if page_data.intro.body %}<p>{{ page_data.intro.body }}</p>{% endif %}
+  {% if page_data.intro.note %}<p class="join-note">{{ page_data.intro.note }}</p>{% endif %}
 </div>
 
 <!-- Opportunities and contact -->
 <section class="section two-column join-contact" data-screen-label="{{ page_data.apply.screen_label }}" aria-labelledby="positions-heading">
   <div class="section-intro">
-    <p class="eyebrow">{{ page_data.positions.eyebrow }}</p>
+    {% if page_data.positions.eyebrow %}<p class="eyebrow">{{ page_data.positions.eyebrow }}</p>{% endif %}
     <h2 id="positions-heading">{{ page_data.positions.title }}</h2>
-    <p>{{ page_data.positions.body }}</p>
+    {% if page_data.positions.body %}<p>{{ page_data.positions.body }}</p>{% endif %}
     {% if positions.size > 0 %}
       <ul class="join-position-list">
         {% for position in positions %}
