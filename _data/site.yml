@@ -25,6 +25,8 @@ lab:
         src: assets/logo/logo-c.svg
         note: Cobalt blue, violet, and ember orange; recommended default for the current site direction.
 
+asset_version: 20260618-c1851f9
+
 meta:
   default_title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
   default_description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, effective, and human-centered language technologies.

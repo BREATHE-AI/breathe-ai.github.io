@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <link id="site-favicon" rel="icon" href="{{ data.lab.logo }}" type="image/svg+xml" data-logo-role="favicon" data-logo-default="{{ data.lab.logo }}" />
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css?v={{ data.asset_version }}" />
 </head>
 <body>
   <a class="skip-link" href="#main">{{ data.ui.accessibility.skip_link }}</a>
@@ -25,6 +25,6 @@
   </main>
 
   {% include footer.html %}
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v={{ data.asset_version }}"></script>
 </body>
 </html>
