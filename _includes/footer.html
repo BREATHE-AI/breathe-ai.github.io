@@ -1,14 +1,17 @@
 {% assign lab = site.data.site.lab %}
 {% assign footer = site.data.site.footer %}
 {% assign ui = site.data.site.ui %}
-<footer class="site-footer">
-  <div class="footer-brand">
-    <img src="{{ lab.logo }}" width="28" height="28" alt="" data-logo-role="mark" data-logo-default="{{ lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
-    <div>
-      <strong>{{ lab.display_name }}</strong>
-      <p>{{ footer.tagline }}</p>
-      <p class="footer-colophon">{{ footer.colophon }}</p>
-    </div>
+<footer class="site-footer" id="site-footer">
+  <div>
+    <span class="lockup">
+      <img class="lockup__mark" src="assets/logo/mark-ink.svg" width="30" height="30" alt="" data-logo-role="footer-mark" data-logo-default="assets/logo/mark-ink.svg" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
+      <span class="lockup__text">
+        <span class="lockup__name">{{ lab.display_name }}</span>
+        <span class="lockup__desc">{{ site.data.site.brand.subtitle }}</span>
+      </span>
+    </span>
+    <p class="site-footer__tagline">{{ footer.tagline }}</p>
+    <p class="site-footer__colophon">{{ footer.colophon }}</p>
   </div>
   <nav class="footer-links" aria-label="{{ ui.accessibility.footer_navigation }}">
     {% for link in footer.links %}
@@ -16,8 +19,6 @@
         <a href="{{ lab.github }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
       {% elsif link.type == 'email' %}
         <a href="mailto:{{ lab.email }}">{{ link.label }}</a>
-      {% else %}
-        <a href="{{ link.url }}">{% if page.nav == 'home' and link.url == 'index.html' %}{{ ui.labels.top }}{% else %}{{ link.label }}{% endif %}</a>
       {% endif %}
     {% endfor %}
   </nav>

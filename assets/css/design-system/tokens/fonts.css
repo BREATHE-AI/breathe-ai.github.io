@@ -1,0 +1,13 @@
+/* ============================================================
+   BREATHE AI Lab — Webfonts
+   Three switchable type directions are supported (see
+   typography.css). All families load here so any direction is
+   available instantly when [data-type-system] is toggled.
+
+   Direction families:
+   · Editorial (default) — Newsreader / Geist / Geist Mono
+   · Contrast            — Instrument Serif / Hanken Grotesk / Space Mono
+   · Technical           — Space Grotesk / IBM Plex Sans / IBM Plex Mono
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap");

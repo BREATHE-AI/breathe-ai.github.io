@@ -7,64 +7,73 @@ nav: research
 {% assign projects = site.data.projects %}
 {% assign ui = site.data.site.ui %}
 
-<!-- Research statement -->
-<section class="research-statement" id="research" data-screen-label="{{ page_data.statement.screen_label }}" aria-labelledby="research-heading">
-  <div class="research-statement-main">
-    {% if page_data.statement.eyebrow %}<p class="eyebrow">{{ page_data.statement.eyebrow }}</p>{% endif %}
-    <h1 id="research-heading">{{ page_data.statement.title }}</h1>
-    <p class="research-lead">{{ page_data.statement.lead }}</p>
-  </div>
-  <div class="research-statement-body">
-    <p>{{ page_data.statement.body }}</p>
-    {% if page_data.statement.closing %}<p>{{ page_data.statement.closing }}</p>{% endif %}
-    <div class="research-theme-list" aria-label="Research themes">
-      {% for theme in page_data.statement.themes %}
-        <article class="research-theme-item">
-          <h2>{{ theme.title }}</h2>
-          <p>{{ theme.body }}</p>
-        </article>
+<section class="section section--lg" id="research" data-screen-label="{{ page_data.statement.screen_label }}" aria-labelledby="research-heading">
+  <div class="research-statement">
+    <div>
+      {% if page_data.statement.eyebrow %}<p class="eyebrow eyebrow--accent">{{ page_data.statement.eyebrow }}</p>{% endif %}
+      <h1 id="research-heading" class="title" style="margin-top:.6rem">{{ page_data.statement.title }}</h1>
+      <p class="research-lead">{{ page_data.statement.lead }}</p>
+    </div>
+    <div class="research-body">
+      <p>{{ page_data.statement.body }}</p>
+      {% if page_data.statement.closing %}<p>{{ page_data.statement.closing }}</p>{% endif %}
+      <div class="theme-list" aria-label="Research themes">
+        {% for theme in page_data.statement.themes %}
+          <article class="theme-item">
+            <h3>{{ theme.title }}</h3>
+            <p>{{ theme.body }}</p>
+          </article>
         {% endfor %}
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Publications -->
-<section class="section publication-section" id="publications" data-screen-label="{{ page_data.publications.screen_label }}" aria-labelledby="pub-heading">
-  <div class="publication-section-heading">
-    <h2 id="pub-heading">{{ page_data.publications.title }}</h2>
-    {% if page_data.publications.intro %}<p>{{ page_data.publications.intro }}</p>{% endif %}
-  </div>
-  <div class="publication-list" data-pub-list aria-live="polite">
-    {% if publications.size > 0 %}
-      {% for p in publications %}
-        <article class="publication-item{% unless p.year %} no-year{% endunless %}" data-tags="{{ p.tags | join: ' ' }}">
-          {% if p.image.src %}
-            <figure class="content-figure publication-figure">
-              <img src="{{ p.image.src }}" alt="{{ p.image.alt | default: p.title }}" />
-              {% if p.image.caption %}<figcaption>{{ p.image.caption }}</figcaption>{% endif %}
-            </figure>
-          {% endif %}
-          <div>
-            <div class="publication-topline">
-              {% if p.year %}<span>{{ p.year }}</span>{% endif %}
-              {% if p.type %}<span>{{ p.type }}</span>{% endif %}
-            </div>
-            <h3>{{ p.title }}</h3>
-            <p class="pub-summary">{{ p.summary }}</p>
-            <div class="publication-meta">{{ p.authors }} · {{ p.venue }}</div>
-            {% if p.links.size > 0 %}
-              <div class="link-row">
-                {% for link in p.links %}
-                  <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
-                {% endfor %}
-              </div>
+<section class="section section--alt" id="publications" data-screen-label="{{ page_data.publications.screen_label }}" aria-labelledby="pub-heading">
+  <div class="pub-section">
+    <aside class="pub-aside">
+      <h2 id="pub-heading" class="h2">{{ page_data.publications.title }}</h2>
+      {% if page_data.publications.intro %}<p>{{ page_data.publications.intro }}</p>{% endif %}
+    </aside>
+    <div class="pub-list" data-pub-list aria-live="polite">
+      {% if publications.size > 0 %}
+        {% for p in publications %}
+          <article class="pub-item{% unless p.image.src %} pub-item--no-thumb{% endunless %}" data-tags="{{ p.tags | join: ' ' }}">
+            {% if p.image.src %}
+              <figure class="pub-thumb">
+                <img src="{{ p.image.src }}" alt="{{ p.image.alt | default: p.title }}" />
+              </figure>
             {% endif %}
-          </div>
-        </article>
-      {% endfor %}
-    {% else %}
-      <p class="empty-state">{{ page_data.publications.empty }}</p>
-    {% endif %}
+            <div>
+              <div class="pub-topline">
+                {% if p.year %}<span>{{ p.year }}</span>{% endif %}
+                {% if p.year and p.type %}<span class="dot"></span>{% endif %}
+                {% if p.type %}<span>{{ p.type }}</span>{% endif %}
+              </div>
+              <h3 class="pub-title">{{ p.title }}</h3>
+              <p class="pub-authors">{{ p.authors }} · {{ p.venue }}</p>
+              <p class="pub-summary">{{ p.summary }}</p>
+              {% if p.tags.size > 0 %}
+                <div class="pub-tags">
+                  {% for tag in p.tags %}
+                    <span class="tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+              {% endif %}
+              {% if p.links.size > 0 %}
+                <div class="link-row">
+                  {% for link in p.links %}
+                    <a class="link-item" href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      {% else %}
+        <p class="empty-state">{{ page_data.publications.empty }}</p>
+      {% endif %}
+    </div>
   </div>
 </section>
 
@@ -72,12 +81,13 @@ nav: research
   <hr class="divider" />
 
   <!-- Open source -->
-  <section class="section two-column" id="projects" data-screen-label="{{ page_data.projects.screen_label }}" aria-labelledby="proj-heading">
-  <div class="section-intro">
+  <section class="section" id="projects" data-screen-label="{{ page_data.projects.screen_label }}" aria-labelledby="proj-heading">
+  <div class="pub-section">
+  <aside class="pub-aside">
     <p class="eyebrow">{{ page_data.projects.eyebrow }}</p>
-    <h2 id="proj-heading">{{ page_data.projects.title }}</h2>
+    <h2 id="proj-heading" class="h2">{{ page_data.projects.title }}</h2>
     <p>{{ page_data.projects.body }}</p>
-  </div>
+  </aside>
   <div class="project-list" aria-live="polite">
       {% for project in projects %}
         <article class="project-item{% if project.status == 'Active' %} is-active{% endif %}">
@@ -99,6 +109,7 @@ nav: research
           {% endif %}
         </article>
       {% endfor %}
+  </div>
   </div>
 </section>
 {% endif %}

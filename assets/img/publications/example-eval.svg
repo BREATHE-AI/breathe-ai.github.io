@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
   <title id="title">Evaluation thumbnail</title>
   <desc id="desc">Abstract diagram of evaluation traces and evidence.</desc>
-  <rect width="640" height="360" fill="#fbfbfb"/>
-  <rect x="48" y="54" width="544" height="252" rx="14" fill="#111113"/>
-  <path d="M98 244l82-72 68 42 82-98 70 58 108-88" fill="none" stroke="#7df0d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="180" cy="172" r="14" fill="#e4583f"/>
-  <circle cx="330" cy="116" r="14" fill="#e4583f"/>
-  <circle cx="508" cy="86" r="14" fill="#e4583f"/>
-  <path d="M96 96h112M96 124h74M96 276h220" stroke="#fbfbfb" stroke-opacity=".75" stroke-width="8" stroke-linecap="round"/>
+  <rect width="640" height="360" fill="#FFFFFF"></rect>
+  <rect x="48" y="54" width="544" height="252" rx="14" fill="#0E1117"></rect>
+  <path d="M98 244l82-72 68 42 82-98 70 58 108-88" fill="none" stroke="#7df0d0" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="180" cy="172" r="14" fill="#E85C2B"></circle>
+  <circle cx="330" cy="116" r="14" fill="#E85C2B"></circle>
+  <circle cx="508" cy="86" r="14" fill="#E85C2B"></circle>
+  <path d="M96 96h112M96 124h74M96 276h220" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="8" stroke-linecap="round"></path>
   <text x="78" y="84" fill="#7df0d0" font-family="ui-monospace, Menlo, monospace" font-size="18" font-weight="700">EVALUATION · ROBUSTNESS · EVIDENCE</text>
 </svg>

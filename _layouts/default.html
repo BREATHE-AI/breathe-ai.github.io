@@ -4,7 +4,7 @@
 {% assign title = page.title | default: page_meta.title | default: data.meta.default_title %}
 {% assign description = page.description | default: page_meta.description | default: data.meta.default_description %}
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type-system="editorial">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,6 +25,7 @@
   </main>
 
   {% include footer.html %}
+  {% include type-switcher.html %}
   <script src="assets/js/main.js?v={{ data.asset_version }}"></script>
 </body>
 </html>

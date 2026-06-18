@@ -3,11 +3,13 @@
 {% assign nav_items = site.data.site.navigation %}
 {% assign ui = site.data.site.ui %}
 <header class="site-header" data-header>
-  <a class="brand-lockup" href="index.html" aria-label="{{ lab.name }} home">
-    <img src="{{ lab.logo }}" width="32" height="32" alt="" data-logo-role="mark" data-logo-default="{{ lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
-    <span class="brand-stack">
-      <span class="brand-word">{{ lab.short_name }}</span>
-      <span class="brand-sub">{{ brand.subtitle }}</span>
+  <a href="index.html" aria-label="{{ lab.name }} home">
+    <span class="lockup">
+      <img class="lockup__mark" src="assets/logo/mark.svg" width="32" height="32" alt="" data-logo-role="mark" data-logo-default="assets/logo/mark.svg" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
+      <span class="lockup__text">
+        <span class="lockup__name">{{ lab.short_name }}</span>
+        <span class="lockup__desc">{{ brand.subtitle }}</span>
+      </span>
     </span>
   </a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="{{ ui.accessibility.navigation_toggle }}">
@@ -17,7 +19,7 @@
   </button>
   <nav class="site-nav" id="site-nav" aria-label="{{ ui.accessibility.primary_navigation }}">
     {% for item in nav_items %}
-      <a href="{{ item.url }}" class="nav-link{% if page.nav == item.id %} is-active{% endif %}">{{ item.label }}</a>
+      <a href="{{ item.url }}" class="nav-link{% if page.nav == item.id %} is-active{% endif %}" {% if page.nav == item.id %}aria-current="page"{% endif %}>{{ item.label }}</a>
     {% endfor %}
     <a href="{{ lab.github }}" class="nav-link nav-github-mobile" target="_blank" rel="noreferrer">{{ ui.labels.github }}</a>
     <a href="{{ lab.github }}" class="nav-icon" target="_blank" rel="noreferrer" aria-label="{{ ui.labels.github_repository }}">

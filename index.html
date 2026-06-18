@@ -6,66 +6,63 @@ nav: home
 {% assign page_data = site.data.pages.home %}
 {% assign ui = site.data.site.ui %}
 
-<!-- Hero -->
 <section class="hero" id="top" data-screen-label="{{ page_data.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
-  <div class="hero-copy hero-copy-centered">
-    {% if home.status.show %}
-      <span class="hero-status">
-        <span class="dot"></span>
-        {{ home.status.text }}
-      </span>
-    {% endif %}
-    <p class="eyebrow">{{ home.eyebrow }}</p>
-    <h1 class="hero-h1"><span class="hero-mark" aria-hidden="true"><img src="{{ site.data.site.lab.logo }}" width="76" height="76" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" /></span><span class="hero-title-main">{% assign title_words = home.title | split: ' ' %}{% for word in title_words %}<span class="hero-title-word">{{ word }}</span>{% endfor %}</span>{% if home.title_suffix %}<span class="hero-title-suffix">{{ home.title_suffix }}</span>{% endif %}</h1>
-    {% if home.expanded_name %}<p class="hero-expansion">{{ home.expanded_name }}</p>{% endif %}
-    <p class="hero-lede">{{ home.lede }}</p>
-    <p class="hero-text">{{ home.body }}</p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="{{ home.primary_action.url }}">{{ home.primary_action.label }}</a>
-      <a class="button button-quiet" href="{{ home.secondary_action.url }}">{{ home.secondary_action.label }} →</a>
+  <div class="hero__inner">
+    <img class="hero__mark" src="assets/logo/mark.svg" width="78" height="78" alt="" data-logo-role="mark" data-logo-default="assets/logo/mark.svg" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
+    <h1 class="hero__title">{% assign title_words = home.title | split: ' ' %}{% for word in title_words %}{% if forloop.first %}<span class="gradient-text">{{ word }}</span>{% else %} {{ word }}{% endif %}{% endfor %}{% if home.title_suffix %} {{ home.title_suffix }}{% endif %}</h1>
+    {% if home.expanded_name %}<p class="hero__expand">{{ home.expanded_name }}</p>{% endif %}
+    <p class="hero__lede">{{ home.lede }}</p>
+    <p class="hero__text">{{ home.body }}</p>
+    <div class="hero__actions">
+      <a class="button button--primary" href="{{ home.primary_action.url }}">{{ home.primary_action.label }}</a>
+      <a class="button button--quiet" href="{{ home.secondary_action.url }}">{{ home.secondary_action.label }} <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- News -->
-<section class="section news-section" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
-  <div class="section-intro">
-    {% if home.news_intro.eyebrow %}<p class="eyebrow">{{ home.news_intro.eyebrow }}</p>{% endif %}
-    <h2 id="news-heading">{{ home.news_intro.title }}</h2>
-    {% if home.news_intro.body %}<p>{{ home.news_intro.body }}</p>{% endif %}
-  </div>
-  <div class="news-list" aria-live="polite">
-    {% if site.data.news.size > 0 %}
-      {% for item in site.data.news %}
-        <article class="news-item">
-          <time class="news-date">{{ item.date }}</time>
-          <div>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.summary }}</p>
-            {% if item.links.size > 0 %}
-              <div class="link-row">
-                {% for link in item.links %}
-                  <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
-                {% endfor %}
+<section class="section section--alt" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
+  <div class="news">
+    <div class="news-grid">
+      <div>
+        {% if home.news_intro.eyebrow %}<p class="eyebrow">{{ home.news_intro.eyebrow }}</p>{% endif %}
+        <h2 id="news-heading" class="h2">{{ home.news_intro.title }}</h2>
+        {% if home.news_intro.body %}<p>{{ home.news_intro.body }}</p>{% endif %}
+      </div>
+      <div class="news-list" aria-live="polite">
+        {% if site.data.news.size > 0 %}
+          {% for item in site.data.news %}
+            <article class="news-item">
+              <time class="news-item__date">{{ item.date }}</time>
+              <div>
+                <h3 class="news-item__title">{{ item.title }}</h3>
+                <p class="news-item__summary">{{ item.summary }}</p>
+                {% if item.links.size > 0 %}
+                  <div class="news-item__links link-row">
+                    {% for link in item.links %}
+                      <a class="link-item" href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
               </div>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
-    {% else %}
-      <p class="empty-state">{{ home.news_empty }}</p>
-    {% endif %}
+            </article>
+          {% endfor %}
+        {% else %}
+          <p class="empty-state">{{ home.news_empty }}</p>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </section>
 
 {% if home.recruiting.show %}
-  <!-- Recruiting strip -->
-  <div class="recruiting-strip" data-screen-label="{{ page_data.screen_labels.recruiting }}">
-    <div>
-      {% if home.recruiting.eyebrow %}<p class="eyebrow">{{ home.recruiting.eyebrow }}</p>{% endif %}
-      <strong>{{ home.recruiting.title }}</strong>
-      <p>{{ home.recruiting.body }}</p>
+  <section class="section" data-screen-label="{{ page_data.screen_labels.recruiting }}">
+    <div class="recruiting">
+      <div>
+        {% if home.recruiting.eyebrow %}<p class="eyebrow eyebrow--accent">{{ home.recruiting.eyebrow }}</p>{% endif %}
+        <p class="recruiting__title">{{ home.recruiting.title }}</p>
+        <p class="recruiting__body">{{ home.recruiting.body }}</p>
+      </div>
+      <a class="button button--primary" href="{{ home.recruiting.action.url }}">{{ home.recruiting.action.label }}</a>
     </div>
-    <a class="button button-primary" href="{{ home.recruiting.action.url }}">{{ home.recruiting.action.label }}</a>
-  </div>
+  </section>
 {% endif %}

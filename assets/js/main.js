@@ -37,7 +37,7 @@
         filterButtons.forEach(function (item) {
           item.classList.toggle('is-active', item === button);
         });
-        publicationList.querySelectorAll('.publication-item').forEach(function (item) {
+        publicationList.querySelectorAll('.pub-item, .publication-item').forEach(function (item) {
           const tags = (item.getAttribute('data-tags') || '').split(/\s+/);
           item.hidden = filter !== 'all' && tags.indexOf(filter) === -1;
         });
@@ -54,25 +54,50 @@
   };
   const params = new URLSearchParams(window.location.search);
   const requestedLogo = (params.get('logo') || '').toLowerCase();
-  const logoVariant = Object.prototype.hasOwnProperty.call(logoMap, requestedLogo) ? requestedLogo : 'c';
-  document.documentElement.setAttribute('data-logo-variant', logoVariant);
+  const logoVariant = Object.prototype.hasOwnProperty.call(logoMap, requestedLogo) ? requestedLogo : '';
+  if (logoVariant) document.documentElement.setAttribute('data-logo-variant', logoVariant);
 
-  document.querySelectorAll('[data-logo-role="mark"]').forEach(function (node) {
+  document.querySelectorAll('[data-logo-role="mark"], [data-logo-role="footer-mark"]').forEach(function (node) {
     const src = node.getAttribute('data-logo-' + logoVariant) || logoMap[logoVariant] || node.getAttribute('data-logo-default');
     if (src) node.setAttribute('src', src);
   });
 
   const favicon = document.querySelector('[data-logo-role="favicon"]');
-  if (favicon) favicon.setAttribute('href', logoMap[logoVariant]);
+  if (favicon && logoVariant) favicon.setAttribute('href', logoMap[logoVariant]);
 
-  document.querySelectorAll('a[href]').forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) return;
-    if (!/\.html($|[?#])/.test(href) && href !== './' && href !== '/') return;
-    const url = new URL(href, window.location.href);
-    if (url.searchParams.has('logo')) return;
-    url.searchParams.set('logo', logoVariant);
-    link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
-  });
+  if (logoVariant) {
+    document.querySelectorAll('a[href]').forEach(function (link) {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) return;
+      if (!/\.html($|[?#])/.test(href) && href !== './' && href !== '/') return;
+      const url = new URL(href, window.location.href);
+      if (url.searchParams.has('logo')) return;
+      url.searchParams.set('logo', logoVariant);
+      link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
+    });
+  }
+
+  // Preview-only type direction switcher. Remove _includes/type-switcher.html
+  // and this block when the final typography direction is selected.
+  const typeSwitcher = document.querySelector('[data-type-switcher]');
+  if (typeSwitcher) {
+    const buttons = typeSwitcher.querySelectorAll('[data-type-option]');
+    const savedType = window.localStorage.getItem('breatheai-type-system') || 'editorial';
+
+    function setTypeSystem(typeSystem) {
+      document.documentElement.setAttribute('data-type-system', typeSystem);
+      buttons.forEach(function (button) {
+        button.setAttribute('aria-pressed', String(button.getAttribute('data-type-option') === typeSystem));
+      });
+      window.localStorage.setItem('breatheai-type-system', typeSystem);
+    }
+
+    setTypeSystem(savedType);
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        setTypeSystem(button.getAttribute('data-type-option') || 'editorial');
+      });
+    });
+  }
 
 })();

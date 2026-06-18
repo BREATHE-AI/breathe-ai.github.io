@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="BREATHE AI Lab mark">
+  <defs>
+    <linearGradient id="breatheGrad" gradientUnits="userSpaceOnUse" x1="9" y1="24" x2="55" y2="40">
+      <stop offset="0" stop-color="#2563EB"></stop>
+      <stop offset="0.52" stop-color="#6E54C8"></stop>
+      <stop offset="1" stop-color="#E85C2B"></stop>
+    </linearGradient>
+  </defs>
+  <path d="M32,32 C24,20 12,22 12,32 C12,42 24,44 32,32 C40,20 52,22 52,32 C52,42 40,44 32,32" fill="none" stroke="url(#breatheGrad)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

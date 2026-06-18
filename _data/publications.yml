@@ -2,8 +2,8 @@
   type: Agentic AI
   title: "Learning to Improve: Self-Evolving Language Agents from Interaction Traces"
   authors: Author One, Author Two, BREATHE AI Lab
-  venue: Preprint / Conference / Journal
-  summary: An example publication entry for work on agents that turn feedback, tool-use trajectories, and task outcomes into future improvements.
+  venue: Preprint
+  summary: Work on agents that turn feedback, tool-use trajectories, and task outcomes into future improvements.
   image:
     src: assets/img/publications/example-agent.svg
     alt: Abstract thumbnail for an agent learning loop
@@ -25,8 +25,8 @@
   type: Efficient models
   title: "Compact Language Models as Controllable Components for AI Systems"
   authors: Author One, Author Two, BREATHE AI Lab
-  venue: Preprint / Conference / Journal
-  summary: An example entry for papers on efficient training, specialization, distillation, and deployment-aware language intelligence.
+  venue: Preprint
+  summary: Papers on efficient training, specialization, distillation, and deployment-aware language intelligence.
   image:
     src: assets/img/publications/example-slm.svg
     alt: Abstract thumbnail for compact language models
@@ -44,8 +44,8 @@
   type: Evaluation
   title: "Beyond Static Benchmarks: Evaluating Adaptive AI Systems"
   authors: Author One, Author Two, BREATHE AI Lab
-  venue: Preprint / Conference / Journal
-  summary: An example entry for evaluation work that measures adaptation, robustness, failure modes, and practical usefulness under changing conditions.
+  venue: Preprint
+  summary: Evaluation work that measures adaptation, robustness, failure modes, and usefulness under changing conditions.
   image:
     src: assets/img/publications/example-eval.svg
     alt: Abstract thumbnail for evaluation and analysis

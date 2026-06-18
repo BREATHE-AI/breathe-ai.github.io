@@ -17,16 +17,16 @@ research:
     title: Research
     lead: We study AI systems that can learn from experience, reason through language, and act responsibly under real constraints.
     body: BREATHE AI Lab works at the intersection of natural language processing, machine learning, and agentic systems. Our central question is how language models can move beyond static prediction toward systems that improve through interaction, use tools and feedback, remain efficient enough to deploy, and can be evaluated with evidence rather than impression.
-    closing: The public agenda is intentionally high level. It is meant to describe the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
+    closing: The public agenda is intentionally high level. It describes the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
     themes:
       - title: Self-evolving AI
         body: Models and agents that adapt from feedback, trajectories, tool use, and experience.
       - title: Language agents
-        body: Systems that plan, use tools, collaborate, and complete long-horizon tasks through language.
+        body: Systems that plan, use tools, collaborate, and complete long-horizon tasks.
       - title: Small language models
         body: Compact models that remain capable, controllable, and useful under deployment constraints.
       - title: Responsible evaluation
-        body: Measurements that expose capability, robustness, failure modes, and real-world usefulness.
+        body: Measurements that expose capability, robustness, failure modes, and usefulness.
   publications:
     screen_label: 02 Research · Publications
     aria_label: Publications

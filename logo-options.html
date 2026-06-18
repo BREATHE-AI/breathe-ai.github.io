@@ -19,7 +19,7 @@ data_key: logo_options
       <p class="eyebrow">{{ page_data.compare.eyebrow }}</p>
       <h2 id="logo-options-heading">{{ page_data.compare.title }}</h2>
     </div>
-    <a class="button button-quiet" href="{{ page_data.compare.back_url }}">{{ page_data.compare.back_label }}</a>
+    <a class="button button--quiet" href="{{ page_data.compare.back_url }}">{{ page_data.compare.back_label }}</a>
   </div>
 
   <div class="logo-option-grid">
@@ -31,9 +31,9 @@ data_key: logo_options
         </div>
         <div class="logo-option-header">
           <img src="{{ option.src }}" width="42" height="42" alt="{{ option.label }} logo" />
-          <span class="brand-stack">
-            <span class="brand-word">{{ lab.name }}</span>
-            <span class="brand-sub">{{ site.data.site.brand.subtitle }}</span>
+          <span class="lockup__text">
+            <span class="lockup__name">{{ lab.name }}</span>
+            <span class="lockup__desc">{{ site.data.site.brand.subtitle }}</span>
           </span>
         </div>
         <div class="logo-option-hero">
@@ -42,8 +42,8 @@ data_key: logo_options
         </div>
         <p>{{ option.note }}</p>
         <div class="logo-option-actions">
-          <a class="button button-primary" href="index.html?logo={{ option.id }}">{{ page_data.compare.preview_home_label }}</a>
-          <a class="button button-quiet" href="research.html?logo={{ option.id }}">{{ page_data.compare.research_label }}</a>
+          <a class="button button--primary" href="index.html?logo={{ option.id }}">{{ page_data.compare.preview_home_label }}</a>
+          <a class="button button--quiet" href="research.html?logo={{ option.id }}">{{ page_data.compare.research_label }}</a>
         </div>
       </article>
     {% endfor %}

@@ -1,0 +1,32 @@
+/* ============================================================
+   BREATHE AI Lab — Spacing tokens
+   An 8px-based scale with a couple of half steps. Generous,
+   architectural whitespace is part of the scholarly register.
+   ============================================================ */
+
+:root {
+  --space-0:   0;
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32:  128px;
+
+  /* ---- Section rhythm ---- */
+  --section-y:    clamp(3.5rem, 6vw, 6.5rem); /* @kind spacing */
+  --section-y-lg: clamp(4.5rem, 8vw, 8.5rem); /* @kind spacing */
+
+  /* ---- Page gutters & measure ---- */
+  --gutter:    clamp(1.25rem, 4vw, 4rem); /* @kind spacing */
+  --max-page:  1280px;     /* @kind spacing */ /* outer content cap */
+  --max-prose: 66ch;       /* @kind spacing */ /* readable text column */
+  --max-lede:  42ch;       /* @kind spacing */
+}
