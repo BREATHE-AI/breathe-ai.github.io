@@ -1,80 +1,50 @@
 ---
 layout: default
 nav: research
-title: Research — BreatheAI
-description: BreatheAI research — language reasoning, language agents, evaluation, and multilingual NLP.
 ---
-{% assign page_data = site.data.site.research_page %}
+{% assign page_data = site.data.pages.research %}
 {% assign research = site.data.research %}
 {% assign publications = site.data.publications %}
 {% assign projects = site.data.projects %}
+{% assign ui = site.data.site.ui %}
 
 <!-- Page header -->
-<div class="page-header" data-screen-label="01 Research · Header">
-  <p class="eyebrow">{{ page_data.eyebrow }}</p>
-  <h1>{{ page_data.title }}</h1>
-  <p>{{ page_data.body }}</p>
+<div class="page-header" data-screen-label="{{ page_data.header.screen_label }}">
+  <p class="eyebrow">{{ page_data.header.eyebrow }}</p>
+  <h1>{{ page_data.header.title }}</h1>
+  <p>{{ page_data.header.body }}</p>
 </div>
 
-<!-- Research areas -->
-<section class="section" data-screen-label="02 Research · Areas" aria-labelledby="areas-heading">
-  <div class="section-heading">
-    <div>
-      <p class="eyebrow">{{ page_data.areas_eyebrow }}</p>
-      <h2 id="areas-heading">{{ page_data.areas_title }}</h2>
-    </div>
-  </div>
-  <div class="research-grid">
-    {% for area in research.areas %}
-      <article class="research-card">
-        <span class="card-index">{{ area.index }}</span>
-        <h3>{{ area.title }}</h3>
-        <p>{{ area.body }}</p>
-        <p class="topics">{{ area.topics | join: " · " }}</p>
-      </article>
-    {% endfor %}
-  </div>
-</section>
-
-<hr class="divider" />
-
 <!-- Publications -->
-<section class="section section-alt" id="publications" data-screen-label="03 Research · Publications" aria-labelledby="pub-heading">
+<section class="section" id="publications" data-screen-label="{{ page_data.publications.screen_label }}" aria-labelledby="pub-heading">
   <div class="section-heading compact">
     <div>
       <p class="eyebrow">{{ page_data.publications.eyebrow }}</p>
       <h2 id="pub-heading">{{ page_data.publications.title }}</h2>
     </div>
-    {% if publications.size > 0 %}
-      <div class="filter-group" role="group" aria-label="Filter publications">
-        <button class="filter-button is-active" type="button" data-filter="all">All</button>
-        <button class="filter-button" type="button" data-filter="models">Models</button>
-        <button class="filter-button" type="button" data-filter="agents">Agents</button>
-        <button class="filter-button" type="button" data-filter="eval">Evaluation</button>
-      </div>
-    {% endif %}
   </div>
   <div class="publication-list" data-pub-list aria-live="polite">
     {% if publications.size > 0 %}
       {% for p in publications %}
-        <article class="publication-item" data-tags="{{ p.tags | join: ' ' }}">
-          <div class="publication-year">{{ p.year }}</div>
+        <article class="publication-item{% unless p.year %} no-year{% endunless %}" data-tags="{{ p.tags | join: ' ' }}">
+          <div class="publication-year">{% if p.year %}{{ p.year }}{% endif %}</div>
           <div>
             <h3>{{ p.title }}</h3>
+            {% if p.image.src %}
+              <figure class="content-figure">
+                <img src="{{ p.image.src }}" alt="{{ p.image.alt | default: p.title }}" />
+                {% if p.image.caption %}<figcaption>{{ p.image.caption }}</figcaption>{% endif %}
+              </figure>
+            {% endif %}
             <p class="pub-summary">{{ p.summary }}</p>
             <div class="publication-meta">{{ p.authors }} · {{ p.venue }}</div>
             {% if p.links.size > 0 %}
               <div class="link-row">
                 {% for link in p.links %}
-                  <a href="{{ link.url }}" {% if link.url contains 'http' %}rel="noreferrer"{% endif %}>{{ link.label }} ↗</a>
+                  <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
                 {% endfor %}
               </div>
             {% endif %}
-          </div>
-          <div class="tag-list">
-            {% for tag in p.tags %}
-              <span>{{ tag }}</span>
-            {% endfor %}
           </div>
         </article>
       {% endfor %}
@@ -84,33 +54,37 @@ description: BreatheAI research — language reasoning, language agents, evaluat
   </div>
 </section>
 
-<hr class="divider" />
+{% if projects.size > 0 %}
+  <hr class="divider" />
 
-<!-- Open source -->
-<section class="section two-column" id="projects" data-screen-label="04 Research · Open Source" aria-labelledby="proj-heading">
+  <!-- Open source -->
+  <section class="section two-column" id="projects" data-screen-label="{{ page_data.projects.screen_label }}" aria-labelledby="proj-heading">
   <div class="section-intro">
     <p class="eyebrow">{{ page_data.projects.eyebrow }}</p>
     <h2 id="proj-heading">{{ page_data.projects.title }}</h2>
     <p>{{ page_data.projects.body }}</p>
   </div>
   <div class="project-list" aria-live="polite">
-    {% if projects.size > 0 %}
       {% for project in projects %}
         <article class="project-item{% if project.status == 'Active' %} is-active{% endif %}">
           <span class="project-status">{{ project.status }}</span>
           <h3>{{ project.name }}</h3>
+          {% if project.image.src %}
+            <figure class="content-figure">
+              <img src="{{ project.image.src }}" alt="{{ project.image.alt | default: project.name }}" />
+              {% if project.image.caption %}<figcaption>{{ project.image.caption }}</figcaption>{% endif %}
+            </figure>
+          {% endif %}
           <p>{{ project.description }}</p>
           {% if project.links.size > 0 %}
             <div class="link-row">
               {% for link in project.links %}
-                <a href="{{ link.url }}" {% if link.url contains 'http' %}rel="noreferrer"{% endif %}>{{ link.label }} ↗</a>
+                <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
               {% endfor %}
             </div>
           {% endif %}
         </article>
       {% endfor %}
-    {% else %}
-      <p class="empty-state">Projects will appear here.</p>
-    {% endif %}
   </div>
 </section>
+{% endif %}

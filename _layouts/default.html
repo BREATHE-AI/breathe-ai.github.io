@@ -1,6 +1,8 @@
 {% assign data = site.data.site %}
-{% assign title = page.title | default: data.meta.default_title %}
-{% assign description = page.description | default: data.meta.default_description %}
+{% assign data_key = page.data_key | default: page.nav %}
+{% assign page_meta = site.data.pages[data_key].meta %}
+{% assign title = page.title | default: page_meta.title | default: data.meta.default_title %}
+{% assign description = page.description | default: page_meta.description | default: data.meta.default_description %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,12 +12,12 @@
   <meta property="og:title" content="{{ page.og_title | default: data.meta.og_title | escape }}" />
   <meta property="og:description" content="{{ page.og_description | default: data.meta.og_description | escape }}" />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="{{ data.lab.logo }}" type="image/svg+xml" />
+  <link id="site-favicon" rel="icon" href="{{ data.lab.logo }}" type="image/svg+xml" data-logo-role="favicon" data-logo-default="{{ data.lab.logo }}" />
   <title>{{ title }}</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">{{ data.ui.accessibility.skip_link }}</a>
   {% include header.html %}
 
   <main id="main">

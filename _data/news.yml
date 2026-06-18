@@ -1,9 +1,30 @@
-- date: Launch
-  title: Website structure ready for PI completion
-  summary: The site layout, content model, and update workflow are prepared. Final lab details can be added through YAML files.
-- date: Research
-  title: Research agenda placeholders added
-  summary: Language reasoning, agents, evaluation, and multilingual NLP are represented as editable research areas.
-- date: Recruiting
-  title: Join page prepared for confirmed openings
-  summary: Open positions, deadlines, and application instructions can be published once confirmed.
+- date: 2026
+  title: BreatheAI Lab website preview is online
+  summary: This preview introduces the lab identity, research agenda, people page, and content structure for review before the public launch.
+  image:
+    src:
+    alt:
+    caption:
+  links: []
+- date: 2026
+  title: Research agenda organized around evolving AI systems
+  summary: The public research narrative now emphasizes self-evolving intelligence, language agents, small language models, and evaluation beyond benchmark scores.
+  image:
+    src:
+    alt:
+    caption:
+  links:
+    - label: Research
+      url: research.html
+      kind: html
+- date: 2026
+  title: Initial lab member profiles are being added
+  summary: BreatheAI is adding member profiles and research links as information is approved for public release.
+  image:
+    src:
+    alt:
+    caption:
+  links:
+    - label: People
+      url: people.html
+      kind: html

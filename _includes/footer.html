@@ -1,17 +1,24 @@
 {% assign lab = site.data.site.lab %}
 {% assign footer = site.data.site.footer %}
+{% assign ui = site.data.site.ui %}
 <footer class="site-footer">
   <div class="footer-brand">
-    <img src="{{ lab.logo }}" width="28" height="28" alt="" />
+    <img src="{{ lab.logo }}" width="28" height="28" alt="" data-logo-role="mark" data-logo-default="{{ lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
     <div>
       <strong>{{ lab.name }}</strong>
       <p>{{ footer.tagline }}</p>
       <p class="footer-colophon">{{ footer.colophon }}</p>
     </div>
   </div>
-  <nav class="footer-links" aria-label="Footer links">
-    <a href="{{ lab.github }}" target="_blank" rel="noreferrer">GitHub</a>
-    <a href="mailto:{{ lab.email }}">Email</a>
-    <a href="index.html">{% if page.nav == 'home' %}Top ↑{% else %}Home{% endif %}</a>
+  <nav class="footer-links" aria-label="{{ ui.accessibility.footer_navigation }}">
+    {% for link in footer.links %}
+      {% if link.type == 'github' %}
+        <a href="{{ lab.github }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
+      {% elsif link.type == 'email' %}
+        <a href="mailto:{{ lab.email }}">{{ link.label }}</a>
+      {% else %}
+        <a href="{{ link.url }}">{% if page.nav == 'home' and link.url == 'index.html' %}{{ ui.labels.top }}{% else %}{{ link.label }}{% endif %}</a>
+      {% endif %}
+    {% endfor %}
   </nav>
 </footer>

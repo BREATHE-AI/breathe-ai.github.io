@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" width="320" height="56" role="img" aria-label="BreatheAI · NTU">
-  <path d="M 4 20 C 8.5 10.7, 15.25 10.7, 20 20 C 24.75 29.3, 31.5 29.3, 36 20" fill="none" stroke="#111113" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M 4 20 C 8.5 29.3, 15.25 29.3, 20 20 C 24.75 10.7, 31.5 10.7, 36 20" fill="none" stroke="#111113" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M 18 20 C 19.2 18.3, 20.8 18.3, 22 20 C 20.8 21.7, 19.2 21.7, 18 20 Z" fill="#00A887"></path>
-  <text x="44" y="22" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="20" font-weight="650" fill="#111113" letter-spacing="-0.2">BreatheAI</text>
-  <text x="44" y="40" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="10" font-weight="700" fill="#72777f" letter-spacing="0.4">Nanyang Technological University · Singapore</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 58" width="340" height="58" role="img" aria-label="BreatheAI · NTU">
+  <path d="M20,20 C15.6,13.1 6.9,13.8 6.9,20 C6.9,26.2 15.6,26.9 20,20 C24.4,13.1 33.1,13.8 33.1,20 C33.1,26.2 24.4,26.9 20,20 Z" fill="none" stroke="#111113" stroke-width="1.75" stroke-linejoin="round"></path>
+  <circle cx="20" cy="20" r="1.4" fill="#00A887"></circle>
+  <text x="44" y="22" font-family="&#39;Source Serif 4&#39;,&#39;Iowan Old Style&#39;,Georgia,serif" font-size="20" font-weight="650" fill="#111113" letter-spacing="0">BreatheAI</text>
+  <text x="44" y="38" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="8" font-weight="700" fill="#72777F" letter-spacing="1.5">RESEARCH LAB · NTU</text>
+  <text x="44" y="52" font-family="&#39;Geist&#39;,ui-sans-serif,system-ui,sans-serif" font-size="9" font-weight="500" fill="#72777f" letter-spacing="0.2">Nanyang Technological University · Singapore</text>
 </svg>

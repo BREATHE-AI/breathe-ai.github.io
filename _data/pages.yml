@@ -1,0 +1,107 @@
+home:
+  meta:
+    title: BreatheAI | NTU Frontier AI Lab
+    description: BreatheAI Lab at NTU studies self-evolving AI, language agents, small language models, and rigorous evaluation for frontier language intelligence.
+  screen_labels:
+    hero: 01 Home · Hero
+    news: 02 Home · News
+    recruiting: 03 Home · Recruiting
+
+research:
+  meta:
+    title: Publications — BreatheAI
+    description: Publications from BreatheAI Lab at Nanyang Technological University.
+  header:
+    screen_label: 01 Research · Header
+    eyebrow: Publications
+    title: Publications
+    body: Selected papers and research artifacts from BreatheAI Lab.
+  areas:
+    screen_label: 02 Research · Areas
+    aria_label: Research areas
+    eyebrow: Research Areas
+    title: Research directions
+  publications:
+    screen_label: 03 Research · Publications
+    aria_label: Publications
+    eyebrow: Publications
+    title: Selected papers
+    empty: Publications will be listed here as papers are released.
+    filter_aria_label: Filter publications
+    filters: []
+  projects:
+    screen_label: 04 Research · Open Source
+    aria_label: Open source projects
+    eyebrow: Open Source
+    title: Code, data, and systems
+    body: We maintain research software, datasets, evaluation tools, and project pages when releases are ready for the community.
+    empty: Public repositories and datasets will be added here after release.
+
+people:
+  meta:
+    title: People — BreatheAI
+    description: BreatheAI Lab members and collaborators at Nanyang Technological University.
+  header:
+    screen_label: 01 People · Header
+    eyebrow: People
+    title: Researchers building BreatheAI.
+    body: BreatheAI brings together researchers working on language intelligence, learning systems, agents, and efficient AI.
+    join_label: Join us
+    join_url: join.html
+  members:
+    screen_label: 02 People · Members
+    heading: Lab members
+
+join:
+  meta:
+    title: Join — BreatheAI
+    description: Opportunities to work with BreatheAI Lab at NTU as a PhD student, research fellow, research associate, research engineer, intern, or visiting student.
+  intro:
+    screen_label: 01 Join · Intro
+    eyebrow: Join
+    title: Join BreatheAI.
+    body: We are building a new team at NTU and welcome self-motivated PhD students, researchers, engineers, interns, and visiting students to contact us.
+  positions:
+    screen_label: 02 Join · Positions
+    eyebrow: Open Roles
+    title: Open positions
+    body: 'Current roles include:'
+    empty: Confirmed openings will appear here.
+  apply:
+    screen_label: 04 Join · How to apply
+    eyebrow: How to apply
+    email_subject: '[BreatheAI Enquiry]'
+    block:
+      eyebrow: By email
+      title: Contact us
+      paragraphs:
+        - 'Please send a short email with your CV, intended role, research interests, and links to relevant work.'
+        - 'Suggested subject: [BreatheAI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
+        - 'Example email: breatheai@example.edu.sg.'
+      action_label: Email us
+
+logo_options:
+  meta:
+    title: BreatheAI Logo Options
+    description: Compare the A, B, and C logo directions on the BreatheAI lab website.
+  header:
+    screen_label: 01 Logo Options · Header
+    eyebrow: Logo Preview
+    title: Three marks, one site.
+    body: Use these links to view the same website with each logo direction. The URL parameter works locally and on GitHub Pages.
+  compare:
+    eyebrow: A/B/C
+    title: Compare in context
+    back_label: Back to home
+    back_url: index.html
+    preview_home_label: Preview home
+    research_label: Research
+  share:
+    eyebrow: Share Links
+    title: Local and GitHub Pages use the same parameter.
+    local_urls:
+      - http://localhost:4173/?logo=a
+      - http://localhost:4173/?logo=b
+      - http://localhost:4173/?logo=c
+    github_urls:
+      - https://zimingyou01.github.io/breathai-lab-preview/?logo=a

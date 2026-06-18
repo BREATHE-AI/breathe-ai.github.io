@@ -1,66 +1,38 @@
 ---
 layout: default
 nav: join
-title: Join — BreatheAI
-description: Join BreatheAI — PhD, research assistant, intern, and visiting scholar opportunities at NTU.
 ---
-{% assign page_data = site.data.site.join_page %}
+{% assign page_data = site.data.pages.join %}
 {% assign positions = site.data.positions %}
+{% assign ui = site.data.site.ui %}
 
 <!-- Intro -->
-<div class="join-intro" data-screen-label="01 Join · Intro">
-  <p class="eyebrow">{{ page_data.eyebrow }}</p>
-  <h1>{{ page_data.title }}</h1>
-  <p>{{ page_data.body }}</p>
+<div class="join-intro" data-screen-label="{{ page_data.intro.screen_label }}">
+  <p class="eyebrow">{{ page_data.intro.eyebrow }}</p>
+  <h1>{{ page_data.intro.title }}</h1>
+  <p>{{ page_data.intro.body }}</p>
 </div>
 
-<!-- Open positions -->
-<section class="section" data-screen-label="02 Join · Positions" aria-labelledby="positions-heading">
-  <p class="eyebrow">{{ page_data.positions_eyebrow }}</p>
-  <h2 id="positions-heading">{{ page_data.positions_title }}</h2>
-  {% if positions.size > 0 %}
-    <div class="positions-grid">
-      {% for position in positions %}
-        <article class="position-card{% if position.closed %} position-closed{% endif %}">
-          <span class="position-type">{{ position.type }} · {{ position.status }}</span>
-          <h3>{{ position.title }}</h3>
-          <p>{{ position.body }}</p>
-          <p class="deadline">{{ position.deadline }}</p>
-        </article>
-      {% endfor %}
-    </div>
-  {% else %}
-    <p class="empty-state">{{ page_data.positions_empty }}</p>
-  {% endif %}
-</section>
-
-<hr class="divider" />
-
-<!-- What we look for -->
-<section class="section" data-screen-label="03 Join · What we look for" aria-labelledby="qualities-heading">
-  <p class="eyebrow">{{ page_data.qualities_eyebrow }}</p>
-  <h2 id="qualities-heading">{{ page_data.qualities_title }}</h2>
-  <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">{{ page_data.qualities_intro }}</p>
-  <ul class="qualities-list">
-    {% for quality in page_data.qualities %}
-      <li><b>{{ quality.title }}</b> {{ quality.body }}</li>
-    {% endfor %}
-  </ul>
-</section>
-
-<hr class="divider" />
-
-<!-- How to apply -->
-<section class="section" data-screen-label="04 Join · How to apply" aria-labelledby="apply-heading">
-  <p class="eyebrow">{{ page_data.apply_eyebrow }}</p>
-  <h2 id="apply-heading">{{ page_data.apply_title }}</h2>
-  <p style="color: var(--ink-soft); max-width: 640px; margin-bottom: 0;">{{ page_data.apply_intro }}</p>
+<!-- Opportunities and contact -->
+<section class="section two-column join-contact" data-screen-label="{{ page_data.apply.screen_label }}" aria-labelledby="positions-heading">
+  <div class="section-intro">
+    <p class="eyebrow">{{ page_data.positions.eyebrow }}</p>
+    <h2 id="positions-heading">{{ page_data.positions.title }}</h2>
+    <p>{{ page_data.positions.body }}</p>
+    {% if positions.size > 0 %}
+      <ul class="join-position-list">
+        {% for position in positions %}
+          <li>{{ position.title }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
   <div class="apply-block">
-    <p class="eyebrow">{{ page_data.apply_block.eyebrow }}</p>
-    <h3>{{ page_data.apply_block.title }}</h3>
-    {% for paragraph in page_data.apply_block.paragraphs %}
+    <p class="eyebrow">{{ page_data.apply.block.eyebrow }}</p>
+    <h3>{{ page_data.apply.block.title }}</h3>
+    {% for paragraph in page_data.apply.block.paragraphs %}
       <p>{{ paragraph }}</p>
     {% endfor %}
-    <a class="button button-primary" href="mailto:{{ site.data.site.lab.email }}?subject=[{{ site.data.site.lab.name }} Enquiry]">{{ page_data.apply_block.action_label }}</a>
+    <a class="button button-primary" href="mailto:{{ site.data.site.lab.email }}?subject={{ page_data.apply.email_subject | url_encode }}">{{ page_data.apply.block.action_label }}</a>
   </div>
 </section>

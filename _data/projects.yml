@@ -1,8 +1,1 @@
-- name: Agent Evaluation Stack
-  status: Planned
-  description: Placeholder for evaluation pipelines, trace analysis, or agent benchmarking infrastructure.
-  links: []
-- name: Multilingual NLP Resources
-  status: Planned
-  description: Placeholder for datasets, model cards, benchmarks, and resources for regional and multilingual NLP research.
-  links: []
+[]

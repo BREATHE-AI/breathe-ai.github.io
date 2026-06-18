@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Agent learning loop thumbnail</title>
+  <desc id="desc">Abstract diagram of language agents learning from interaction.</desc>
+  <rect width="640" height="360" fill="#f6f2ea"/>
+  <rect x="44" y="48" width="552" height="264" rx="16" fill="#fbfbfb" stroke="#dedfdd"/>
+  <circle cx="170" cy="180" r="58" fill="#111113"/>
+  <circle cx="170" cy="180" r="24" fill="#00a887"/>
+  <path d="M290 132h158c32 0 58 26 58 58s-26 58-58 58H290" fill="none" stroke="#e4583f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M310 132l-28 28M310 248l-28-28" stroke="#e4583f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M250 180h184" stroke="#111113" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 24"/>
+  <text x="64" y="88" fill="#006d5b" font-family="ui-monospace, Menlo, monospace" font-size="18" font-weight="700">AGENTS · EXPERIENCE · FEEDBACK</text>
+</svg>

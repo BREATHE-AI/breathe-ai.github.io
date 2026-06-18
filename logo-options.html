@@ -1,0 +1,60 @@
+---
+layout: default
+nav: logo-options
+data_key: logo_options
+---
+{% assign lab = site.data.site.lab %}
+{% assign variants = lab.logo_variants.options %}
+{% assign page_data = site.data.pages.logo_options %}
+
+<div class="page-header logo-options-header" data-screen-label="{{ page_data.header.screen_label }}">
+  <p class="eyebrow">{{ page_data.header.eyebrow }}</p>
+  <h1>{{ page_data.header.title }}</h1>
+  <p>{{ page_data.header.body }}</p>
+</div>
+
+<section class="section logo-options" aria-labelledby="logo-options-heading">
+  <div class="section-heading compact">
+    <div>
+      <p class="eyebrow">{{ page_data.compare.eyebrow }}</p>
+      <h2 id="logo-options-heading">{{ page_data.compare.title }}</h2>
+    </div>
+    <a class="button button-quiet" href="{{ page_data.compare.back_url }}">{{ page_data.compare.back_label }}</a>
+  </div>
+
+  <div class="logo-option-grid">
+    {% for option in variants %}
+      <article class="logo-option-card">
+        <div class="logo-option-topline">
+          <span>{{ option.label }}</span>
+          <code>?logo={{ option.id }}</code>
+        </div>
+        <div class="logo-option-header">
+          <img src="{{ option.src }}" width="42" height="42" alt="{{ option.label }} logo" />
+          <span class="brand-stack">
+            <span class="brand-word">{{ lab.name }}</span>
+            <span class="brand-sub">{{ site.data.site.brand.subtitle }}</span>
+          </span>
+        </div>
+        <div class="logo-option-hero">
+          <img src="{{ option.src }}" width="74" height="74" alt="" />
+          <strong>{{ lab.name }}</strong>
+        </div>
+        <p>{{ option.note }}</p>
+        <div class="logo-option-actions">
+          <a class="button button-primary" href="index.html?logo={{ option.id }}">{{ page_data.compare.preview_home_label }}</a>
+          <a class="button button-quiet" href="research.html?logo={{ option.id }}">{{ page_data.compare.research_label }}</a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <div class="logo-link-panel">
+    <p class="eyebrow">{{ page_data.share.eyebrow }}</p>
+    <h3>{{ page_data.share.title }}</h3>
+    <p>{% for url in page_data.share.local_urls %}<code>{{ url }}</code>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+    {% for url in page_data.share.github_urls %}
+      <p><code>{{ url }}</code></p>
+    {% endfor %}
+  </div>
+</section>

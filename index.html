@@ -1,14 +1,14 @@
 ---
 layout: default
 nav: home
-title: BreatheAI | NTU Frontier AI Lab
-description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on language, reasoning, agents, evaluation, and multilingual intelligence.
 ---
-{% assign home = site.data.site.home %}
+{% assign home = site.data.home %}
+{% assign page_data = site.data.pages.home %}
 {% assign research = site.data.research %}
+{% assign ui = site.data.site.ui %}
 
 <!-- Hero -->
-<section class="hero" id="top" data-screen-label="01 Home · Hero" aria-label="{{ site.data.site.lab.name }} introduction">
+<section class="hero" id="top" data-screen-label="{{ page_data.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
   <div class="hero-copy">
     {% if home.status.show %}
       <span class="hero-status">
@@ -17,7 +17,7 @@ description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on langu
       </span>
     {% endif %}
     <p class="eyebrow">{{ home.eyebrow }}</p>
-    <h1 class="hero-h1">{{ home.title }}</h1>
+    <h1 class="hero-h1"><span class="hero-mark" aria-hidden="true"><img src="{{ site.data.site.lab.logo }}" width="76" height="76" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" /></span><span>{{ home.title }}</span></h1>
     <p class="hero-lede">{{ home.lede }}</p>
     <p class="hero-text">{{ home.body }}</p>
     <div class="hero-actions">
@@ -25,10 +25,10 @@ description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on langu
       <a class="button button-quiet" href="{{ home.secondary_action.url }}">{{ home.secondary_action.label }} →</a>
     </div>
   </div>
-  <aside class="hero-agenda" aria-label="Research agenda">
+  <aside class="hero-agenda" aria-label="{{ home.agenda.aria_label }}">
     <div class="agenda-topline">
-      <span>Research agenda</span>
-      <span>NTU · Singapore</span>
+      <span>{{ home.agenda.title }}</span>
+      <span>{{ home.agenda.subtitle }}</span>
     </div>
     <ol class="agenda-list">
       {% for item in research.agenda %}
@@ -47,7 +47,7 @@ description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on langu
 <hr class="divider" />
 
 <!-- News -->
-<section class="section two-column" id="news" data-screen-label="02 Home · News" aria-labelledby="news-heading">
+<section class="section two-column" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
   <div class="section-intro">
     <p class="eyebrow">{{ home.news_intro.eyebrow }}</p>
     <h2 id="news-heading">{{ home.news_intro.title }}</h2>
@@ -61,18 +61,25 @@ description: BreatheAI is a new frontier AI and NLP lab at NTU, focused on langu
           <div>
             <h3>{{ item.title }}</h3>
             <p>{{ item.summary }}</p>
+            {% if item.links.size > 0 %}
+              <div class="link-row">
+                {% for link in item.links %}
+                  <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
           </div>
         </article>
       {% endfor %}
     {% else %}
-      <p class="empty-state">News will appear here.</p>
+      <p class="empty-state">{{ home.news_empty }}</p>
     {% endif %}
   </div>
 </section>
 
 {% if home.recruiting.show %}
   <!-- Recruiting strip -->
-  <div class="recruiting-strip" data-screen-label="03 Home · Recruiting">
+  <div class="recruiting-strip" data-screen-label="{{ page_data.screen_labels.recruiting }}">
     <div>
       <p class="eyebrow">{{ home.recruiting.eyebrow }}</p>
       <strong>{{ home.recruiting.title }}</strong>

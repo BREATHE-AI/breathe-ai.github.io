@@ -1,1 +1,58 @@
-[]
+- year:
+  title: "Self-Evolving Language Agents"
+  authors: Replace with authors
+  venue: Example venue
+  summary: A short one-sentence description can go here when a paper has a project thumbnail or representative figure.
+  image:
+    src: assets/img/publications/example-agent.svg
+    alt: Abstract thumbnail for an agent learning loop
+    caption:
+  tags:
+    - agents
+    - eval
+  links:
+    - label: Paper
+      url: "#"
+      kind: pdf
+    - label: Code
+      url: "#"
+      kind: code
+    - label: Data
+      url: "#"
+      kind: data
+- year:
+  title: "Efficient Small Language Models"
+  authors: Replace with authors
+  venue: Example venue
+  summary: Use this pattern for model papers, system papers, or work with a project page.
+  image:
+    src: assets/img/publications/example-slm.svg
+    alt: Abstract thumbnail for compact language models
+    caption:
+  tags:
+    - models
+  links:
+    - label: Paper
+      url: "#"
+      kind: pdf
+    - label: Project
+      url: "#"
+      kind: html
+- year:
+  title: "Evaluation Beyond Benchmark Scores"
+  authors: Replace with authors
+  venue: Example venue
+  summary: Use this pattern for evaluation papers, benchmark releases, or analysis work with accompanying artifacts.
+  image:
+    src: assets/img/publications/example-eval.svg
+    alt: Abstract thumbnail for evaluation and analysis
+    caption:
+  tags:
+    - eval
+  links:
+    - label: Paper
+      url: "#"
+      kind: pdf
+    - label: Benchmark
+      url: "#"
+      kind: data

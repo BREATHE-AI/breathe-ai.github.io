@@ -1,47 +1,47 @@
 agenda:
   - index: "01"
-    title: Language Reasoning
-    summary: Compositional inference, multi-step planning, and verifiable reasoning in language models.
+    title: Self-evolving intelligence
+    summary: Models and agents that learn from feedback, experience, interaction, and their own trajectories.
   - index: "02"
-    title: Language Agents
-    summary: Tool-augmented systems and autonomous agents for complex, open-ended research tasks.
+    title: Agentic language systems
+    summary: Language agents that plan, use tools, collaborate, and complete long-horizon tasks under real constraints.
   - index: "03"
-    title: Evaluation and Alignment
-    summary: Rigorous behavioral auditing and benchmarks for reliable model assessment.
+    title: Efficient and capable models
+    summary: Small and specialized language models that preserve capability while improving controllability and deployability.
   - index: "04"
-    title: Multilingual NLP
-    summary: Cross-lingual transfer, low-resource modeling, and NLP for underserved language communities.
+    title: Evaluation beyond scores
+    summary: Measurements that expose reasoning, adaptation, robustness, and failure modes before systems are trusted.
 
 areas:
   - index: A
-    title: Language Reasoning
-    body: Training, adapting, and evaluating models for compositional reasoning, multi-step planning, and reliable decision-making. This description should be refined by the PI.
+    title: Self-Evolving AI
+    body: We study how AI systems can improve through interaction, feedback, and experience, including learning procedures that turn model behavior, tool use, and task outcomes into stronger future performance.
     topics:
-      - Chain-of-thought
-      - Multi-hop QA
-      - Planning
-      - Verifiable inference
+      - Continual improvement
+      - Experiential learning
+      - Feedback-driven adaptation
+      - Self-refinement
   - index: B
     title: Language Agents
-    body: Designing and evaluating agents that use tools, write and execute code, retrieve structured knowledge, and coordinate with other agents to complete complex tasks.
+    body: We build and evaluate agents that reason over language, use external tools, coordinate across steps or collaborators, and operate in realistic research, coding, and knowledge-work settings.
     topics:
       - Tool use
-      - Code generation
+      - Planning
       - Multi-agent systems
-      - Agentic evaluation
+      - Long-horizon tasks
   - index: C
-    title: Evaluation and Alignment
-    body: Building benchmarks, auditing methods, and safety-oriented frameworks that reveal model behavior at fine granularity before deployment.
+    title: Small Language Models
+    body: We investigate compact and specialized models that can reason, follow instructions, and serve as controllable components in larger AI systems, with attention to data, training, and deployment constraints.
     topics:
-      - Behavioral auditing
-      - Fine-grained benchmarks
-      - Safety
-      - Human annotation
+      - Efficient training
+      - Model specialization
+      - Distillation
+      - On-device AI
   - index: D
-    title: Multilingual NLP
-    body: Extending language technology through cross-lingual transfer, low-resource language modeling, and grounded multilingual datasets.
+    title: Evaluation and Understanding
+    body: We design evaluation methods that reveal how systems reason, adapt, fail, and generalize, moving beyond leaderboard scores toward evidence that can guide scientific and engineering decisions.
     topics:
-      - Cross-lingual transfer
-      - Low-resource NLP
-      - Southeast Asian languages
-      - Multilingual benchmarks
+      - Behavioral evaluation
+      - Robustness
+      - Interpretability
+      - Reproducibility

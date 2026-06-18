@@ -1,0 +1,22 @@
+assets:
+  people_photos: assets/img/people/
+  research_images: assets/img/research/
+  publication_files: assets/data/publications/
+  project_images: assets/img/projects/
+
+link_kinds:
+  - html
+  - pdf
+  - code
+  - data
+  - demo
+  - slides
+  - video
+  - profile
+
+notes:
+  - Keep page copy in _data/home.yml and _data/pages.yml.
+  - Keep research directions in _data/research.yml.
+  - Keep news, people, positions, publications, and projects in their matching YAML files.
+  - Any link can point to an external URL or to a file inside this repository, such as assets/data/publications/example.pdf.
+  - Optional image fields use src, alt, and caption keys. If an image is missing, the template keeps the current text-only layout.

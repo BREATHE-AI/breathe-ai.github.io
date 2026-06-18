@@ -1,25 +1,48 @@
 - name: Faculty
   members:
-    - name: Principal Investigator
-      initials: PI
-      role: Profile to be added
-      focus: Add the PI's confirmed research interests, homepage, and contact links here.
-      links: []
-- name: Students & Researchers
-  members: []
-- name: Open Roles
+    - name: Wei Lu
+      initials: WL
+      image:
+        src: assets/img/people/placeholder.svg
+        alt: Wei Lu
+      role: Principal Investigator
+      focus:
+      links:
+        - label: Homepage
+          url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
+          kind: profile
+- name: PhD Students & Researchers
   members:
-    - name: PhD Positions
-      initials: PhD
-      role: To be confirmed
-      focus: Confirmed PhD topics, application cycles, and funding details can be linked here.
+    - name: Ziming You
+      initials: ZY
+      image:
+        src: assets/img/people/placeholder.svg
+        alt: Ziming You
+      role: PhD Student
+      focus:
       links:
-        - label: Join
-          url: join.html
-    - name: Research Assistant
-      initials: RA
-      role: To be confirmed
-      focus: Add RA openings only after scope, start date, and funding are confirmed.
+        - label: Google Scholar
+          url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
+          kind: profile
+    - name: Xiaoyan Yu
+      initials: XY
+      image:
+        src: assets/img/people/placeholder.svg
+        alt: Xiaoyan Yu
+      role: Researcher
+      focus:
       links:
-        - label: Join
-          url: join.html
+        - label: Google Scholar
+          url: https://scholar.google.com/citations?user=MgsexesAAAAJ&hl=zh-CN
+          kind: profile
+    - name: Xiyan Fu
+      initials: XF
+      image:
+        src: assets/img/people/placeholder.svg
+        alt: Xiyan Fu
+      role: Researcher
+      focus:
+      links:
+        - label: Google Scholar
+          url: https://scholar.google.com/citations?user=q1glETQAAAAJ&hl=en
+          kind: profile
