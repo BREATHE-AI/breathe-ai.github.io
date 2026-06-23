@@ -48,9 +48,9 @@
   // Logo variant switcher. Works on localhost and GitHub Pages:
   // ?logo=a, ?logo=b, ?logo=c
   const logoMap = {
-    a: 'assets/logo/logo-a.svg',
-    b: 'assets/logo/logo-b.svg',
-    c: 'assets/logo/logo-c.svg'
+    a: 'assets/logo/breathe_infinity_mark_realistic.svg',
+    b: 'assets/logo/breathe_infinity_mark_realistic.svg',
+    c: 'assets/logo/breathe_infinity_mark_realistic.svg'
   };
   const params = new URLSearchParams(window.location.search);
   const requestedLogo = (params.get('logo') || '').toLowerCase();
@@ -74,29 +74,6 @@
       if (url.searchParams.has('logo')) return;
       url.searchParams.set('logo', logoVariant);
       link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
-    });
-  }
-
-  // Preview-only type direction switcher. Remove _includes/type-switcher.html
-  // and this block when the final typography direction is selected.
-  const typeSwitcher = document.querySelector('[data-type-switcher]');
-  if (typeSwitcher) {
-    const buttons = typeSwitcher.querySelectorAll('[data-type-option]');
-    const savedType = window.localStorage.getItem('breatheai-type-system') || 'editorial';
-
-    function setTypeSystem(typeSystem) {
-      document.documentElement.setAttribute('data-type-system', typeSystem);
-      buttons.forEach(function (button) {
-        button.setAttribute('aria-pressed', String(button.getAttribute('data-type-option') === typeSystem));
-      });
-      window.localStorage.setItem('breatheai-type-system', typeSystem);
-    }
-
-    setTypeSystem(savedType);
-    buttons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        setTypeSystem(button.getAttribute('data-type-option') || 'editorial');
-      });
     });
   }
 

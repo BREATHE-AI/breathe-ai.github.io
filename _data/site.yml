@@ -2,39 +2,39 @@ lab:
   name: BREATHE AI Lab
   short_name: BREATHE AI
   display_name: BREATHE AI Lab
-  expanded_name: Building Responsible and Effective AI Technologies for Humanity and Equity
+  expanded_name: Building Responsible and Efficient AI Technologies for Humanity and Equity
   institution: Nanyang Technological University
   location: Singapore
   field: NLP · Language Models · Responsible AI
   email: breatheai@ntu.edu.sg
   github: https://github.com/breatheai-lab
-  logo: assets/logo/mark.svg
+  logo: assets/logo/breathe_infinity_mark_realistic.svg
   logo_variants:
     default: c
     options:
       - id: a
         label: A · Evolve
-        src: assets/logo/logo-a.svg
-        note: Balanced black + signal green; the calmest default for the lab site.
+        src: assets/logo/breathe_infinity_mark_realistic.svg
+        note: Unified BREATHE AI infinity mark.
       - id: b
         label: B · Two-tone
-        src: assets/logo/logo-b.svg
-        note: Signal green + coral; more energetic and visibly experimental.
+        src: assets/logo/breathe_infinity_mark_realistic.svg
+        note: Unified BREATHE AI infinity mark.
       - id: c
         label: C · Gradient
-        src: assets/logo/logo-c.svg
-        note: Cobalt blue, violet, and ember orange; recommended default for the current site direction.
+        src: assets/logo/breathe_infinity_mark_realistic.svg
+        note: Unified BREATHE AI infinity mark.
 
-asset_version: 20260618-text-align
+asset_version: 20260624-editorial-fixed
 
 meta:
   default_title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
-  default_description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, effective, and human-centered language technologies.
+  default_description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, efficient, and human-centered language technologies.
   og_title: BREATHE AI Lab at NTU
   og_description: NLP and AI research on self-evolving systems, language agents, efficient models, and responsible evaluation.
 
 brand:
-  subtitle: Language Intelligence · NTU
+  subtitle:
 
 navigation:
   - id: home
@@ -66,7 +66,7 @@ ui:
     external_suffix: ↗
 
 footer:
-  tagline: Building Responsible and Effective AI Technologies for Humanity and Equity.
+  tagline: Building Responsible and Efficient AI Technologies for Humanity and Equity.
   colophon: © 2026 · Nanyang Technological University · Singapore
   links:
     - label: GitHub

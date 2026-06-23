@@ -1,47 +1,111 @@
-agenda:
-  - index: "01"
-    title: Self-evolving AI
-    summary: Learning systems that improve from feedback, interaction, and experience.
-  - index: "02"
-    title: Language agents
-    summary: Agents that reason, use tools, and act across realistic tasks.
-  - index: "03"
-    title: Small language models
-    summary: Compact models for controllable, efficient, and deployable intelligence.
-  - index: "04"
-    title: Responsible evaluation
-    summary: Evidence for capability, robustness, adaptation, and failure modes.
+# Research page content.
+#
+# Content editors usually update:
+# - statement: visible Research page opening copy and themes
+# - publications.items: papers, preprints, and artifacts
+# - projects.items: open-source projects, datasets, or systems
+#
+# Usually leave meta, screen_label, and aria labels unchanged unless the page
+# purpose or structure changes.
 
-areas:
-  - index: A
-    title: Self-Evolving AI
-    body: We study how AI systems can improve through interaction, feedback, and experience, including learning procedures that turn model behavior, tool use, and task outcomes into stronger future performance.
-    topics:
-      - Continual improvement
-      - Experiential learning
-      - Feedback-driven adaptation
-      - Self-refinement
-  - index: B
-    title: Language Agents
-    body: We build and evaluate agents that reason over language, use external tools, coordinate across steps or collaborators, and operate in realistic research, coding, and knowledge-work settings.
-    topics:
-      - Tool use
-      - Planning
-      - Multi-agent systems
-      - Long-horizon tasks
-  - index: C
-    title: Small Language Models
-    body: We investigate compact and specialized models that can reason, follow instructions, and serve as controllable components in larger AI systems, with attention to data, training, and deployment constraints.
-    topics:
-      - Efficient training
-      - Model specialization
-      - Distillation
-      - On-device AI
-  - index: D
-    title: Evaluation and Understanding
-    body: We design evaluation methods that reveal how systems reason, adapt, fail, and generalize, moving beyond leaderboard scores toward evidence that can guide scientific and engineering decisions.
-    topics:
-      - Behavioral evaluation
-      - Robustness
-      - Interpretability
-      - Reproducibility
+meta:
+  title: Research — BREATHE AI Lab at NTU
+  description: Research and publications from BREATHE AI Lab at Nanyang Technological University.
+
+statement:
+  screen_label: 01 Research · Statement
+  eyebrow: Research
+  title: Research
+  lead: We study AI systems that can learn from experience, reason through language, and act responsibly under real constraints.
+  body: BREATHE AI Lab works at the intersection of natural language processing, machine learning, and agentic systems. Our central question is how language models can move beyond static prediction toward systems that improve through interaction, use tools and feedback, remain efficient enough to deploy, and can be evaluated with evidence rather than impression.
+  closing: The public agenda is intentionally high level. It describes the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
+  themes:
+    - title: Self-evolving AI
+      body: Models and agents that adapt from feedback, trajectories, tool use, and experience.
+    - title: Language agents
+      body: Systems that plan, use tools, collaborate, and complete long-horizon tasks.
+    - title: Small language models
+      body: Compact models that remain capable, controllable, and useful under deployment constraints.
+    - title: Responsible evaluation
+      body: Measurements that expose capability, robustness, failure modes, and usefulness.
+
+publications:
+  screen_label: 02 Research · Publications
+  aria_label: Publications
+  eyebrow:
+  title: Publications
+  intro: Selected papers, preprints, and artifacts.
+  empty: Publications will be listed here as they are released.
+  filter_aria_label: Filter publications
+  filters: []
+  items:
+    - year: Preview
+      type: Agentic AI
+      title: "Learning to Improve: Self-Evolving Language Agents from Interaction Traces"
+      authors: Author One, Author Two, BREATHE AI Lab
+      venue: Preprint
+      summary: Work on agents that turn feedback, tool-use trajectories, and task outcomes into future improvements.
+      image:
+        src: assets/img/publications/example-agent.svg
+        alt: Abstract thumbnail for an agent learning loop
+        caption:
+      tags:
+        - agents
+        - eval
+      links:
+        - label: Paper
+          url: "#"
+          kind: pdf
+        - label: Code
+          url: "#"
+          kind: code
+        - label: Data
+          url: "#"
+          kind: data
+    - year: Preview
+      type: Efficient models
+      title: "Compact Language Models as Controllable Components for AI Systems"
+      authors: Author One, Author Two, BREATHE AI Lab
+      venue: Preprint
+      summary: Papers on efficient training, specialization, distillation, and deployment-aware language intelligence.
+      image:
+        src: assets/img/publications/example-slm.svg
+        alt: Abstract thumbnail for compact language models
+        caption:
+      tags:
+        - models
+      links:
+        - label: Paper
+          url: "#"
+          kind: pdf
+        - label: Project
+          url: "#"
+          kind: html
+    - year: Preview
+      type: Evaluation
+      title: "Beyond Static Benchmarks: Evaluating Adaptive AI Systems"
+      authors: Author One, Author Two, BREATHE AI Lab
+      venue: Preprint
+      summary: Evaluation work that measures adaptation, robustness, failure modes, and usefulness under changing conditions.
+      image:
+        src: assets/img/publications/example-eval.svg
+        alt: Abstract thumbnail for evaluation and analysis
+        caption:
+      tags:
+        - eval
+      links:
+        - label: Paper
+          url: "#"
+          kind: pdf
+        - label: Benchmark
+          url: "#"
+          kind: data
+
+projects:
+  screen_label: 04 Research · Open Source
+  aria_label: Open source projects
+  eyebrow: Open Source
+  title: Code, data, and systems
+  body: We maintain research software, datasets, evaluation tools, and project pages when releases are ready for the community.
+  empty: Public repositories and datasets will be added here after release.
+  items: []

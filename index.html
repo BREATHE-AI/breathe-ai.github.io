@@ -3,13 +3,13 @@ layout: default
 nav: home
 ---
 {% assign home = site.data.home %}
-{% assign page_data = site.data.pages.home %}
 {% assign ui = site.data.site.ui %}
+{% assign asset_version = site.data.site.asset_version %}
 
-<section class="hero" id="top" data-screen-label="{{ page_data.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
+<section class="hero" id="top" data-screen-label="{{ home.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
   <div class="hero__inner">
-    <img class="hero__mark" src="assets/logo/mark.svg" width="78" height="78" alt="" data-logo-role="mark" data-logo-default="assets/logo/mark.svg" data-logo-a="assets/logo/logo-a.svg" data-logo-b="assets/logo/logo-b.svg" data-logo-c="assets/logo/logo-c.svg" />
-    <h1 class="hero__title">{% assign title_words = home.title | split: ' ' %}{% for word in title_words %}{% if forloop.first %}<span class="gradient-text">{{ word }}</span>{% else %} {{ word }}{% endif %}{% endfor %}{% if home.title_suffix %} {{ home.title_suffix }}{% endif %}</h1>
+    <img class="hero__mark" src="{{ site.data.site.lab.logo }}?v={{ asset_version }}" width="78" height="78" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-a="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-b="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-c="{{ site.data.site.lab.logo }}?v={{ asset_version }}" />
+    <h1 class="hero__title group-name">{{ home.title }}{% if home.title_suffix %} {{ home.title_suffix }}{% endif %}</h1>
     {% if home.expanded_name %}<p class="hero__expand">{{ home.expanded_name }}</p>{% endif %}
     <p class="hero__lede">{{ home.lede }}</p>
     <p class="hero__text">{{ home.body }}</p>
@@ -20,17 +20,17 @@ nav: home
   </div>
 </section>
 
-<section class="section section--alt" id="news" data-screen-label="{{ page_data.screen_labels.news }}" aria-labelledby="news-heading">
+<section class="section section--alt" id="news" data-screen-label="{{ home.screen_labels.news }}" aria-labelledby="news-heading">
   <div class="news">
     <div class="news-grid">
       <div>
-        {% if home.news_intro.eyebrow %}<p class="eyebrow">{{ home.news_intro.eyebrow }}</p>{% endif %}
-        <h2 id="news-heading" class="h2">{{ home.news_intro.title }}</h2>
-        {% if home.news_intro.body %}<p>{{ home.news_intro.body }}</p>{% endif %}
+        {% if home.news.intro.eyebrow %}<p class="eyebrow">{{ home.news.intro.eyebrow }}</p>{% endif %}
+        <h2 id="news-heading" class="h2">{{ home.news.intro.title }}</h2>
+        {% if home.news.intro.body %}<p>{{ home.news.intro.body }}</p>{% endif %}
       </div>
       <div class="news-list" aria-live="polite">
-        {% if site.data.news.size > 0 %}
-          {% for item in site.data.news %}
+        {% if home.news.items.size > 0 %}
+          {% for item in home.news.items %}
             <article class="news-item">
               <time class="news-item__date">{{ item.date }}</time>
               <div>
@@ -47,7 +47,7 @@ nav: home
             </article>
           {% endfor %}
         {% else %}
-          <p class="empty-state">{{ home.news_empty }}</p>
+          <p class="empty-state">{{ home.news.empty }}</p>
         {% endif %}
       </div>
     </div>
@@ -55,7 +55,7 @@ nav: home
 </section>
 
 {% if home.recruiting.show %}
-  <section class="section" data-screen-label="{{ page_data.screen_labels.recruiting }}">
+  <section class="section" data-screen-label="{{ home.screen_labels.recruiting }}">
     <div class="recruiting">
       <div>
         {% if home.recruiting.eyebrow %}<p class="eyebrow eyebrow--accent">{{ home.recruiting.eyebrow }}</p>{% endif %}

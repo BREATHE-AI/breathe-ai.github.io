@@ -1,23 +1,85 @@
+# Home page content.
+#
+# Content editors usually update:
+# - title / expanded_name / lede / body: hero copy
+# - primary_action / secondary_action: hero buttons
+# - news.items: homepage news entries
+# - recruiting: homepage recruiting strip
+#
+# Usually leave meta and screen_labels unchanged unless the page purpose or
+# structure changes.
+
+meta:
+  title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
+  description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, efficient, and human-centered language technologies.
+
+screen_labels:
+  hero: 01 Home · Hero
+  news: 02 Home · News
+  recruiting: 03 Home · Recruiting
+
 status:
   show: false
   text: NTU Singapore
 eyebrow: Nanyang Technological University · Singapore
 title: BREATHE AI
 title_suffix:
-expanded_name: Building Responsible and Effective AI Technologies for Humanity and Equity
-lede: A research lab for language intelligence, responsible AI, and systems that learn from experience.
-body: We study self-evolving AI, language agents, and small language models at NTU Singapore.
+expanded_name: Building Responsible and Efficient AI Technologies for Humanity and Equity
+lede: Towards building truly capable intelligence.
+# body: 
+
 primary_action:
   label: Research
   url: research.html
 secondary_action:
   label: Join
   url: join.html
-news_intro:
-  eyebrow:
-  title: News
-  body:
-news_empty: News will be posted here as updates are ready for public release.
+
+news:
+  # Intro text shown on the left side of the News section.
+  intro:
+    eyebrow:
+    title: News
+    body:
+  # Fallback text when items is empty.
+  empty: News will be posted here as updates are ready for public release.
+  # Add one item per public update.
+  #
+  # Image fields are reserved for future/news-card layouts. If images are
+  # enabled later, prefer local files such as assets/img/news/example.png
+  # instead of external image URLs.
+  items:
+    - date: 2026
+      title: BREATHE AI Lab website preview is online
+      summary: Initial public preview for lab identity, people, research, and joining information.
+      image:
+        src:
+        alt:
+        caption:
+      links: []
+    - date: 2026
+      title: Research page drafted
+      summary: Public-facing research statement and publication structure prepared for review.
+      image:
+        src:
+        alt:
+        caption:
+      links:
+        - label: Research
+          url: research.html
+          kind: html
+    - date: 2026
+      title: Initial member profiles added
+      summary: Member cards and profile links added with placeholder photos.
+      image:
+        src:
+        alt:
+        caption:
+      links:
+        - label: People
+          url: people.html
+          kind: html
+
 recruiting:
   show: true
   eyebrow:

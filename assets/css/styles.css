@@ -45,6 +45,41 @@
 .nav-link.is-active { color: var(--text-strong); }
 .nav-link.is-active::after { transform: scaleX(1); }
 
+/* Home wordmark override requested for the current BREATHE AI title. */
+.group-name {
+  color: #000;
+  font-family: Optima, "Optima Regular", "Palatino Linotype", Palatino, serif;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.hero__title.group-name {
+  line-height: 1.1;
+  margin-bottom: .75em;
+}
+.hero__lede {
+  max-width: none;
+  text-wrap: nowrap;
+  white-space: nowrap;
+}
+.hero__expand {
+  white-space: nowrap;
+}
+.recruiting__title {
+  font-family: Optima, "Optima Regular", "Palatino Linotype", Palatino, serif;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+.recruiting__body {
+  max-width: none;
+  white-space: nowrap;
+}
+.site-footer__tagline {
+  max-width: none;
+  white-space: nowrap;
+}
+
 /* Align static Jekyll sections to the body grid at desktop widths. */
 @media (min-width: 1321px) {
   .site-footer {
@@ -109,48 +144,6 @@
   color: var(--text-muted);
   font-size: var(--text-body-sm);
   margin-bottom: .8rem;
-}
-
-/* Lightweight, removable type switcher. */
-.type-switcher {
-  align-items: center;
-  background: var(--surface);
-  border: var(--bw) solid var(--border-strong);
-  border-radius: var(--r-pill);
-  bottom: 16px;
-  box-shadow: var(--shadow);
-  display: flex;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  gap: 8px;
-  padding: 5px 6px 5px 12px;
-  position: fixed;
-  right: 16px;
-  z-index: 50;
-}
-.type-switcher__label {
-  color: var(--text-faint);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.type-switcher__options {
-  display: flex;
-  gap: 2px;
-}
-.type-switcher button {
-  background: transparent;
-  border: 0;
-  border-radius: var(--r-pill);
-  color: var(--text-body);
-  cursor: pointer;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  font-weight: var(--w-semibold);
-  padding: 5px 11px;
-}
-.type-switcher button[aria-pressed="true"] {
-  background: var(--ink);
-  color: #fff;
 }
 
 /* Logo options page stays data-driven but uses the same tokens. */
@@ -239,12 +232,8 @@
 
 @media (max-width: 760px) {
   .nav-toggle { display: inline-flex; }
-  .type-switcher {
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    justify-content: space-between;
-  }
-  .type-switcher__options { flex: 1; }
-  .type-switcher button { flex: 1; padding-inline: 8px; }
+  .hero__expand { white-space: normal; }
+  .hero__lede { font-size: 1.1rem; }
+  .recruiting__body { white-space: normal; }
+  .site-footer__tagline { white-space: normal; }
 }

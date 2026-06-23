@@ -6,17 +6,16 @@ The visual layout is intentionally kept separate from the editable content. Most
 
 ## Edit Content
 
-Start here:
+Start with the page you want to edit:
 
 | File | What to edit |
 |---|---|
-| `_data/site.yml` | Lab name, email, GitHub URL, homepage text, page intros, footer, join-page copy |
-| `_data/research.yml` | Homepage research agenda and research-area cards |
-| `_data/news.yml` | Homepage news items |
-| `_data/people.yml` | PI, students, researchers, collaborators, open-role cards |
-| `_data/positions.yml` | Join-page positions, statuses, deadlines, closed/open state |
-| `_data/projects.yml` | Research projects, datasets, repositories, software |
-| `_data/publications.yml` | Papers and artifacts |
+| `_data/home.yml` | Home hero, homepage news, and homepage recruiting strip |
+| `_data/research.yml` | Research statement, research themes, publications, and projects |
+| `_data/people.yml` | People page heading and member groups |
+| `_data/join.yml` | Join page intro, open roles, and application/contact copy |
+| `_data/site.yml` | Global lab name, email, GitHub URL, navigation, footer, and brand subtitle |
+| `_data/logo_options.yml` | Internal logo preview/review page copy |
 
 The page layouts live in `index.html`, `research.html`, `people.html`, and `join.html`. They should usually not need editing unless the layout itself changes.
 
@@ -47,5 +46,6 @@ This repo uses GitHub Pages' built-in Jekyll support. Do not add `.nojekyll`; th
 - Do not publish PI names, positions, deadlines, funding, or official NTU details until confirmed.
 - Keep placeholders honest: use "to be confirmed" instead of invented details.
 - Prefer clear research questions over buzzwords.
-- Keep the brand spelling as `BreatheAI`.
-- Update `_data/site.yml` first when changing global identity, email, GitHub, or footer text.
+- Keep the brand spelling as `BREATHE AI Lab`.
+- Do not keep legacy data files that are not rendered by the current templates.
+- Update `_data/site.yml` first when changing global identity, email, GitHub, navigation, or footer text.

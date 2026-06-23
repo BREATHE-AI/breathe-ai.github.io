@@ -1,48 +1,73 @@
-- name: Faculty
-  members:
-    - name: Wei Lu
-      initials: WL
-      image:
-        src: assets/img/people/placeholder.svg
-        alt: Wei Lu
-      role: Principal Investigator
-      focus:
-      links:
-        - label: Homepage
-          url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
-          kind: profile
-- name: PhD Students & Researchers
-  members:
-    - name: Ziming You
-      initials: ZY
-      image:
-        src: assets/img/people/placeholder.svg
-        alt: Ziming You
-      role: PhD Student
-      focus:
-      links:
-        - label: Google Scholar
-          url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-          kind: profile
-    - name: Xiaoyan Yu
-      initials: XY
-      image:
-        src: assets/img/people/placeholder.svg
-        alt: Xiaoyan Yu
-      role: Researcher
-      focus:
-      links:
-        - label: Google Scholar
-          url: https://scholar.google.com/citations?user=MgsexesAAAAJ&hl=zh-CN
-          kind: profile
-    - name: Xiyan Fu
-      initials: XF
-      image:
-        src: assets/img/people/placeholder.svg
-        alt: Xiyan Fu
-      role: Researcher
-      focus:
-      links:
-        - label: Google Scholar
-          url: https://scholar.google.com/citations?user=q1glETQAAAAJ&hl=en
-          kind: profile
+# People page content.
+#
+# Content editors usually update:
+# - header.title / header.body: visible page heading area
+# - members.groups: faculty, students, researchers, and collaborators
+#
+# Usually leave meta and screen_label unchanged unless the page purpose or
+# structure changes.
+
+meta:
+  title: People — BREATHE AI Lab at NTU
+  description: BREATHE AI Lab members and collaborators at Nanyang Technological University.
+
+header:
+  screen_label: 01 People · Header
+  eyebrow:
+  title: People
+  body:
+  join_label:
+  join_url:
+
+members:
+  screen_label: 02 People · Members
+  heading: Lab members
+  groups:
+    - name: Faculty
+      members:
+        - name: Wei Lu
+          initials: WL
+          image:
+            src: assets/img/people/placeholder.svg
+            alt: Wei Lu
+          role: Principal Investigator
+          focus:
+          links:
+            - label: Homepage
+              url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
+              kind: profile
+    - name: PhD Students & Researchers
+      members:
+        - name: Ziming You
+          initials: ZY
+          image:
+            src: assets/img/people/placeholder.svg
+            alt: Ziming You
+          role: PhD Student
+          focus:
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
+              kind: profile
+        - name: Xiaoyan Yu
+          initials: XY
+          image:
+            src: assets/img/people/placeholder.svg
+            alt: Xiaoyan Yu
+          role: Researcher
+          focus:
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=MgsexesAAAAJ&hl=zh-CN
+              kind: profile
+        - name: Xiyan Fu
+          initials: XF
+          image:
+            src: assets/img/people/placeholder.svg
+            alt: Xiyan Fu
+          role: Researcher
+          focus:
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=q1glETQAAAAJ&hl=en
+              kind: profile

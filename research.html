@@ -2,9 +2,9 @@
 layout: default
 nav: research
 ---
-{% assign page_data = site.data.pages.research %}
-{% assign publications = site.data.publications %}
-{% assign projects = site.data.projects %}
+{% assign page_data = site.data.research %}
+{% assign publications = page_data.publications.items %}
+{% assign projects = page_data.projects.items %}
 {% assign ui = site.data.site.ui %}
 
 <section class="section section--lg" id="research" data-screen-label="{{ page_data.statement.screen_label }}" aria-labelledby="research-heading">

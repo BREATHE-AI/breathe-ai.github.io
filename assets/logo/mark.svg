@@ -1,10 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="BREATHE AI Lab mark">
   <defs>
-    <linearGradient id="breatheGrad" gradientUnits="userSpaceOnUse" x1="9" y1="24" x2="55" y2="40">
-      <stop offset="0" stop-color="#2563EB"></stop>
-      <stop offset="0.52" stop-color="#6E54C8"></stop>
-      <stop offset="1" stop-color="#E85C2B"></stop>
+    <linearGradient id="breatheMarkGrad" gradientUnits="userSpaceOnUse" x1="7" y1="26" x2="57" y2="38">
+      <stop offset="0" stop-color="#08B9F2"></stop>
+      <stop offset="0.28" stop-color="#0878F6"></stop>
+      <stop offset="0.45" stop-color="#1260EF"></stop>
+      <stop offset="0.51" stop-color="#6D5BC7"></stop>
+      <stop offset="0.57" stop-color="#F04E26"></stop>
+      <stop offset="0.76" stop-color="#FF7600"></stop>
+      <stop offset="1" stop-color="#FF2E00"></stop>
     </linearGradient>
+    <radialGradient id="breatheCenterGlow" cx="32" cy="32" r="9" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8D62BC" stop-opacity=".7"></stop>
+      <stop offset=".45" stop-color="#F0522C" stop-opacity=".28"></stop>
+      <stop offset="1" stop-color="#F0522C" stop-opacity="0"></stop>
+    </radialGradient>
   </defs>
-  <path d="M32,32 C24,20 12,22 12,32 C12,42 24,44 32,32 C40,20 52,22 52,32 C52,42 40,44 32,32" fill="none" stroke="url(#breatheGrad)" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path d="M32,32 C23.3,17.4 9.2,18.3 9.2,32 C9.2,45.7 23.3,46.6 32,32 C40.7,17.4 54.8,18.3 54.8,32 C54.8,45.7 40.7,46.6 32,32Z" fill="none" stroke="url(#breatheMarkGrad)" stroke-width="10.9" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="32" cy="32" r="8.4" fill="url(#breatheCenterGlow)"></circle>
 </svg>

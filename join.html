@@ -2,8 +2,8 @@
 layout: default
 nav: join
 ---
-{% assign page_data = site.data.pages.join %}
-{% assign positions = site.data.positions %}
+{% assign page_data = site.data.join %}
+{% assign positions = page_data.positions.items %}
 {% assign ui = site.data.site.ui %}
 
 <section class="section section--lg" style="padding-bottom:2.5rem" data-screen-label="{{ page_data.intro.screen_label }}">

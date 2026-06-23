@@ -1,0 +1,45 @@
+# Join page content.
+#
+# Content editors usually update:
+# - intro.body / intro.note: visible recruitment copy
+# - positions.items: open roles shown on the Join page
+# - apply.block: contact/application instructions
+#
+# Usually leave meta and screen_label unchanged unless the page purpose or
+# structure changes.
+
+meta:
+  title: Join — BREATHE AI Lab at NTU
+  description: Opportunities to work with BREATHE AI Lab at NTU as a PhD student, research fellow, research associate, research engineer, intern, or visiting student.
+
+intro:
+  screen_label: 01 Join · Intro
+  eyebrow:
+  title: Join
+  body: We are building a new team at NTU and welcome enquiries from self-motivated PhD students, researchers, engineers, interns, and visiting students.
+  note: If you are interested in joining the group, please contact us with a short introduction, CV, and links to relevant work.
+
+positions:
+  screen_label: 02 Join · Positions
+  eyebrow:
+  title: Open roles
+  body:
+  empty: Confirmed openings will appear here.
+  items:
+    - title: PhD Student
+    - title: Research Fellow / Postdoctoral Researcher
+    - title: Research Associate / Research Assistant
+    - title: Research Engineer / Software Engineer
+    - title: Research Intern / Visiting Student
+
+apply:
+  screen_label: 04 Join · How to apply
+  eyebrow: How to apply
+  email_subject: '[BREATHE AI Enquiry]'
+  block:
+    eyebrow: By email
+    title: Contact
+    paragraphs:
+      - 'Please include your intended role, a CV, a brief statement of research interests, and links to papers, code, or project pages if available.'
+      - 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
+    action_label: Email BREATHE AI

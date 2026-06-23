@@ -2,22 +2,24 @@
 layout: default
 nav: people
 ---
-{% assign page_data = site.data.pages.people %}
+{% assign page_data = site.data.people %}
 {% assign ui = site.data.site.ui %}
 
 <div class="page-header page-header--people" data-screen-label="{{ page_data.header.screen_label }}">
   {% if page_data.header.eyebrow %}<p class="eyebrow">{{ page_data.header.eyebrow }}</p>{% endif %}
   <h1 class="title">{{ page_data.header.title }}</h1>
-  <p class="page-header__intro">
-    {% if page_data.header.body %}{{ page_data.header.body }} {% endif %}
-    {% if page_data.header.join_label %}<a class="text-link" href="{{ page_data.header.join_url }}">{{ page_data.header.join_label }}</a>.{% endif %}
-  </p>
+  {% if page_data.header.body or page_data.header.join_label %}
+    <p class="page-header__intro">
+      {% if page_data.header.body %}{{ page_data.header.body }} {% endif %}
+      {% if page_data.header.join_label %}<a class="text-link" href="{{ page_data.header.join_url }}">{{ page_data.header.join_label }}</a>.{% endif %}
+    </p>
+  {% endif %}
 </div>
 
 <section class="section" style="padding-top:1.5rem" data-screen-label="{{ page_data.members.screen_label }}" aria-labelledby="people-heading">
   <h2 id="people-heading" class="visually-hidden">{{ page_data.members.heading }}</h2>
   <div class="people-groups" aria-live="polite">
-    {% for group in site.data.people %}
+    {% for group in page_data.members.groups %}
       {% if group.members.size > 0 %}
         <section class="people-group">
           <h3 class="people-group__head">{{ group.name }}</h3>
