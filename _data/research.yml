@@ -21,9 +21,9 @@ statement:
   screen_label: 01 Research · Statement
   eyebrow: Research
   title: Research
-  lead: We study AI systems that can learn from experience, reason through language, and act responsibly under real constraints.
-  body: BREATHE AI Lab works at the intersection of natural language processing, machine learning, and agentic systems. Our central question is how language models can move beyond static prediction toward systems that improve through interaction, use tools and feedback, remain efficient enough to deploy, and can be evaluated with evidence rather than impression.
-  closing: The public agenda is intentionally high level. It describes the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
+  lead: We study AI systems that learn from experience, reason in language, and stay both efficient and responsible under real constraints.
+  body: BREATHE AI Lab's central question is how language models can move beyond static prediction toward systems that improve through interaction with tools and feedback, stay efficient enough to deploy at scale, and earn trust through evidence rather than impression.
+
   themes_aria_label: Research themes
   themes:
     - title: Self-evolving AI
