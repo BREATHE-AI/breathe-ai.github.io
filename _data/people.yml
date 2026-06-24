@@ -36,9 +36,6 @@ members:
             - degree: Appointment
               institution: Nanyang Technological University
               department: College of Computing & Data Science
-            - degree: Previous appointment
-              institution: Singapore University of Technology and Design
-              department: ISTD Pillar
             - degree: Ph.D. and M.Sc.
               institution: Singapore-MIT Alliance
             - degree: B.Comp.
@@ -144,6 +141,7 @@ members:
           education:
             - degree: B.Sc. in Statistics
               institution: University of Science and Technology of China
+              department: Special Class for the Gifted Young
               note: 2026
           links:
             - label: GitHub
