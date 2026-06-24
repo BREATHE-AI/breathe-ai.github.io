@@ -76,10 +76,18 @@ members:
               institution: University of Oxford
         - name: Wuqiang Zheng
           initials: WZ
+          image:
+            src: assets/img/people/wuqiang-zheng.jpg
+            alt: Wuqiang Zheng
           role: PhD Student
           education:
-            - degree: Affiliation
+            - degree: B.S. in Data Science
               institution: University of Science and Technology of China
+          links:
+            - label: Homepage
+              url: https://zhengwwwq.github.io/
+            - label: GitHub
+              url: https://github.com/ZhengWwwq
     - name: Research Staff
       members:
         - name: Xiyan Fu

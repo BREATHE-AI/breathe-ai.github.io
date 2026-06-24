@@ -15,10 +15,10 @@ lab:
 asset_version: 20260624-hero-nowrap
 
 meta:
-  default_title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
-  default_description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, efficient, and human-centered language technologies.
+  default_title: BREATHE AI Lab at NTU | Towards building truly capable intelligence
+  default_description: BREATHE AI Lab at NTU builds responsible and efficient AI technologies for humanity and equity, with research on language models, efficient AI, and agentic systems.
   og_title: BREATHE AI Lab at NTU
-  og_description: NLP and AI research on self-evolving systems, language agents, efficient models, and responsible evaluation.
+  og_description: Towards building truly capable intelligence through responsible, efficient, and evidence-driven AI research.
 
 navigation:
   - id: home

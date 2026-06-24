@@ -13,8 +13,8 @@
 # - recruiting.show: set false to hide the recruiting strip.
 
 meta:
-  title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
-  description: BREATHE AI Lab at NTU is an NLP and AI research lab building responsible, efficient, and human-centered language technologies.
+  title: BREATHE AI Lab at NTU | Towards building truly capable intelligence
+  description: BREATHE AI Lab at NTU builds responsible and efficient AI technologies for humanity and equity, with research on language models, efficient AI, and agentic systems.
 
 screen_labels:
   hero: 01 Home · Hero
