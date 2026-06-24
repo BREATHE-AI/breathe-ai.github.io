@@ -9,7 +9,7 @@ lab:
   name: BREATHE AI Lab
   short_name: BREATHE AI
   email: wei.lu@ntu.edu.sg
-  github: https://github.com/breatheai-lab
+  github: https://github.com/BREATHE-AI
   logo: assets/logo/breathe-infinity.svg
 
 asset_version: 20260624-data-cleanup
