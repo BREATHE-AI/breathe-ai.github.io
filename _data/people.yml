@@ -48,26 +48,6 @@ members:
               url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
     - name: PhD Students
       members:
-        - name: Ziming You
-          initials: ZY
-          image:
-            src: assets/img/people/ziming-you.jpg
-            alt: Ziming You
-          role: PhD Student
-          education:
-            - degree: M.Eng. in Software Engineering
-              institution: Peking University
-              note: 2025
-            - degree: B.E. in Computer Science and Technology
-              institution: Beihang University
-              note: 2022
-          links:
-            - label: Homepage
-              url: https://zimingyou01.github.io/
-            - label: GitHub
-              url: https://github.com/zimingyou01
-            - label: Google Scholar
-              url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
         - name: Yunzhou Bai
           initials: YB
           role: PhD Student
@@ -88,6 +68,26 @@ members:
               url: https://zhengwwwq.github.io/
             - label: GitHub
               url: https://github.com/ZhengWwwq
+        - name: Ziming You
+          initials: ZY
+          image:
+            src: assets/img/people/ziming-you.jpg
+            alt: Ziming You
+          role: PhD Student
+          education:
+            - degree: M.Eng. in Software Engineering
+              institution: Peking University
+              note: 2025
+            - degree: B.E. in Computer Science and Technology
+              institution: Beihang University
+              note: 2022
+          links:
+            - label: Homepage
+              url: https://zimingyou01.github.io/
+            - label: GitHub
+              url: https://github.com/zimingyou01
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
     - name: Research Staff
       members:
         - name: Xiyan Fu
