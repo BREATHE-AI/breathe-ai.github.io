@@ -40,7 +40,6 @@ nav: people
                   <h3 class="person-card__name">{{ person.name }}</h3>
                   {% if person.role %}<p class="person-card__role">{{ person.role }}</p>{% endif %}
                 </div>
-                {% if person.focus %}<p class="person-card__focus">{{ person.focus }}</p>{% endif %}
                 {% if person.education.size > 0 %}
                   <ul class="edu-list">
                     {% for education in person.education %}

@@ -1,12 +1,17 @@
 # Research page content.
 #
-# Content editors usually update:
-# - statement: visible Research page opening copy and themes
-# - publications.items: papers, preprints, and artifacts
-# - projects.items: open-source projects, datasets, or systems
+# Edit this file to maintain all visible Research page text: the research
+# statement, theme list, publication list, and Google Scholar callout.
 #
-# Usually leave meta, screen_label, and aria labels unchanged unless the page
-# purpose or structure changes.
+# Publications are text-only by default.
+# - Optional item image is supported between authors and summary:
+#     image:
+#       src: assets/img/publications/example.png
+#       alt: Short description of the figure
+#   Use this sparingly. Prefer a clean figure-only crop without captions,
+#   paragraphs, or dense text so the list does not become visually overloaded.
+# - Each link needs only label + url. External arrows are added automatically
+#   for http(s) URLs.
 
 meta:
   title: Research — BREATHE AI Lab at NTU
@@ -19,6 +24,7 @@ statement:
   lead: We study AI systems that can learn from experience, reason through language, and act responsibly under real constraints.
   body: BREATHE AI Lab works at the intersection of natural language processing, machine learning, and agentic systems. Our central question is how language models can move beyond static prediction toward systems that improve through interaction, use tools and feedback, remain efficient enough to deploy, and can be evaluated with evidence rather than impression.
   closing: The public agenda is intentionally high level. It describes the scientific shape of the lab while leaving room for concrete projects, datasets, and methods to evolve with the team.
+  themes_aria_label: Research themes
   themes:
     - title: Self-evolving AI
       body: Models and agents that adapt from feedback, trajectories, tool use, and experience.
@@ -32,80 +38,40 @@ statement:
 publications:
   screen_label: 02 Research · Publications
   aria_label: Publications
-  eyebrow:
   title: Publications
   intro: Selected papers, preprints, and artifacts.
   empty: Publications will be listed here as they are released.
-  filter_aria_label: Filter publications
-  filters: []
+  more_link:
+    label: More publications on
+    label_accent: Google Scholar
+    url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
+    summary: View the full publication record, citation metrics, and newly released papers.
   items:
-    - year: Preprint
-      type: Agentic AI
-      title: "Learning to Improve: Self-Evolving Language Agents from Interaction Traces"
-      authors: Author One, Author Two, BREATHE AI Lab
-      venue: Preprint
-      summary: Work on agents that turn feedback, tool-use trajectories, and task outcomes into future improvements.
-      image:
-        src: assets/img/publications/example-agent.svg
-        alt: Abstract thumbnail for an agent learning loop
-        caption:
-      tags:
-        - agents
-        - eval
+    - time: Sep 2025
+      title: "Difficulty-Diversity Collaborative Filtering for Data-Efficient LLM Fine-Tuning"
+      authors: LP Hoang, W Zhang, W Lu
+      venue: ICLR 2026
+      summary: Data-efficient fine-tuning work that selects training signals by coordinating example difficulty and diversity for large language models.
       links:
         - label: Paper
-          url: "#"
-          kind: pdf
+          url: https://openreview.net/pdf?id=n9mXlqD2SJ
         - label: Code
-          url: "#"
-          kind: code
-        - label: Data
-          url: "#"
-          kind: data
-    - year: Preprint
-      type: Efficient models
-      title: "Compact Language Models as Controllable Components for AI Systems"
-      authors: Author One, Author Two, BREATHE AI Lab
-      venue: Preprint
-      summary: Efficient training, specialization, distillation, and deployment-aware language intelligence.
-      image:
-        src: assets/img/publications/example-slm.svg
-        alt: Abstract thumbnail for compact language models
-        caption:
-      tags:
-        - models
+          url: https://github.com/iNLP-Lab/DDCF
+    - time: Oct 2025
+      title: "PEAR: Phase Entropy Aware Reward for Efficient Reasoning"
+      authors: C Huang, W Lu, W Zhang
+      venue: ICLR 2026
+      summary: Phase-aware reward design for reducing unnecessary reasoning length while preserving strong performance across reasoning benchmarks.
       links:
         - label: Paper
-          url: "#"
-          kind: pdf
-        - label: Project
-          url: "#"
-          kind: html
-    - year: Preprint
-      type: Evaluation
-      title: "Beyond Static Benchmarks: Evaluating Adaptive AI Systems"
-      authors: Author One, Author Two, BREATHE AI Lab
-      venue: Preprint
-      summary: Evaluation work that measures adaptation, robustness, failure modes, and usefulness under changing conditions.
-      image:
-        src: assets/img/publications/example-eval.svg
-        alt: Abstract thumbnail for evaluation and analysis
-        caption:
-      tags:
-        - eval
+          url: https://arxiv.org/pdf/2510.08026
+        - label: Code
+          url: https://github.com/iNLP-Lab/PEAR
+    - time: Jun 2025
+      title: "Through the Valley: Path to Effective Long CoT Training for Small Language Models"
+      authors: R Luo, J Li, C Huang, W Lu
+      venue: EMNLP 2025
+      summary: Analysis and training guidance for long chain-of-thought supervision in small language models, including when long CoT can degrade performance.
       links:
         - label: Paper
-          url: "#"
-          kind: pdf
-        - label: Benchmark
-          url: "#"
-          kind: data
-
-projects:
-  screen_label: 04 Research · Open Source
-  aria_label: Open source projects
-  eyebrow: Open Source
-  title: Code, data, and systems
-  body: We maintain research software, datasets, evaluation tools, and project pages when releases are ready for the community.
-  empty: Public repositories and datasets will be added here after release.
-  items: []
+          url: https://arxiv.org/pdf/2506.07712

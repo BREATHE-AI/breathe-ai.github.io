@@ -35,14 +35,14 @@
   --text-hero:     clamp(3.1rem, 8vw, 6rem);      /* large display heads */
   --text-title:    clamp(2.4rem, 5.4vw, 3.9rem);  /* page titles: People / Research / Join */
   --text-h2:       clamp(1.85rem, 3.6vw, 2.7rem); /* section heads */
-  --text-h3:       1.3125rem;                     /* 21px — card / item titles */
-  --text-h4:       1.0625rem;                     /* 17px */
+  --text-h3:       1.5rem;                        /* 24px — card / item titles */
+  --text-h4:       1.1875rem;                     /* 19px */
   --text-lede:     clamp(1.2rem, 1.9vw, 1.5rem);  /* opening statements (smaller than wordmark) */
-  --text-body-lg:  1.125rem;                      /* 18px */
-  --text-body:     1rem;                          /* 16px */
-  --text-body-sm:  0.9375rem;                     /* 15px */
-  --text-caption:  0.8125rem;                     /* 13px */
-  --text-eyebrow:  0.75rem;                        /* 12px — mono labels */
+  --text-body-lg:  1.25rem;                       /* 20px */
+  --text-body:     1.125rem;                      /* 18px */
+  --text-body-sm:  1.0625rem;                     /* 17px */
+  --text-caption:  0.9375rem;                     /* 15px */
+  --text-eyebrow:  0.875rem;                      /* 14px — mono labels */
 
   /* ---- Line heights ---- */
   --lh-wordmark: 1.04; /* @kind other */

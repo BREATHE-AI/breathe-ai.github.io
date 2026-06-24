@@ -28,7 +28,7 @@
 
     if (themeToggle) {
       const isDark = theme === 'dark';
-      const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      const label = isDark ? themeToggle.dataset.themeLabelLight : themeToggle.dataset.themeLabelDark;
       themeToggle.setAttribute('aria-pressed', String(isDark));
       themeToggle.setAttribute('aria-label', label);
       themeToggle.setAttribute('title', label);
@@ -43,6 +43,33 @@
       const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
       setTheme(nextTheme, true);
     });
+  }
+
+  // News scroll reveal
+  const revealItems = Array.prototype.slice.call(document.querySelectorAll('.news-item--reveal'));
+  if (revealItems.length) {
+    revealItems.forEach(function (item, index) {
+      item.style.transitionDelay = (index * 90) + 'ms';
+    });
+
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.06, rootMargin: '0px 0px -24px 0px' });
+
+      revealItems.forEach(function (item) {
+        revealObserver.observe(item);
+      });
+    } else {
+      revealItems.forEach(function (item) {
+        item.classList.add('is-visible');
+      });
+    }
   }
 
   // Active nav link by filename
@@ -68,56 +95,6 @@
         toggle.setAttribute('aria-expanded', 'false');
         nav.classList.remove('is-open');
       });
-    });
-  }
-
-  // Publication filters
-  const publicationList = document.querySelector('[data-pub-list]');
-  const filterButtons = document.querySelectorAll('.filter-button[data-filter]');
-  if (publicationList && filterButtons.length) {
-    filterButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        const filter = button.getAttribute('data-filter') || 'all';
-        filterButtons.forEach(function (item) {
-          item.classList.toggle('is-active', item === button);
-        });
-        publicationList.querySelectorAll('.pub-item, .publication-item').forEach(function (item) {
-          const tags = (item.getAttribute('data-tags') || '').split(/\s+/);
-          item.hidden = filter !== 'all' && tags.indexOf(filter) === -1;
-        });
-      });
-    });
-  }
-
-  // Logo variant switcher. Works on localhost and GitHub Pages:
-  // ?logo=a, ?logo=b, ?logo=c
-  const logoMap = {
-    a: 'assets/logo/breathe_infinity_mark_realistic.svg',
-    b: 'assets/logo/breathe_infinity_mark_realistic.svg',
-    c: 'assets/logo/breathe_infinity_mark_realistic.svg'
-  };
-  const params = new URLSearchParams(window.location.search);
-  const requestedLogo = (params.get('logo') || '').toLowerCase();
-  const logoVariant = Object.prototype.hasOwnProperty.call(logoMap, requestedLogo) ? requestedLogo : '';
-  if (logoVariant) document.documentElement.setAttribute('data-logo-variant', logoVariant);
-
-  document.querySelectorAll('[data-logo-role="mark"], [data-logo-role="footer-mark"]').forEach(function (node) {
-    const src = node.getAttribute('data-logo-' + logoVariant) || logoMap[logoVariant] || node.getAttribute('data-logo-default');
-    if (src) node.setAttribute('src', src);
-  });
-
-  const favicon = document.querySelector('[data-logo-role="favicon"]');
-  if (favicon && logoVariant) favicon.setAttribute('href', logoMap[logoVariant]);
-
-  if (logoVariant) {
-    document.querySelectorAll('a[href]').forEach(function (link) {
-      const href = link.getAttribute('href');
-      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) return;
-      if (!/\.html($|[?#])/.test(href) && href !== './' && href !== '/') return;
-      const url = new URL(href, window.location.href);
-      if (url.searchParams.has('logo')) return;
-      url.searchParams.set('logo', logoVariant);
-      link.setAttribute('href', url.pathname.split('/').pop() + url.search + url.hash);
     });
   }
 

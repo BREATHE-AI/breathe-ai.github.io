@@ -4,7 +4,6 @@ nav: research
 ---
 {% assign page_data = site.data.research %}
 {% assign publications = page_data.publications.items %}
-{% assign projects = page_data.projects.items %}
 {% assign ui = site.data.site.ui %}
 
 <section class="section section--lg" id="research" data-screen-label="{{ page_data.statement.screen_label }}" aria-labelledby="research-heading">
@@ -15,9 +14,9 @@ nav: research
       <p class="research-lead">{{ page_data.statement.lead }}</p>
     </div>
     <div class="research-body">
-      <p>{{ page_data.statement.body }}</p>
-      {% if page_data.statement.closing %}<p>{{ page_data.statement.closing }}</p>{% endif %}
-      <div class="theme-list" aria-label="Research themes">
+      <p>{{ page_data.statement.body | replace: 'BREATHE AI', '<span class="wordmark wordmark--inline">BREATHE AI</span>' }}</p>
+      {% if page_data.statement.closing %}<p>{{ page_data.statement.closing | replace: 'BREATHE AI', '<span class="wordmark wordmark--inline">BREATHE AI</span>' }}</p>{% endif %}
+      <div class="theme-list" aria-label="{{ page_data.statement.themes_aria_label }}">
         {% for theme in page_data.statement.themes %}
           <article class="theme-item">
             <h3>{{ theme.title }}</h3>
@@ -38,28 +37,22 @@ nav: research
     <div class="pub-list" data-pub-list aria-live="polite">
       {% if publications.size > 0 %}
         {% for p in publications %}
-          <article class="pub-item{% unless p.image.src %} pub-item--no-thumb{% endunless %}" data-tags="{{ p.tags | join: ' ' }}">
-            {% if p.image.src %}
-              <figure class="pub-thumb">
-                <img src="{{ p.image.src }}" alt="{{ p.image.alt | default: p.title }}" />
-              </figure>
-            {% endif %}
+          <article class="pub-item">
             <div>
               <div class="pub-topline">
-                {% if p.year %}<span>{{ p.year }}</span>{% endif %}
-                {% if p.year and p.type %}<span class="dot"></span>{% endif %}
-                {% if p.type %}<span>{{ p.type }}</span>{% endif %}
+                {% assign pub_time = p.time | default: p.year %}
+                {% if pub_time %}<span>{{ pub_time }}</span>{% endif %}
+                {% if pub_time and p.venue %}<span class="dot"></span>{% endif %}
+                {% if p.venue %}<span>{{ p.venue }}</span>{% endif %}
               </div>
               <h3 class="pub-title">{{ p.title }}</h3>
-              <p class="pub-authors">{{ p.authors }} · {{ p.venue }}</p>
-              <p class="pub-summary">{{ p.summary }}</p>
-              {% if p.tags.size > 0 %}
-                <div class="pub-tags">
-                  {% for tag in p.tags %}
-                    <span class="tag">{{ tag }}</span>
-                  {% endfor %}
-                </div>
+              <p class="pub-authors">{{ p.authors }}</p>
+              {% if p.image.src %}
+                <figure class="pub-thumb">
+                  <img src="{{ p.image.src }}?v={{ site.data.site.asset_version }}" alt="{{ p.image.alt | default: p.title }}" loading="lazy" />
+                </figure>
               {% endif %}
+              <p class="pub-summary">{{ p.summary }}</p>
               {% if p.links.size > 0 %}
                 <div class="link-row">
                   {% for link in p.links %}
@@ -70,46 +63,15 @@ nav: research
             </div>
           </article>
         {% endfor %}
+        {% if page_data.publications.more_link.url %}
+          <a class="pub-more" href="{{ page_data.publications.more_link.url }}" target="_blank" rel="noreferrer">
+            <span>{{ page_data.publications.more_link.label }} <span class="pub-more__accent">{{ page_data.publications.more_link.label_accent | default: page_data.publications.more_link.label }} {{ ui.labels.external_suffix }}</span></span>
+            {% if page_data.publications.more_link.summary %}<small>{{ page_data.publications.more_link.summary }}</small>{% endif %}
+          </a>
+        {% endif %}
       {% else %}
         <p class="empty-state">{{ page_data.publications.empty }}</p>
       {% endif %}
     </div>
   </div>
 </section>
-
-{% if projects.size > 0 %}
-  <hr class="divider" />
-
-  <!-- Open source -->
-  <section class="section" id="projects" data-screen-label="{{ page_data.projects.screen_label }}" aria-labelledby="proj-heading">
-  <div class="pub-section">
-  <aside class="pub-aside">
-    <p class="eyebrow">{{ page_data.projects.eyebrow }}</p>
-    <h2 id="proj-heading" class="h2">{{ page_data.projects.title }}</h2>
-    <p>{{ page_data.projects.body }}</p>
-  </aside>
-  <div class="project-list" aria-live="polite">
-      {% for project in projects %}
-        <article class="project-item{% if project.status == 'Active' %} is-active{% endif %}">
-          <span class="project-status">{{ project.status }}</span>
-          <h3>{{ project.name }}</h3>
-          {% if project.image.src %}
-            <figure class="content-figure">
-              <img src="{{ project.image.src }}" alt="{{ project.image.alt | default: project.name }}" />
-              {% if project.image.caption %}<figcaption>{{ project.image.caption }}</figcaption>{% endif %}
-            </figure>
-          {% endif %}
-          <p>{{ project.description }}</p>
-          {% if project.links.size > 0 %}
-            <div class="link-row">
-              {% for link in project.links %}
-                <a href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
-              {% endfor %}
-            </div>
-          {% endif %}
-        </article>
-      {% endfor %}
-  </div>
-  </div>
-</section>
-{% endif %}

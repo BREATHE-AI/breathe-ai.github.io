@@ -1,12 +1,10 @@
 # Join page content.
 #
-# Content editors usually update:
-# - intro.body / intro.note: visible recruitment copy
-# - positions.items: open roles shown on the Join page
-# - apply.block: contact/application instructions
+# Edit this file to maintain all visible Join page text: intro copy, open-role
+# labels, and application/contact instructions.
 #
-# Usually leave meta and screen_label unchanged unless the page purpose or
-# structure changes.
+# Optional contact avatar:
+# - Add apply.block.avatar.src and alt to replace initials with a portrait.
 
 meta:
   title: Join — BREATHE AI Lab at NTU
@@ -14,17 +12,12 @@ meta:
 
 intro:
   screen_label: 01 Join · Intro
-  eyebrow:
   title: Join
   body: We are building a new team at NTU and welcome enquiries from self-motivated PhD students, researchers, engineers, interns, and visiting students.
-  note: If you are interested in joining the group, please email Prof. Lu directly with a short introduction, your CV, a brief statement of research interests, and links to papers, code, or project pages if available.
 
 positions:
   screen_label: 02 Join · Positions
-  eyebrow:
   title: Open roles
-  body:
-  empty: Confirmed openings will appear here.
   items:
     - title: PhD Student
     - title: Research Fellow / Postdoctoral Researcher
@@ -34,7 +27,6 @@ positions:
 
 apply:
   screen_label: 04 Join · How to apply
-  eyebrow: How to apply
   email_subject: '[BREATHE AI Enquiry]'
   block:
     eyebrow: By email
@@ -42,9 +34,6 @@ apply:
     pi_name: Prof. Wei Lu
     pi_role: Principal Investigator
     initials: WL
-    avatar:
-      src:
-      alt: Prof. Wei Lu
-    paragraphs:
-      - 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
-    action_label: Email Prof. Wei Lu
+    note: Please send a short introduction, your CV, a brief statement of research interests, and links to papers, code, or project pages if available.
+    subject_hint: 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
+    email_obfuscated: wei.lu [AT] ntu.edu.sg

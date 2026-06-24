@@ -25,7 +25,7 @@
   <meta property="og:title" content="{{ page.og_title | default: data.meta.og_title | escape }}" />
   <meta property="og:description" content="{{ page.og_description | default: data.meta.og_description | escape }}" />
   <meta property="og:type" content="website" />
-  <link id="site-favicon" rel="icon" href="{{ data.lab.logo }}?v={{ data.asset_version }}" type="image/svg+xml" data-logo-role="favicon" data-logo-default="{{ data.lab.logo }}?v={{ data.asset_version }}" />
+  <link id="site-favicon" rel="icon" href="{{ data.lab.logo }}?v={{ data.asset_version }}" type="image/svg+xml" />
   <title>{{ title }}</title>
   <link rel="stylesheet" href="assets/css/styles.css?v={{ data.asset_version }}" />
 </head>

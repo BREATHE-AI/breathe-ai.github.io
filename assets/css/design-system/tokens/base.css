@@ -44,6 +44,12 @@ img, svg { display: block; max-width: 100%; }
   color: var(--text-strong);
   margin: 0;
 }
+.wordmark--inline {
+  color: inherit;
+  display: inline;
+  font-size: inherit;
+  white-space: nowrap;
+}
 
 /* ============================================================
    Semantic typography

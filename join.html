@@ -34,7 +34,9 @@ nav: join
     <div class="apply-block">
       <p class="eyebrow eyebrow--accent">{{ page_data.apply.block.eyebrow }}</p>
       <h3 style="margin-top:.7rem">{{ page_data.apply.block.title }}</h3>
-      <div class="contact-pi">
+      {% if page_data.apply.block.note %}<p style="margin-top:1rem">{{ page_data.apply.block.note }}</p>{% endif %}
+      {% if page_data.apply.block.subject_hint %}<p class="caption" style="margin-top:.5rem">{{ page_data.apply.block.subject_hint | replace: 'BREATHE AI', '<span class="wordmark wordmark--inline">BREATHE AI</span>' }}</p>{% endif %}
+      <div class="contact-pi contact-pi--footer">
         <span class="contact-pi__avatar">
           {% if page_data.apply.block.avatar.src %}
             <img src="{{ page_data.apply.block.avatar.src }}" alt="{{ page_data.apply.block.avatar.alt | default: page_data.apply.block.pi_name }}" />
@@ -42,16 +44,19 @@ nav: join
             {{ page_data.apply.block.initials }}
           {% endif %}
         </span>
-        <span>
-          <p class="contact-pi__name">{{ page_data.apply.block.pi_name }}</p>
-          <p class="contact-pi__role">{{ page_data.apply.block.pi_role }}</p>
-        </span>
+        <div>
+          <p class="contact-pi__name">
+            {{ page_data.apply.block.pi_name }}
+            <span class="contact-pi__role-inline">· {{ page_data.apply.block.pi_role }}</span>
+          </p>
+          {% if page_data.apply.block.email_obfuscated %}
+            <a class="contact-email" href="mailto:{{ site.data.site.lab.email }}?subject={{ page_data.apply.email_subject | url_encode }}">
+              {{ page_data.apply.block.email_obfuscated }}
+              <span aria-hidden="true">↗</span>
+            </a>
+          {% endif %}
+        </div>
       </div>
-      {% if page_data.intro.note %}<p>{{ page_data.intro.note }}</p>{% endif %}
-      {% for paragraph in page_data.apply.block.paragraphs %}
-        <p class="caption">{{ paragraph }}</p>
-      {% endfor %}
-      <a class="button button--accent" style="margin-top:1.2rem" href="mailto:{{ site.data.site.lab.email }}?subject={{ page_data.apply.email_subject | url_encode }}">{{ page_data.apply.block.action_label }}</a>
     </div>
   </div>
 </section>

@@ -162,9 +162,48 @@
   font-family: var(--font-mono); font-size: var(--text-caption);
   color: var(--text-muted); letter-spacing: .02em;
 }
-.news-item__title { font-size: 1.0625rem; font-weight: var(--w-semibold); color: var(--text-strong); margin: 0 0 .25rem; line-height: 1.35; }
+.news-item__title {
+  font-family: var(--font-display); font-weight: var(--display-weight);
+  font-size: clamp(1.2rem, 1.7vw, 1.5rem); line-height: 1.22;
+  letter-spacing: var(--display-tracking); color: var(--text-strong);
+  margin: 0 0 .45rem; transition: color var(--dur) var(--ease);
+}
+.news-item:hover .news-item__title { color: var(--cobalt-deep); }
 .news-item__summary { color: var(--text-body); font-size: var(--text-body-sm); margin: 0; max-width: 70ch; }
 .news-item__links { display: flex; gap: 1rem; margin-top: .55rem; }
+
+/* Optional thumbnail — rendered below the text, inside the content
+   column, so every item's title stays aligned on the same edge
+   whether or not it has an image. No placeholder for image-free items. */
+.news-item__thumb-wrap {
+  margin-top: 1rem;
+  max-width: 420px;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: var(--bw) solid var(--line);
+  background: var(--surface);
+}
+.news-item__thumb {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+  transition: transform 560ms var(--ease);
+}
+.news-item:hover .news-item__thumb { transform: scale(1.04); }
+
+/* Scroll-reveal — items enter from below as they cross the viewport.
+   Gated on prefers-reduced-motion so static/print always show content. */
+@media (prefers-reduced-motion: no-preference) {
+  .news-item--reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 440ms var(--ease), transform 440ms var(--ease);
+  }
+  .news-item--reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* link-row (shared) */
 .link-row { display: flex; flex-wrap: wrap; gap: 1rem; }
@@ -233,17 +272,17 @@
 .pub-aside p { color: var(--text-muted); font-size: var(--text-body-sm); max-width: 28ch; }
 .pub-list { border-top: var(--bw-rule) solid var(--text-strong); }
 .pub-item {
-  display: grid; grid-template-columns: 224px minmax(0, 1fr);
-  gap: clamp(1.3rem, 2.6vw, 2.4rem); align-items: start;
+  display: block;
   padding: clamp(1.5rem, 3vw, 2.3rem) 0;
   border-bottom: var(--bw) solid var(--line);
 }
-.pub-item--no-thumb { grid-template-columns: 1fr; }
 .pub-thumb {
   aspect-ratio: 16 / 9; border-radius: var(--r); overflow: hidden;
   border: var(--bw) solid var(--line); background: var(--surface);
+  margin: clamp(1rem, 2vw, 1.35rem) 0 clamp(.9rem, 1.8vw, 1.25rem);
+  max-width: min(100%, 760px);
 }
-.pub-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out); }
+.pub-thumb img { width: 100%; height: 100%; object-fit: contain; transition: transform var(--dur-slow) var(--ease-out); }
 .pub-item:hover .pub-thumb img { transform: scale(1.035); }
 .pub-topline {
   display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
@@ -276,7 +315,7 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
 }
 .people-group__count { color: var(--text-faint); }
 .people-grid { display: flex; flex-wrap: wrap; gap: clamp(1.2rem, 2vw, 1.6rem); }
-.people-grid .person-card { flex: 0 0 300px; max-width: 300px; }
+.people-grid .person-card { flex: 1 1 360px; max-width: 390px; }
 
 /* Person card — led by a prominent portrait */
 .person-card {
@@ -299,8 +338,6 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
   font-family: var(--font-mono); font-size: .7rem; letter-spacing: .07em;
   text-transform: uppercase; color: var(--cobalt-deep); margin: 0;
 }
-.person-card__focus { font-size: var(--text-body-sm); color: var(--text-body); margin: 0; line-height: 1.5; }
-
 /* Education history */
 .edu-list { display: grid; gap: 0; border-top: var(--bw) solid var(--line); margin: 0; padding: 0; list-style: none; }
 .edu-row { padding: .65rem 0; border-bottom: var(--bw) solid var(--line); }
@@ -351,11 +388,21 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
 
 /* Contact identity row (PI) */
 .contact-pi { display: flex; align-items: center; gap: var(--space-4); padding: .2rem 0 1.1rem; margin-bottom: 1rem; border-bottom: var(--bw) solid var(--line); }
+/* Footer variant — sits at the bottom of the apply-block as the
+   closing "who to write to" identity row. */
+.contact-pi--footer { border-top: var(--bw) solid var(--line); border-bottom: 0; padding: 1.1rem 0 0; margin-top: 1.2rem; margin-bottom: 0; align-items: center; }
 .contact-pi__avatar { flex: none; width: 52px; height: 52px; border-radius: 50%; border: var(--bw) solid var(--line); overflow: hidden; background: var(--paper-alt); display: grid; place-items: center; font-family: var(--font-display); color: var(--text-muted); }
 .contact-pi__avatar img { width: 100%; height: 100%; object-fit: cover; }
 .contact-pi__name { font-size: var(--text-h4); font-weight: var(--w-semibold); color: var(--text-strong); margin: 0; }
 .contact-pi__role { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); margin: .15rem 0 0; }
-.contact-email { font-family: var(--font-mono); font-size: var(--text-body-sm); color: var(--link); word-break: break-all; }
+.contact-pi__role-inline { color: var(--text-muted); font-weight: var(--w-regular); margin-left: .35em; }
+.contact-email {
+  font-family: var(--font-mono); font-size: var(--text-body-sm);
+  color: var(--cobalt); display: inline-flex; align-items: center;
+  gap: .28rem; margin-top: .2rem;
+  transition: color var(--dur) var(--ease), gap var(--dur) var(--ease);
+}
+.contact-email:hover { color: var(--cobalt-deep); gap: .45rem; }
 
 /* ---------- Recruiting strip (home) ----------
    Refined: title in editorial serif, body at a comfortable
@@ -389,14 +436,13 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
 @media (max-width: 1080px) {
   .news-grid, .research-statement, .pub-section, .join-intro { grid-template-columns: 1fr; }
   .research-grid, .people-grid { grid-template-columns: repeat(2, 1fr); }
-  .pub-item { grid-template-columns: 180px 1fr; }
   .pub-aside { position: static; }
 }
 @media (max-width: 680px) {
   .research-grid { grid-template-columns: 1fr; }
   .people-grid .person-card { flex: 1 1 100%; max-width: 100%; }
-  .pub-item, .pub-item--no-thumb { grid-template-columns: 1fr; }
-  .news-item { grid-template-columns: 1fr; gap: .35rem; }
+  .news-item { grid-template-columns: 1fr; gap: .5rem; }
+  .news-item__thumb-wrap { max-width: 100%; }
   .theme-list { grid-template-columns: 1fr; }
   .theme-item:nth-child(odd) { border-right: 0; padding-right: 0; }
   .theme-item:nth-child(even) { padding-left: 0; }

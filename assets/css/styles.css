@@ -119,6 +119,44 @@
   font-size: var(--text-body-sm);
   margin-bottom: .8rem;
 }
+.research-body > p {
+  font-size: 1.1875rem;
+  line-height: 1.72;
+}
+.theme-item {
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+.theme-item h3 {
+  font-size: var(--text-body-lg);
+  margin-bottom: .42rem;
+}
+.theme-item p {
+  font-size: var(--text-body);
+  line-height: 1.58;
+}
+.pub-more {
+  align-items: baseline;
+  border-bottom: var(--bw) solid var(--line);
+  color: var(--text-strong);
+  display: grid;
+  gap: .4rem;
+  padding: clamp(1.1rem, 2vw, 1.55rem) 0;
+  text-decoration: none;
+}
+.pub-more span {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+}
+.pub-more__accent { color: var(--cobalt-deep); }
+.pub-more small {
+  color: var(--text-muted);
+  font-size: var(--text-body-sm);
+  line-height: 1.45;
+}
+.pub-more:hover span { color: var(--cobalt-deep); }
 
 .join-hero-section {
   padding-bottom: clamp(3.25rem, 5vw, 5rem);
@@ -126,7 +164,6 @@
 .join-apply-section {
   padding-top: clamp(1.5rem, 3vw, 2.5rem);
 }
-
 /* Logo options page stays data-driven but uses the same tokens. */
 .logo-options-header { max-width: 900px; }
 .logo-option-grid {

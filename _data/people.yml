@@ -1,11 +1,16 @@
 # People page content.
 #
-# Content editors usually update:
-# - header.title / header.body: visible page heading area
-# - members.groups: faculty, students, researchers, and collaborators
+# Edit this file to maintain all visible People page text: page title, group
+# names, member names, roles, education rows, and profile links.
 #
-# Usually leave meta and screen_label unchanged unless the page purpose or
-# structure changes.
+# Optional member fields:
+# - image: add src + alt to show a portrait. Omit image to show initials.
+# - education: add rows with degree, institution, optional department, and
+#   optional note. Use note for the degree year only, e.g. 2025 or 2027 expected.
+#   If no degree is known yet, use degree: Affiliation as a fallback.
+# - links: add label + url rows for profile pages.
+# Groups with no members should be omitted; the template also hides any empty
+# group defensively.
 
 meta:
   title: People — BREATHE AI Lab at NTU
@@ -13,11 +18,7 @@ meta:
 
 header:
   screen_label: 01 People · Header
-  eyebrow:
   title: People
-  body:
-  join_label:
-  join_url:
 
 members:
   screen_label: 02 People · Members
@@ -28,80 +29,122 @@ members:
         - name: Wei Lu
           initials: WL
           image:
-            src: assets/img/people/placeholder.svg
+            src: assets/img/people/wei-lu.png
             alt: Wei Lu
           role: Principal Investigator
-          focus:
           education:
             - degree: Appointment
               institution: Nanyang Technological University
               department: College of Computing & Data Science
+            - degree: Previous appointment
+              institution: Singapore University of Technology and Design
+              department: ISTD Pillar
+            - degree: Ph.D. and M.Sc.
+              institution: Singapore-MIT Alliance
+            - degree: B.Comp.
+              institution: National University of Singapore
+              department: School of Computing
           links:
             - label: Homepage
               url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
-              kind: profile
-    - name: Research Fellows & Postdocs
-      members:
-        - name: Xiaoyan Yu
-          initials: XY
-          image:
-            src: assets/img/people/placeholder.svg
-            alt: Xiaoyan Yu
-          role: Research Fellow
-          focus:
-          education:
-            - degree: Ph.D.
-              institution: Prior institution — to confirm
-              department: Department — to confirm
-            - degree: B.Sc.
-              institution: Prior institution — to confirm
-              department: Department — to confirm
-          links:
             - label: Google Scholar
-              url: https://scholar.google.com/citations?user=MgsexesAAAAJ&hl=zh-CN
-              kind: profile
-        - name: Xiyan Fu
-          initials: XF
-          image:
-            src: assets/img/people/placeholder.svg
-            alt: Xiyan Fu
-          role: Research Fellow
-          focus:
-          education:
-            - degree: Ph.D.
-              institution: Prior institution — to confirm
-              department: Department — to confirm
-            - degree: B.Sc.
-              institution: Prior institution — to confirm
-              department: Department — to confirm
-          links:
-            - label: Google Scholar
-              url: https://scholar.google.com/citations?user=q1glETQAAAAJ&hl=en
-              kind: profile
+              url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
     - name: PhD Students
       members:
         - name: Ziming You
           initials: ZY
           image:
-            src: assets/img/people/placeholder.svg
+            src: assets/img/people/ziming-you.jpg
             alt: Ziming You
           role: PhD Student
-          focus:
           education:
-            - degree: Ph.D.
-              note: 2025–
-              institution: Nanyang Technological University
-              department: College of Computing & Data Science
-            - degree: B.Eng.
-              institution: Undergraduate institution — to confirm
-              department: Department — to confirm
+            - degree: M.Eng. in Software Engineering
+              institution: Peking University
+              note: 2025
+            - degree: B.E. in Computer Science and Technology
+              institution: Beihang University
+              note: 2022
           links:
+            - label: Homepage
+              url: https://zimingyou01.github.io/
+            - label: GitHub
+              url: https://github.com/zimingyou01
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-              kind: profile
-    - name: Research Assistants & Engineers
-      members: []
-    - name: Visiting Students & Interns
-      members: []
-    - name: Alumni
-      members: []
+        - name: Yunzhou Bai
+          initials: YB
+          role: PhD Student
+          education:
+            - degree: Affiliation
+              institution: University of Oxford
+        - name: Wuqiang Zheng
+          initials: WZ
+          role: PhD Student
+          education:
+            - degree: Affiliation
+              institution: University of Science and Technology of China
+    - name: Research Staff
+      members:
+        - name: Xiyan Fu
+          initials: XF
+          image:
+            src: assets/img/people/xiyan-fu.jpg
+            alt: Xiyan Fu
+          role: Research Fellow
+          education:
+            - degree: Ph.D. in Computer Science
+              institution: Heidelberg University
+              note: 2025
+            - degree: M.Sc. in Computer Science
+              institution: Nankai University
+              note: 2021
+            - degree: B.Eng. in Software Engineering
+              institution: Nankai University
+              note: 2018
+          links:
+            - label: Homepage
+              url: https://xiyan-fu.github.io/
+        - name: Xiaoyan Yu
+          initials: XY
+          image:
+            src: assets/img/people/xiaoyan-yu.jpg
+            alt: Xiaoyan Yu
+          role: Research Fellow
+          education:
+            - degree: Ph.D. in Computer Science and Technology
+              institution: Beijing Institute of Technology
+              note: 2026
+          links:
+            - label: Homepage
+              url: https://yu-xiaoyan.github.io/
+    - name: Research Interns & Visiting Students
+      members:
+        - name: Xuyan Ye
+          initials: XY
+          image:
+            src: assets/img/people/xuyan-ye.jpg
+            alt: Xuyan Ye
+          role: Research Intern & Visiting Student
+          education:
+            - degree: Undergraduate student
+              institution: Renmin University of China
+              department: Gaoling School of Artificial Intelligence
+              note: 2027 expected
+          links:
+            - label: Homepage
+              url: https://xuyan923r.github.io/
+            - label: GitHub
+              url: https://github.com/Xuyan923r
+        - name: Mingzhe Xuan
+          initials: MX
+          image:
+            src: assets/img/people/mingzhe-xuan.png
+            alt: Mingzhe Xuan
+          role: Research Intern & Visiting Student
+          education:
+            - degree: B.Sc. in Statistics
+              institution: University of Science and Technology of China
+              note: 2026
+          links:
+            - label: GitHub
+              url: https://github.com/Mingzhe-Xuan

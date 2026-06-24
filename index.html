@@ -6,9 +6,9 @@ nav: home
 {% assign ui = site.data.site.ui %}
 {% assign asset_version = site.data.site.asset_version %}
 
-<section class="hero" id="top" data-screen-label="{{ home.screen_labels.hero }}" aria-label="{{ site.data.site.lab.name }} introduction">
+<section class="hero" id="top" data-screen-label="{{ home.screen_labels.hero }}" aria-label="{{ home.hero_aria_label }}">
   <div class="hero__inner">
-    <img class="hero__mark" src="{{ site.data.site.lab.logo }}?v={{ asset_version }}" width="78" height="78" alt="" data-logo-role="mark" data-logo-default="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-a="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-b="{{ site.data.site.lab.logo }}?v={{ asset_version }}" data-logo-c="{{ site.data.site.lab.logo }}?v={{ asset_version }}" />
+    <img class="hero__mark" src="{{ site.data.site.lab.logo }}?v={{ asset_version }}" width="78" height="78" alt="" />
     <h1 class="hero__title group-name">{{ home.title }}{% if home.title_suffix %} {{ home.title_suffix }}{% endif %}</h1>
     {% if home.expanded_name %}<p class="hero__expand">{{ home.expanded_name }}</p>{% endif %}
     <p class="hero__lede">{{ home.lede }}</p>
@@ -31,15 +31,24 @@ nav: home
       <div class="news-list" aria-live="polite">
         {% if home.news.items.size > 0 %}
           {% for item in home.news.items %}
-            <article class="news-item">
+            <article class="news-item{% if item.image.src %} news-item--has-image{% endif %} news-item--reveal">
               <time class="news-item__date">{{ item.date }}</time>
               <div>
-                <h3 class="news-item__title">{{ item.title }}</h3>
-                <p class="news-item__summary">{{ item.summary }}</p>
+                <h3 class="news-item__title">{{ item.title | replace: 'BREATHE AI', '<span class="wordmark wordmark--inline">BREATHE AI</span>' }}</h3>
+                {% if item.summary %}<p class="news-item__summary">{{ item.summary | replace: 'BREATHE AI', '<span class="wordmark wordmark--inline">BREATHE AI</span>' }}</p>{% endif %}
+                {% if item.image.src %}
+                  <div class="news-item__thumb-wrap">
+                    <img class="news-item__thumb" src="{{ item.image.src }}?v={{ asset_version }}" alt="{{ item.image.alt | default: item.title }}" loading="lazy" />
+                  </div>
+                {% endif %}
                 {% if item.links.size > 0 %}
                   <div class="news-item__links link-row">
                     {% for link in item.links %}
-                      <a class="link-item" href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
+                      {% assign is_external = false %}
+                      {% if link.external or link.url contains 'http' %}
+                        {% assign is_external = true %}
+                      {% endif %}
+                      <a class="link-item" href="{{ link.url }}" {% if is_external %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if is_external %} {{ ui.labels.external_suffix }}{% endif %}</a>
                     {% endfor %}
                   </div>
                 {% endif %}
@@ -61,7 +70,7 @@ nav: home
         {% if home.recruiting.eyebrow %}<p class="eyebrow eyebrow--accent">{{ home.recruiting.eyebrow }}</p>{% endif %}
         <p class="recruiting__title">
           <span>{{ home.recruiting.title_prefix }}</span>
-          <span class="recruiting__wordmark">{{ home.recruiting.brand }}</span>
+          <span class="wordmark wordmark--inline recruiting__wordmark">{{ home.recruiting.brand }}</span>
           <span>{{ home.recruiting.title_suffix }}</span>
         </p>
         <p class="recruiting__body">{{ home.recruiting.body }}</p>

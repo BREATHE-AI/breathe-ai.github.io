@@ -1,15 +1,13 @@
 {% assign lab = site.data.site.lab %}
-{% assign brand = site.data.site.brand %}
 {% assign nav_items = site.data.site.navigation %}
 {% assign ui = site.data.site.ui %}
 {% assign asset_version = site.data.site.asset_version %}
 <header class="site-header" data-header>
-  <a href="index.html" aria-label="{{ lab.name }} home">
+  <a href="index.html" aria-label="{{ ui.accessibility.home_link }}">
     <span class="lockup">
-      <img class="lockup__mark" src="{{ lab.logo }}?v={{ asset_version }}" width="32" height="32" alt="" data-logo-role="mark" data-logo-default="{{ lab.logo }}?v={{ asset_version }}" data-logo-a="{{ lab.logo }}?v={{ asset_version }}" data-logo-b="{{ lab.logo }}?v={{ asset_version }}" data-logo-c="{{ lab.logo }}?v={{ asset_version }}" />
+      <img class="lockup__mark" src="{{ lab.logo }}?v={{ asset_version }}" width="32" height="32" alt="" />
       <span class="lockup__text">
         <span class="lockup__name">{{ lab.short_name }}</span>
-        {% if brand.subtitle %}<span class="lockup__desc">{{ brand.subtitle }}</span>{% endif %}
       </span>
     </span>
   </a>
@@ -24,7 +22,7 @@
     {% endfor %}
     <a href="{{ lab.github }}" class="nav-link nav-github-mobile" target="_blank" rel="noreferrer">{{ ui.labels.github }}</a>
     <span class="header-tools">
-      <button class="nav-icon theme-toggle" type="button" aria-label="{{ ui.labels.theme_dark }}" aria-pressed="false" data-theme-toggle>
+      <button class="nav-icon theme-toggle" type="button" aria-label="{{ ui.labels.theme_dark }}" aria-pressed="false" data-theme-toggle data-theme-label-dark="{{ ui.labels.theme_dark }}" data-theme-label-light="{{ ui.labels.theme_light }}">
         <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
         </svg>
