@@ -34,6 +34,6 @@ apply:
     pi_name: Prof. Wei Lu
     pi_role: Principal Investigator
     initials: WL
-    note: Please send a short introduction, your CV, a brief statement of research interests, and links to papers, code, or project pages if available.
+    note: Please send a short introduction, your CV, your academic transcript, a brief statement of research interests, and links to any papers, code, or project pages, if available.
     subject_hint: 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
     email_obfuscated: wei.lu [AT] ntu.edu.sg
