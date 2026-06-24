@@ -36,11 +36,11 @@ members:
             - degree: Appointment
               institution: Nanyang Technological University
               department: College of Computing & Data Science
-            - degree: Ph.D. and M.Sc.
-              institution: Singapore-MIT Alliance
-            - degree: B.Comp.
-              institution: National University of Singapore
-              department: School of Computing
+            # - degree: Ph.D. and M.Sc.
+            #  institution: Singapore-MIT Alliance
+            #- degree: B.Comp.
+            #  institution: National University of Singapore
+            #  department: School of Computing
           links:
             - label: Homepage
               url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
