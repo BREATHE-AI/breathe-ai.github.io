@@ -17,7 +17,7 @@ intro:
   eyebrow:
   title: Join
   body: We are building a new team at NTU and welcome enquiries from self-motivated PhD students, researchers, engineers, interns, and visiting students.
-  note: If you are interested in joining the group, please contact us with a short introduction, CV, and links to relevant work.
+  note: If you are interested in joining the group, please email Prof. Lu directly with a short introduction, your CV, a brief statement of research interests, and links to papers, code, or project pages if available.
 
 positions:
   screen_label: 02 Join · Positions
@@ -39,7 +39,12 @@ apply:
   block:
     eyebrow: By email
     title: Contact
+    pi_name: Prof. Wei Lu
+    pi_role: Principal Investigator
+    initials: WL
+    avatar:
+      src:
+      alt: Prof. Wei Lu
     paragraphs:
-      - 'Please include your intended role, a CV, a brief statement of research interests, and links to papers, code, or project pages if available.'
       - 'Suggested subject: [BREATHE AI] PhD / Research Fellow / RA / Engineer / Intern / Visiting Student.'
-    action_label: Email BREATHE AI
+    action_label: Email Prof. Wei Lu

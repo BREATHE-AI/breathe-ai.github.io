@@ -1,6 +1,50 @@
 /* main.js — shared nav logic, runs on every page */
 
 (function () {
+  const themeToggle = document.querySelector('[data-theme-toggle]');
+  const themeStorageKey = 'breathe-theme';
+  const root = document.documentElement;
+
+  function getStoredTheme() {
+    try {
+      const value = localStorage.getItem(themeStorageKey);
+      return value === 'dark' || value === 'light' ? value : '';
+    } catch (error) {
+      return '';
+    }
+  }
+
+  function storeTheme(theme) {
+    try {
+      localStorage.setItem(themeStorageKey, theme);
+    } catch (error) {
+      // Storage can be blocked in private browsing; the current page still updates.
+    }
+  }
+
+  function setTheme(theme, persist) {
+    root.setAttribute('data-theme', theme);
+    if (persist) storeTheme(theme);
+
+    if (themeToggle) {
+      const isDark = theme === 'dark';
+      const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+      themeToggle.setAttribute('aria-label', label);
+      themeToggle.setAttribute('title', label);
+    }
+  }
+
+  const initialTheme = getStoredTheme() || 'light';
+  setTheme(initialTheme, false);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      setTheme(nextTheme, true);
+    });
+  }
+
   // Active nav link by filename
   const file = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.site-nav .nav-link').forEach(function (link) {

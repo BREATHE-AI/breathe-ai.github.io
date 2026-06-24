@@ -39,7 +39,7 @@ publications:
   filter_aria_label: Filter publications
   filters: []
   items:
-    - year: Preview
+    - year: Preprint
       type: Agentic AI
       title: "Learning to Improve: Self-Evolving Language Agents from Interaction Traces"
       authors: Author One, Author Two, BREATHE AI Lab
@@ -62,12 +62,12 @@ publications:
         - label: Data
           url: "#"
           kind: data
-    - year: Preview
+    - year: Preprint
       type: Efficient models
       title: "Compact Language Models as Controllable Components for AI Systems"
       authors: Author One, Author Two, BREATHE AI Lab
       venue: Preprint
-      summary: Papers on efficient training, specialization, distillation, and deployment-aware language intelligence.
+      summary: Efficient training, specialization, distillation, and deployment-aware language intelligence.
       image:
         src: assets/img/publications/example-slm.svg
         alt: Abstract thumbnail for compact language models
@@ -81,7 +81,7 @@ publications:
         - label: Project
           url: "#"
           kind: html
-    - year: Preview
+    - year: Preprint
       type: Evaluation
       title: "Beyond Static Benchmarks: Evaluating Adaptive AI Systems"
       authors: Author One, Author Two, BREATHE AI Lab

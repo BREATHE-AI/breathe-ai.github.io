@@ -22,22 +22,38 @@ nav: people
     {% for group in page_data.members.groups %}
       {% if group.members.size > 0 %}
         <section class="people-group">
-          <h3 class="people-group__head">{{ group.name }}</h3>
+          <h2 class="people-group__head">
+            <span>{{ group.name }}</span>
+            <span class="people-group__count">{{ group.members.size | prepend: '0' | slice: -2, 2 }}</span>
+          </h2>
           <div class="people-grid">
             {% for person in group.members %}
-              <article class="person">
-                <div class="person__photo">
+              <article class="person-card">
+                <div class="person-card__photo">
                   {% if person.image.src %}
                     <img src="{{ person.image.src }}" alt="{{ person.image.alt | default: person.name }}" />
                   {% else %}
-                    {{ person.initials }}
+                    <span class="person-card__initials">{{ person.initials }}</span>
                   {% endif %}
                 </div>
-                <span class="person__role">{{ person.role }}</span>
-                <h3 class="person__name">{{ person.name }}</h3>
-                {% if person.focus %}<p class="person__focus">{{ person.focus }}</p>{% endif %}
+                <div class="person-card__id">
+                  <h3 class="person-card__name">{{ person.name }}</h3>
+                  {% if person.role %}<p class="person-card__role">{{ person.role }}</p>{% endif %}
+                </div>
+                {% if person.focus %}<p class="person-card__focus">{{ person.focus }}</p>{% endif %}
+                {% if person.education.size > 0 %}
+                  <ul class="edu-list">
+                    {% for education in person.education %}
+                      <li class="edu-row">
+                        <p class="edu-row__degree">{{ education.degree }}{% if education.note %} · {{ education.note }}{% endif %}</p>
+                        <p class="edu-row__inst">{{ education.institution }}</p>
+                        {% if education.department %}<p class="edu-row__dept">{{ education.department }}</p>{% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
                 {% if person.links.size > 0 %}
-                  <div class="link-row">
+                  <div class="person-card__links link-row">
                     {% for link in person.links %}
                       <a class="link-item" href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
                     {% endfor %}

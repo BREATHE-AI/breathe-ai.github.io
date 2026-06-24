@@ -23,7 +23,7 @@ members:
   screen_label: 02 People · Members
   heading: Lab members
   groups:
-    - name: Faculty
+    - name: Principal Investigator
       members:
         - name: Wei Lu
           initials: WL
@@ -32,30 +32,30 @@ members:
             alt: Wei Lu
           role: Principal Investigator
           focus:
+          education:
+            - degree: Appointment
+              institution: Nanyang Technological University
+              department: College of Computing & Data Science
           links:
             - label: Homepage
               url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
               kind: profile
-    - name: PhD Students & Researchers
+    - name: Research Fellows & Postdocs
       members:
-        - name: Ziming You
-          initials: ZY
-          image:
-            src: assets/img/people/placeholder.svg
-            alt: Ziming You
-          role: PhD Student
-          focus:
-          links:
-            - label: Google Scholar
-              url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-              kind: profile
         - name: Xiaoyan Yu
           initials: XY
           image:
             src: assets/img/people/placeholder.svg
             alt: Xiaoyan Yu
-          role: Researcher
+          role: Research Fellow
           focus:
+          education:
+            - degree: Ph.D.
+              institution: Prior institution — to confirm
+              department: Department — to confirm
+            - degree: B.Sc.
+              institution: Prior institution — to confirm
+              department: Department — to confirm
           links:
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=MgsexesAAAAJ&hl=zh-CN
@@ -65,9 +65,43 @@ members:
           image:
             src: assets/img/people/placeholder.svg
             alt: Xiyan Fu
-          role: Researcher
+          role: Research Fellow
           focus:
+          education:
+            - degree: Ph.D.
+              institution: Prior institution — to confirm
+              department: Department — to confirm
+            - degree: B.Sc.
+              institution: Prior institution — to confirm
+              department: Department — to confirm
           links:
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=q1glETQAAAAJ&hl=en
               kind: profile
+    - name: PhD Students
+      members:
+        - name: Ziming You
+          initials: ZY
+          image:
+            src: assets/img/people/placeholder.svg
+            alt: Ziming You
+          role: PhD Student
+          focus:
+          education:
+            - degree: Ph.D.
+              note: 2025–
+              institution: Nanyang Technological University
+              department: College of Computing & Data Science
+            - degree: B.Eng.
+              institution: Undergraduate institution — to confirm
+              department: Department — to confirm
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
+              kind: profile
+    - name: Research Assistants & Engineers
+      members: []
+    - name: Visiting Students & Interns
+      members: []
+    - name: Alumni
+      members: []

@@ -1,13 +1,19 @@
 /* ============================================================
    BREATHE AI Lab — Webfonts
-   Three switchable type directions are supported (see
-   typography.css). All families load here so any direction is
-   available instantly when [data-type-system] is toggled.
+   One canonical Editorial direction. Three families load from
+   Google Fonts; the BREATHE AI wordmark is set in Optima, a
+   FIXED brand decision (see typography.css → --font-wordmark).
 
-   Direction families:
-   · Editorial (default) — Newsreader / Geist / Geist Mono
-   · Contrast            — Instrument Serif / Hanken Grotesk / Space Mono
-   · Technical           — Space Grotesk / IBM Plex Sans / IBM Plex Mono
+   Editorial direction:
+   · Display / editorial  — Newsreader (optical serif)
+   · UI / body            — Geist (neutral humanist sans)
+   · Mono / labels        — Geist Mono
+
+   Optima is a system/Adobe font and is NOT a webfont. On
+   machines without it the wordmark falls back through humanist
+   sans (Gill Sans / Candara) before Palatino. If a pixel-exact
+   wordmark is required on every device, supply an Optima (or
+   licensed alternative) .woff2 and add an @font-face here.
    ============================================================ */
 
-@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Space+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap");

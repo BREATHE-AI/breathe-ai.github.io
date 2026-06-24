@@ -1,12 +1,11 @@
 lab:
   name: BREATHE AI Lab
   short_name: BREATHE AI
-  display_name: BREATHE AI Lab
   expanded_name: Building Responsible and Efficient AI Technologies for Humanity and Equity
   institution: Nanyang Technological University
   location: Singapore
   field: NLP · Language Models · Responsible AI
-  email: breatheai@ntu.edu.sg
+  email: wei.lu@ntu.edu.sg
   github: https://github.com/breatheai-lab
   logo: assets/logo/breathe_infinity_mark_realistic.svg
   logo_variants:
@@ -25,7 +24,7 @@ lab:
         src: assets/logo/breathe_infinity_mark_realistic.svg
         note: Unified BREATHE AI infinity mark.
 
-asset_version: 20260624-editorial-fixed
+asset_version: 20260624-join-spacing
 
 meta:
   default_title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
@@ -54,7 +53,6 @@ ui:
   accessibility:
     skip_link: Skip to content
     primary_navigation: Primary navigation
-    footer_navigation: Footer links
     navigation_toggle: Open navigation
   labels:
     github: GitHub
@@ -64,16 +62,9 @@ ui:
     top: Top ↑
     logo_options: Logo options
     external_suffix: ↗
+    theme_light: Switch to light mode
+    theme_dark: Switch to dark mode
 
 footer:
   tagline: Building Responsible and Efficient AI Technologies for Humanity and Equity.
   colophon: © 2026 · Nanyang Technological University · Singapore
-  links:
-    - label: GitHub
-      type: github
-    - label: Email
-      type: email
-    - label: Logo options
-      url: logo-options.html
-    - label: Home
-      url: index.html

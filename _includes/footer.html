@@ -7,20 +7,11 @@
     <span class="lockup">
       <img class="lockup__mark" src="{{ lab.logo }}?v={{ asset_version }}" width="30" height="30" alt="" data-logo-role="footer-mark" data-logo-default="{{ lab.logo }}?v={{ asset_version }}" data-logo-a="{{ lab.logo }}?v={{ asset_version }}" data-logo-b="{{ lab.logo }}?v={{ asset_version }}" data-logo-c="{{ lab.logo }}?v={{ asset_version }}" />
       <span class="lockup__text">
-        <span class="lockup__name">{{ lab.display_name }}</span>
+        <span class="lockup__name">{{ lab.short_name }}</span>
         {% if site.data.site.brand.subtitle %}<span class="lockup__desc">{{ site.data.site.brand.subtitle }}</span>{% endif %}
       </span>
     </span>
     <p class="site-footer__tagline">{{ footer.tagline }}</p>
     <p class="site-footer__colophon">{{ footer.colophon }}</p>
   </div>
-  <nav class="footer-links" aria-label="{{ ui.accessibility.footer_navigation }}">
-    {% for link in footer.links %}
-      {% if link.type == 'github' %}
-        <a href="{{ lab.github }}" target="_blank" rel="noreferrer">{{ link.label }}</a>
-      {% elsif link.type == 'email' %}
-        <a href="mailto:{{ lab.email }}">{{ link.label }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
 </footer>

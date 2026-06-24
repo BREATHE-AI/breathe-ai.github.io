@@ -1,13 +1,19 @@
 /* ============================================================
    BREATHE AI Lab — Color tokens
    A calm, scholarly, near-monochrome system. Ink + paper carry
-   the design; the cobalt→violet→ember spectrum belongs to the
-   lemniscate mark and appears only as restrained signal.
-   Green is deliberately absent from the brand to avoid wellness
-   / respiratory readings.
+   the design; the cobalt → violet → ember spectrum of the
+   infinity mark appears only as restrained signal. Green is
+   deliberately absent to avoid wellness / respiratory readings.
+
+   Light is the default. A full dark theme is defined under
+   [data-theme="dark"] — toggle it on <html>. The infinity mark
+   is a fixed multi-colour SVG and reads on both surfaces, so it
+   never swaps between themes.
    ============================================================ */
 
 :root {
+  color-scheme: light;
+
   /* ---- Neutrals: paper & ink ---- */
   --paper:          #f8f9fb;   /* page background — near-white, faintly cool */
   --paper-alt:      #eef1f5;   /* alternating section bands */
@@ -58,9 +64,8 @@
   --critical:       #c8481c;
 }
 
-/* ---- Inverted surface (dark CTA bands, footers, slides) ---- */
-.invert,
-[data-theme="dark"] {
+/* ---- Inverted utility (dark CTA bands inside a light page) ---- */
+.invert {
   --bg:           var(--ink);
   --bg-alt:       #161b25;
   --surface-card: #1b212d;
@@ -79,4 +84,58 @@
 
   background: var(--bg);
   color: var(--text-strong);
+}
+
+/* ============================================================
+   Dark theme — toggled with [data-theme="dark"] on <html>.
+   A true scholarly night mode: deep slate-ink paper, raised
+   surfaces a touch lighter, hairlines made of light at low
+   opacity. The cobalt signal lightens so it stays legible.
+   ============================================================ */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --paper:          #0c0f15;   /* page background — deep cool slate */
+  --paper-alt:      #11151d;   /* alternating bands */
+  --paper-sunken:   #090b10;
+  --surface:        #161b24;   /* cards, inputs, raised surfaces */
+
+  --ink:            #f3f5f8;   /* primary text */
+  --ink-soft:       #c2c9d4;   /* secondary text */
+  --ink-muted:      #8b95a4;   /* tertiary text, metadata */
+  --ink-faint:      #5d6675;   /* disabled, placeholder */
+
+  --line:           rgba(255,255,255,.10);  /* hairline */
+  --line-strong:    rgba(255,255,255,.20);  /* emphasised dividers */
+
+  --cobalt:         #5b8cf5;   /* primary signal, lifted for dark */
+  --cobalt-deep:    #82a8f8;   /* links/hover on dark */
+  --cobalt-soft:    #aac6fb;
+  --violet:         #9784e0;
+  --ember:          #f0764a;
+  --ember-deep:     #e85c2b;
+
+  --brand-gradient: linear-gradient(100deg, #4f86f7 0%, #9784e0 52%, #f0764a 100%); /* @kind color */
+  --brand-gradient-soft: linear-gradient(100deg, rgba(91,140,245,.16), rgba(151,132,224,.16), rgba(240,118,74,.16)); /* @kind color */
+
+  --bg:             var(--paper);
+  --bg-alt:         var(--paper-alt);
+  --bg-invert:      #ffffff;
+  --surface-card:   var(--surface);
+
+  --text-strong:    var(--ink);
+  --text-body:      var(--ink-soft);
+  --text-muted:     var(--ink-muted);
+  --text-faint:     var(--ink-faint);
+
+  --border:         var(--line);
+  --border-strong:  var(--line-strong);
+
+  --accent:         var(--cobalt);
+  --link:           var(--cobalt-deep);
+  --focus-ring:     var(--cobalt);
+
+  --positive:       #45b985;
+  --warning:        #d9a13c;
+  --critical:       #ef7a52;
 }

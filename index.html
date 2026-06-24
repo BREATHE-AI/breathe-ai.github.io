@@ -12,7 +12,7 @@ nav: home
     <h1 class="hero__title group-name">{{ home.title }}{% if home.title_suffix %} {{ home.title_suffix }}{% endif %}</h1>
     {% if home.expanded_name %}<p class="hero__expand">{{ home.expanded_name }}</p>{% endif %}
     <p class="hero__lede">{{ home.lede }}</p>
-    <p class="hero__text">{{ home.body }}</p>
+    {% if home.body %}<p class="hero__text">{{ home.body }}</p>{% endif %}
     <div class="hero__actions">
       <a class="button button--primary" href="{{ home.primary_action.url }}">{{ home.primary_action.label }}</a>
       <a class="button button--quiet" href="{{ home.secondary_action.url }}">{{ home.secondary_action.label }} <span aria-hidden="true">→</span></a>
@@ -59,7 +59,11 @@ nav: home
     <div class="recruiting">
       <div>
         {% if home.recruiting.eyebrow %}<p class="eyebrow eyebrow--accent">{{ home.recruiting.eyebrow }}</p>{% endif %}
-        <p class="recruiting__title">{{ home.recruiting.title }}</p>
+        <p class="recruiting__title">
+          <span>{{ home.recruiting.title_prefix }}</span>
+          <span class="recruiting__wordmark">{{ home.recruiting.brand }}</span>
+          <span>{{ home.recruiting.title_suffix }}</span>
+        </p>
         <p class="recruiting__body">{{ home.recruiting.body }}</p>
       </div>
       <a class="button button--primary" href="{{ home.recruiting.action.url }}">{{ home.recruiting.action.label }}</a>

@@ -3,9 +3,9 @@
 
 /* Jekyll-only navigation affordances. */
 .skip-link {
-  background: var(--ink);
+  background: var(--text-strong);
   border-radius: var(--r-sm);
-  color: #fff;
+  color: var(--bg);
   left: 1rem;
   padding: .6rem .9rem;
   position: fixed;
@@ -30,7 +30,7 @@
   width: 40px;
 }
 .nav-toggle-line {
-  background: var(--ink);
+  background: var(--text-strong);
   display: block;
   height: 1.5px;
   transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
@@ -45,39 +45,13 @@
 .nav-link.is-active { color: var(--text-strong); }
 .nav-link.is-active::after { transform: scaleX(1); }
 
-/* Home wordmark override requested for the current BREATHE AI title. */
-.group-name {
-  color: #000;
-  font-family: Optima, "Optima Regular", "Palatino Linotype", Palatino, serif;
-  font-size: 42px;
-  font-weight: 500;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
 .hero__title.group-name {
-  line-height: 1.1;
-  margin-bottom: .75em;
-}
-.hero__lede {
-  max-width: none;
-  text-wrap: nowrap;
-  white-space: nowrap;
-}
-.hero__expand {
-  white-space: nowrap;
-}
-.recruiting__title {
-  font-family: Optima, "Optima Regular", "Palatino Linotype", Palatino, serif;
-  font-weight: 400;
-  letter-spacing: .02em;
-}
-.recruiting__body {
-  max-width: none;
-  white-space: nowrap;
-}
-.site-footer__tagline {
-  max-width: none;
-  white-space: nowrap;
+  font-family: var(--font-wordmark);
+  font-size: var(--text-wordmark);
+  font-weight: var(--wordmark-weight);
+  letter-spacing: var(--wordmark-tracking);
+  line-height: var(--lh-wordmark);
+  margin: 0 0 clamp(1.1rem, 2vw, 1.6rem);
 }
 
 /* Align static Jekyll sections to the body grid at desktop widths. */
@@ -146,6 +120,13 @@
   margin-bottom: .8rem;
 }
 
+.join-hero-section {
+  padding-bottom: clamp(3.25rem, 5vw, 5rem);
+}
+.join-apply-section {
+  padding-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 /* Logo options page stays data-driven but uses the same tokens. */
 .logo-options-header { max-width: 900px; }
 .logo-option-grid {
@@ -210,15 +191,15 @@
   margin-top: auto;
 }
 .logo-link-panel {
-  background: var(--ink);
+  background: var(--text-strong);
   border-radius: var(--r);
-  color: #fff;
+  color: var(--bg);
   margin-top: var(--space-5);
   max-width: 920px;
   padding: clamp(1.4rem, 3vw, 2rem);
 }
-.logo-link-panel h3 { color: #fff; margin: .55rem 0 .7rem; }
-.logo-link-panel p { color: rgba(255,255,255,.74); margin-top: .5rem; }
+.logo-link-panel h3 { color: inherit; margin: .55rem 0 .7rem; }
+.logo-link-panel p { color: color-mix(in srgb, var(--bg) 76%, transparent); margin-top: .5rem; }
 .logo-link-panel .eyebrow { color: var(--cobalt-soft); }
 .logo-link-panel code {
   background: rgba(255,255,255,.08);
@@ -231,9 +212,69 @@
 }
 
 @media (max-width: 760px) {
+  .site-header {
+    gap: .75rem;
+    min-height: 64px;
+    position: sticky;
+  }
+  .site-header > a {
+    min-width: 0;
+  }
+  .lockup {
+    min-width: 0;
+  }
+  .lockup__name {
+    font-size: clamp(.82rem, 3.8vw, 1rem);
+    overflow-wrap: anywhere;
+  }
   .nav-toggle { display: inline-flex; }
-  .hero__expand { white-space: normal; }
-  .hero__lede { font-size: 1.1rem; }
-  .recruiting__body { white-space: normal; }
-  .site-footer__tagline { white-space: normal; }
+  .site-nav {
+    align-items: stretch;
+    background: var(--bg);
+    border-bottom: var(--bw) solid var(--border);
+    box-shadow: var(--shadow);
+    display: none;
+    flex-direction: column;
+    gap: .9rem;
+    left: 0;
+    padding: 1rem var(--gutter) 1.2rem;
+    position: absolute;
+    right: 0;
+    top: 100%;
+  }
+  .site-nav.is-open { display: flex; }
+  .site-nav .nav-link {
+    padding: .5rem 0;
+  }
+  .site-nav .header-tools {
+    border-top: var(--bw) solid var(--border);
+    justify-content: flex-start;
+    padding-top: .85rem;
+    width: 100%;
+  }
+  .site-nav .nav-icon {
+    height: 42px;
+    width: 42px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero__title.group-name {
+    font-size: clamp(2.8rem, 17vw, 4.4rem);
+  }
+  .hero__actions {
+    width: 100%;
+  }
+  .hero__actions .button {
+    flex: 1 1 150px;
+  }
+  .news-grid,
+  .research-statement,
+  .pub-section,
+  .join-intro {
+    gap: clamp(1.25rem, 8vw, 2rem);
+  }
 }

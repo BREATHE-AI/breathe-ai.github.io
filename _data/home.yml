@@ -32,8 +32,8 @@ primary_action:
   label: Research
   url: research.html
 secondary_action:
-  label: Join
-  url: join.html
+  label: People
+  url: people.html
 
 news:
   # Intro text shown on the left side of the News section.
@@ -83,7 +83,9 @@ news:
 recruiting:
   show: true
   eyebrow:
-  title: Join BREATHE AI at NTU.
+  title_prefix: Join
+  brand: BREATHE AI
+  title_suffix: at NTU.
   body: We welcome enquiries from self-motivated students, researchers, engineers, interns, and visitors.
   action:
     label: Join

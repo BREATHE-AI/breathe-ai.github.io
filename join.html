@@ -6,14 +6,14 @@ nav: join
 {% assign positions = page_data.positions.items %}
 {% assign ui = site.data.site.ui %}
 
-<section class="section section--lg" style="padding-bottom:2.5rem" data-screen-label="{{ page_data.intro.screen_label }}">
+<section class="section section--lg join-hero-section" data-screen-label="{{ page_data.intro.screen_label }}">
   <div class="join-intro">
     <h1 class="title">{{ page_data.intro.title }}</h1>
     {% if page_data.intro.body %}<p class="join-intro__lede">{{ page_data.intro.body }}</p>{% endif %}
   </div>
 </section>
 
-<section class="section" style="padding-top:0" data-screen-label="{{ page_data.apply.screen_label }}" aria-labelledby="positions-heading">
+<section class="section join-apply-section" data-screen-label="{{ page_data.apply.screen_label }}" aria-labelledby="positions-heading">
   <div class="join-intro" style="align-items:start">
     <div>
       {% if page_data.positions.eyebrow %}<p class="eyebrow">{{ page_data.positions.eyebrow }}</p>{% endif %}
@@ -34,9 +34,22 @@ nav: join
     <div class="apply-block">
       <p class="eyebrow eyebrow--accent">{{ page_data.apply.block.eyebrow }}</p>
       <h3 style="margin-top:.7rem">{{ page_data.apply.block.title }}</h3>
+      <div class="contact-pi">
+        <span class="contact-pi__avatar">
+          {% if page_data.apply.block.avatar.src %}
+            <img src="{{ page_data.apply.block.avatar.src }}" alt="{{ page_data.apply.block.avatar.alt | default: page_data.apply.block.pi_name }}" />
+          {% else %}
+            {{ page_data.apply.block.initials }}
+          {% endif %}
+        </span>
+        <span>
+          <p class="contact-pi__name">{{ page_data.apply.block.pi_name }}</p>
+          <p class="contact-pi__role">{{ page_data.apply.block.pi_role }}</p>
+        </span>
+      </div>
       {% if page_data.intro.note %}<p>{{ page_data.intro.note }}</p>{% endif %}
       {% for paragraph in page_data.apply.block.paragraphs %}
-        <p>{{ paragraph }}</p>
+        <p class="caption">{{ paragraph }}</p>
       {% endfor %}
       <a class="button button--accent" style="margin-top:1.2rem" href="mailto:{{ site.data.site.lab.email }}?subject={{ page_data.apply.email_subject | url_encode }}">{{ page_data.apply.block.action_label }}</a>
     </div>

@@ -1,45 +1,56 @@
 /* ============================================================
    BREATHE AI Lab — Typography tokens
-   Three switchable directions share ONE measured type scale, so
-   sizing, rhythm, and tracking stay consistent no matter which
-   typeface direction is active. Switch with a data attribute on
-   <html> or any container:
+   ONE canonical Editorial direction. A single measured scale
+   keeps sizing, rhythm, and tracking consistent across the
+   whole site. The scale is close-stepped to avoid jarring
+   jumps — except the wordmark, which is intentionally large so
+   the brand name is the first thing the eye lands on.
 
-     <html data-type-system="editorial">   (default)
-     <html data-type-system="contrast">
-     <html data-type-system="technical">
-
-   The scale is intentionally close-stepped to avoid jarring
-   jumps between a large title and small supporting text.
+   Three roles:
+   · --font-wordmark  Optima — the BREATHE AI brand name only
+                      (hero, header lockup, footer lockup). FIXED.
+   · --font-display   Newsreader serif — page titles, ledes,
+                      section heads, publication titles.
+   · --font-sans      Geist — UI, body, navigation, buttons.
+   · --font-mono      Geist Mono — eyebrows, metadata, labels.
    ============================================================ */
 
 :root {
-  /* ---- Direction A · Editorial (default) ---- */
-  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-sans:    "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono:    "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
-  --display-weight: 500; /* @kind other */ /* serif display reads best at medium weight */
+  /* ---- Families ---- */
+  --font-wordmark: "Optima", "Optima nova", "Gill Sans Nova", "Gill Sans",
+                   "Gill Sans MT", Candara, "Trebuchet MS", "Palatino Linotype", sans-serif; /* @kind other */
+  --font-display:  "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif; /* @kind other */
+  --font-sans:     "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; /* @kind other */
+  --font-mono:     "Geist Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace; /* @kind other */
+
+  --display-weight:   500; /* @kind other */ /* Newsreader reads best at medium */
   --display-tracking: -0.01em; /* @kind other */
 
+  /* ---- Wordmark (Optima) — FIXED brand treatment ---- */
+  --wordmark-weight:   500; /* @kind other */
+  --wordmark-tracking: 0.07em; /* @kind other */ /* the wide tracking is part of the mark */
+
   /* ---- Modular type scale (semantic) ---- */
-  --text-hero:     clamp(3.1rem, 8vw, 6rem);      /* home hero word-mark */
+  --text-wordmark: clamp(3.6rem, 11vw, 8rem);     /* home hero BREATHE AI — dominant */
+  --text-hero:     clamp(3.1rem, 8vw, 6rem);      /* large display heads */
   --text-title:    clamp(2.4rem, 5.4vw, 3.9rem);  /* page titles: People / Research / Join */
   --text-h2:       clamp(1.85rem, 3.6vw, 2.7rem); /* section heads */
   --text-h3:       1.3125rem;                     /* 21px — card / item titles */
   --text-h4:       1.0625rem;                     /* 17px */
-  --text-lede:     clamp(1.25rem, 2.4vw, 1.7rem); /* opening statements */
-  --text-body-lg:  1.125rem;                               /* 18px */
-  --text-body:     1rem;                                   /* 16px */
-  --text-body-sm:  0.9375rem;                              /* 15px */
-  --text-caption:  0.8125rem;                              /* 13px */
-  --text-eyebrow:  0.75rem;                                /* 12px — mono labels */
+  --text-lede:     clamp(1.2rem, 1.9vw, 1.5rem);  /* opening statements (smaller than wordmark) */
+  --text-body-lg:  1.125rem;                      /* 18px */
+  --text-body:     1rem;                          /* 16px */
+  --text-body-sm:  0.9375rem;                     /* 15px */
+  --text-caption:  0.8125rem;                     /* 13px */
+  --text-eyebrow:  0.75rem;                        /* 12px — mono labels */
 
   /* ---- Line heights ---- */
-  --lh-tight:   1.02; /* @kind other */
-  --lh-snug:    1.16; /* @kind other */
-  --lh-heading: 1.22; /* @kind other */
-  --lh-body:    1.6; /* @kind other */
-  --lh-relaxed: 1.74; /* @kind other */
+  --lh-wordmark: 1.04; /* @kind other */
+  --lh-tight:    1.02; /* @kind other */
+  --lh-snug:     1.16; /* @kind other */
+  --lh-heading:  1.22; /* @kind other */
+  --lh-body:     1.6; /* @kind other */
+  --lh-relaxed:  1.74; /* @kind other */
 
   /* ---- Weights ---- */
   --w-regular:  400; /* @kind other */
@@ -51,22 +62,4 @@
   --track-eyebrow: 0.14em; /* @kind other */
   --track-tight:   -0.012em; /* @kind other */
   --track-flat:    0; /* @kind other */
-}
-
-/* ---- Direction B · Contrast ---- */
-[data-type-system="contrast"] {
-  --font-display: "Instrument Serif", "Newsreader", Georgia, serif;
-  --font-sans:    "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono:    "Space Mono", ui-monospace, Menlo, Consolas, monospace;
-  --display-weight: 400;          /* Instrument Serif is single-weight, high contrast */
-  --display-tracking: 0;
-}
-
-/* ---- Direction C · Technical ---- */
-[data-type-system="technical"] {
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-sans:    "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-mono:    "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
-  --display-weight: 500;          /* geometric grotesque display, no serif */
-  --display-tracking: -0.02em;
 }

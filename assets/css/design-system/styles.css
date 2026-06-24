@@ -1,8 +1,7 @@
 /* ============================================================
    BREATHE AI Lab — Design System entry point
    Consumers link this one file. It is a manifest of @imports
-   only; every token, font, and base rule lives in the modules
-   below.
+   only; every token, font, and rule lives in the modules below.
    ============================================================ */
 
 @import url("tokens/fonts.css");
@@ -10,5 +9,5 @@
 @import url("tokens/typography.css");
 @import url("tokens/spacing.css");
 @import url("tokens/elevation.css");
-@import url("base.css");
-@import url("patterns.css");
+@import url("tokens/base.css");
+@import url("tokens/patterns.css");

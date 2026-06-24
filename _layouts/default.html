@@ -8,6 +8,18 @@
 <html lang="en" data-type-system="editorial">
 <head>
   <meta charset="utf-8" />
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('breathe-theme');
+        if (savedTheme !== 'dark' && savedTheme !== 'light') savedTheme = '';
+        var theme = savedTheme || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ description | escape }}" />
   <meta property="og:title" content="{{ page.og_title | default: data.meta.og_title | escape }}" />
