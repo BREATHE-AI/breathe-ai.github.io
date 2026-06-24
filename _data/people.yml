@@ -110,6 +110,24 @@ members:
           links:
             - label: Homepage
               url: https://yu-xiaoyan.github.io/
+        - name: Chong Li
+          initials: CL
+          image:
+            src: assets/img/people/chong-li.jpg
+            alt: Chong Li
+          role: Research Fellow
+          education:
+            - degree: Ph.D.
+              institution: Chinese Academy of Sciences
+              department: Institute of Automation
+              note: 2026
+            - degree: B.E.
+              institution: Fudan University
+              department: Software School
+              note: 2021
+          links:
+            - label: OpenReview
+              url: https://openreview.net/profile?id=%7EChong_Li6
     - name: Research Interns & Visiting Students
       members:
         - name: Xuyan Ye
