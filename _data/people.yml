@@ -31,7 +31,7 @@ members:
           image:
             src: assets/img/people/wei-lu.png
             alt: Wei Lu
-          role: Principal Investigator
+          role: Full Professor
           education:
             - degree: Appointment
               institution: Nanyang Technological University
