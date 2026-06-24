@@ -52,6 +52,8 @@
   letter-spacing: var(--wordmark-tracking);
   line-height: var(--lh-wordmark);
   margin: 0 0 clamp(1.1rem, 2vw, 1.6rem);
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 /* Align static Jekyll sections to the body grid at desktop widths. */
@@ -300,7 +302,7 @@
     min-height: auto;
   }
   .hero__title.group-name {
-    font-size: clamp(2.8rem, 17vw, 4.4rem);
+    font-size: 3rem;
   }
   .hero__actions {
     width: 100%;
@@ -313,5 +315,17 @@
   .pub-section,
   .join-intro {
     gap: clamp(1.25rem, 8vw, 2rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero__title.group-name {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .hero__title.group-name {
+    font-size: 2.35rem;
   }
 }

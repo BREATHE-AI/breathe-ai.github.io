@@ -12,7 +12,7 @@ lab:
   github: https://github.com/BREATHE-AI
   logo: assets/logo/breathe-infinity.svg
 
-asset_version: 20260624-data-cleanup
+asset_version: 20260624-hero-nowrap
 
 meta:
   default_title: BREATHE AI Lab | NLP, Language Models & Responsible AI at NTU Singapore
