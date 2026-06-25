@@ -51,7 +51,7 @@ members:
         - name: Yunzhou Bai
           initials: YB
           image:
-            src: assets/img/people/yunzhou-bai.jpeg
+            src: assets/img/people/yunzhou-bai.jpg
             alt: Yunzhou Bai
           role: PhD Student
           education:
