@@ -50,10 +50,20 @@ members:
       members:
         - name: Yunzhou Bai
           initials: YB
+          image:
+            src: assets/img/people/yunzhou-bai.jpeg
+            alt: Yunzhou Bai
           role: PhD Student
           education:
-            - degree: Affiliation
+            - degree: MEng in Engineering Science
               institution: University of Oxford
+              department: Department of Engineering Science
+              note: 2026
+          links:
+            - label: OpenReview
+              url: https://openreview.net/profile?id=~Yunzhou_Bai1
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/yunzhou-bai-300331326/
         - name: Wuqiang Zheng
           initials: WZ
           image:
