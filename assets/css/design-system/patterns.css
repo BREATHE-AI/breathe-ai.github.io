@@ -328,7 +328,7 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
 }
 .person-card:hover { border-color: var(--border-strong); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
 .person-card__photo {
-  width: 100%; aspect-ratio: 1 / 1; border-radius: var(--r);
+  width: 100%; aspect-ratio: 4 / 5; border-radius: var(--r);
   border: var(--bw) solid var(--line); overflow: hidden; background: var(--paper-alt);
   display: grid; place-items: center;
 }
