@@ -373,8 +373,6 @@ a.pub-item:hover .pub-title, .pub-item:hover .pub-title { color: var(--cobalt-de
   transition: padding-left var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .position-item:hover { padding-left: .7rem; color: var(--cobalt-deep); }
-.position-item__arrow { color: var(--text-faint); transition: color var(--dur) var(--ease); }
-.position-item:hover .position-item__arrow { color: var(--cobalt); }
 
 /* Contact / apply block — addresses the PI directly */
 .apply-block {
