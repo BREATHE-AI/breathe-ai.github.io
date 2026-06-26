@@ -1,6 +1,18 @@
 # AGENTS.md
 
-## Deployment and Push Notes
+## Contribution and Deployment Notes
+
+The `main` branch is protected. Do not commit or push directly to `main` for
+ordinary website changes unless you are the user listed in `.github/CODEOWNERS`
+and are intentionally doing maintainer work. Otherwise, create a branch, make
+the change, run `jekyll build`, push the branch, and open a pull request.
+
+For small content updates, prefer editing `_data/*.yml`. Avoid changing
+technical website files such as `_layouts/`, `_includes/`, `.github/`,
+`_config.yml`, and deployment-related files unless the maintainer has asked for
+that change.
+
+## Maintainer Deployment Notes
 
 This repository has two remotes:
 
@@ -10,13 +22,14 @@ This repository has two remotes:
 The preview site is served from `origin/gh-pages`, so pushing only to `origin/main`
 is not enough.
 
-Before committing, run:
+Before merging or deploying a site update, run:
 
 ```sh
 jekyll build
 ```
 
-After committing a site update, push all three targets:
+After the change is merged by the maintainer, sync the deployment refs as
+needed:
 
 ```sh
 git push breathe main
