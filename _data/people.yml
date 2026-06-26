@@ -110,8 +110,9 @@ members:
             - degree: Ph.D. in Computer Science
               institution: Heidelberg University
               note: 2025
-            - degree: M.Sc. in Computer Science (2021) and B.Eng. in Software Engineering (2018)
+            - degree: B.Eng. and M.Sc. in Computer Science
               institution: Nankai University
+              note: 2021
           links:
             - label: Homepage
               url: https://xiyan-fu.github.io/
