@@ -30,7 +30,7 @@ statement:
       body: Models and agents that adapt from feedback, trajectories, tool use, and experience.
     - title: Language agents
       body: Systems that plan, use tools, collaborate, and complete long-horizon tasks.
-    - title: Small language models
+    - title: Efficient language models
       body: Compact models that remain capable, controllable, and useful under deployment constraints.
     - title: Responsible evaluation
       body: Measurements that expose capability, robustness, failure modes, and usefulness.
