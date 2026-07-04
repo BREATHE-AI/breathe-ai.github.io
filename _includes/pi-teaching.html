@@ -1,0 +1,26 @@
+{% assign pi = include.pi %}
+{% if include.aside %}
+  <div class="pi-sec">
+    <div class="pi-sec__grid">
+      <aside class="pi-sec__aside">
+        <h2 class="h2">{{ pi.teaching.title }}</h2>
+      </aside>
+{% else %}
+  <h2 class="h2">{{ pi.teaching.title }}</h2>
+{% endif %}
+
+<ul class="pi-rows">
+  {% for course in pi.teaching.items %}
+    <li class="pi-row">
+      <div class="pi-row__body">
+        <p class="pi-row__title">{% include inline-md.html text=course.course %}</p>
+      </div>
+      <span class="pi-row__when">{{ course.term }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+{% if include.aside %}
+    </div>
+  </div>
+{% endif %}

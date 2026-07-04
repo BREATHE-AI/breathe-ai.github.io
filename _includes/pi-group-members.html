@@ -1,0 +1,66 @@
+{% assign pi = include.pi %}
+{% assign section_kind = include.section | default: 'current' %}
+{% if section_kind == 'alumni' %}
+  {% assign title = pi.group.alumni_title %}
+{% else %}
+  {% assign title = pi.group.title %}
+{% endif %}
+
+{% if include.aside %}
+  <div class="pi-sec">
+    <div class="pi-sec__grid">
+      <aside class="pi-sec__aside">
+        <h2 class="h2">{{ title }}</h2>
+      </aside>
+{% else %}
+  <h2 class="h2">{{ title }}</h2>
+{% endif %}
+
+{% if section_kind == 'alumni' %}
+  <div class="pi-alumni-stack">
+    {% for subsection in pi.group.alumni_sections %}
+      {% if subsection.collapsible %}
+        <details class="pi-details pi-details--flush"{% if subsection.open %} open{% endif %}>
+          <summary>{{ subsection.title }}</summary>
+          <ul class="pi-plain-list">
+            {% for alum in subsection.entries %}
+              <li>
+                {%- if alum.name -%}
+                  <b>{%- include inline-md.html text=alum.name -%}</b>{%- if alum.details %} — {% include inline-md.html text=alum.details -%}{% endif -%}
+                {%- else -%}
+                  {%- include inline-md.html text=alum -%}
+                {%- endif -%}
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% else %}
+        <div class="pi-alumni-subsection">
+          <h3 class="pi-subhead">{{ subsection.title }}</h3>
+          <ul class="pi-plain-list">
+            {% for alum in subsection.entries %}
+              <li>
+                {%- if alum.name -%}
+                  <b>{%- include inline-md.html text=alum.name -%}</b>{%- if alum.details %} — {% include inline-md.html text=alum.details -%}{% endif -%}
+                {%- else -%}
+                  {%- include inline-md.html text=alum -%}
+                {%- endif -%}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <ul class="pi-plain-list">
+    {% for member in pi.group.current %}
+      <li>{% include inline-md.html text=member %}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% if include.aside %}
+    </div>
+  </div>
+{% endif %}

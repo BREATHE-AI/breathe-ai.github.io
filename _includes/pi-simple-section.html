@@ -1,0 +1,20 @@
+{% if include.aside %}
+  <div class="pi-sec">
+    <div class="pi-sec__grid">
+      <aside class="pi-sec__aside">
+        <h2 class="h2">{{ include.title }}</h2>
+      </aside>
+{% else %}
+  <h2 class="h2">{{ include.title }}</h2>
+{% endif %}
+
+<ul class="pi-rows pi-rows--simple">
+  {% for item in include.items %}
+    <li class="pi-row pi-row--simple"><p class="pi-row__title">{% include inline-md.html text=item %}</p></li>
+  {% endfor %}
+</ul>
+
+{% if include.aside %}
+    </div>
+  </div>
+{% endif %}

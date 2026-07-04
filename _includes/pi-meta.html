@@ -1,0 +1,23 @@
+{% assign pi = include.pi %}
+<ul class="pi-meta">
+  <li class="pi-meta__row">
+    <p class="pi-meta__label">Email</p>
+    <p class="pi-meta__value"><a href="mailto:{{ pi.profile.email }}">{{ pi.profile.email }}</a></p>
+  </li>
+  <li class="pi-meta__row">
+    <p class="pi-meta__label">Office</p>
+    <p class="pi-meta__value">{{ pi.profile.office }}</p>
+  </li>
+  <li class="pi-meta__row">
+    <p class="pi-meta__label">Website</p>
+    <p class="pi-meta__value"><a href="{{ pi.profile.website.url }}" target="_blank" rel="noreferrer">{{ pi.profile.website.label }} ↗</a></p>
+  </li>
+  <li class="pi-meta__row">
+    <p class="pi-meta__label">Contact</p>
+    <p class="pi-meta__value">{{ pi.profile.contact }}</p>
+  </li>
+  <li class="pi-meta__row">
+    <p class="pi-meta__label">{{ pi.profile.cv.label }}</p>
+    <p class="pi-meta__value"><a href="{{ pi.profile.cv.url }}">{{ pi.profile.cv.download_label | default: 'View Full CV' }} ↗</a></p>
+  </li>
+</ul>

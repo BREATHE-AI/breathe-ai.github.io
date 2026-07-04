@@ -54,7 +54,11 @@ nav: people
                 {% if person.links.size > 0 %}
                   <div class="person-card__links link-row">
                     {% for link in person.links %}
-                      <a class="link-item" href="{{ link.url }}" {% if link.url contains 'http' %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if link.url contains 'http' %} {{ ui.labels.external_suffix }}{% endif %}</a>
+                      {% assign is_external = false %}
+                      {% if link.external or link.url contains 'http' %}
+                        {% assign is_external = true %}
+                      {% endif %}
+                      <a class="link-item" href="{{ link.url }}" {% if is_external %}target="_blank" rel="noreferrer"{% endif %}>{{ link.label }}{% if is_external or link.show_suffix %} {{ ui.labels.external_suffix }}{% endif %}</a>
                     {% endfor %}
                   </div>
                 {% endif %}

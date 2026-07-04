@@ -1,0 +1,379 @@
+# Wei Lu personal homepage content for the PI homepage prototypes.
+#
+# Source of public facts: https://statnlp.com/people/luwei/
+# This is the single content source for wei-lu-homepage-a.html.
+# Most text fields support Markdown links, e.g. [Google Scholar](https://scholar.google.com/).
+# Local files such as photos and PDFs should live under assets/ and be referenced
+# with a relative path, e.g. assets/img/people/wei-lu.png or assets/docs/wei-lu-cv.pdf.
+
+# Browser title and meta description for the generated homepage pages.
+meta:
+  title: Wei Lu - BREATHE AI Lab at NTU
+  description: Wei Lu, Principal Investigator of BREATHE AI Lab and Full Professor at the College of Computing and Data Science, Nanyang Technological University.
+
+# Profile controls the first screen and the left contact card.
+profile:
+  display_name: Wei Lu
+  role: Principal Investigator
+  appointment: Full Professor
+  department: College of Computing and Data Science
+  institution: Nanyang Technological University
+  lab: BREATHE AI Lab
+  email: wei.lu@ntu.edu.sg
+  website:
+    label: luwei.name
+    url: http://luwei.name/
+  office: N4-2B-41
+  contact: To be confirmed
+  image:
+    src: assets/img/people/wei-lu.png
+    alt: Wei Lu
+  cv:
+    label: Curriculum Vitae
+    download_label: View Full CV
+    url: assets/docs/wei-lu-cv.pdf
+  scholar:
+    label: Google Scholar
+    url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
+  focus:
+    - Natural Language Processing
+    - Large Language Models
+    - Multilingual AI
+  bio:
+    - I am interested in designing mathematical models and machine learning algorithms to solve fundamental data processing problems, with a particular focus on natural language processing (NLP). My research centers on fundamental aspects of modern language models. Prior to joining NTU, I spent 12 years at the Singapore University of Technology and Design (SUTD). Before that, I worked as a postdoctoral research associate at the University of Illinois at Urbana-Champaign and completed my PhD at the Singapore-MIT Alliance of the National University of Singapore. Earlier in my academic journey, I earned my undergraduate degree with first-class honors in Computer Science from the School of Computing, National University of Singapore.
+
+# Timeline items. `text` supports Markdown links. `note` is optional.
+news:
+  title: News
+  items:
+    - date: Sep 2025
+      text: Joined the College of Computing and Data Science at Nanyang Technological University.
+    - date: Apr 2025
+      text: Promoted to Full Professor.
+    - date: Mar 2025
+      text: Thanks to [AI Singapore](https://aisingapore.org/) for awarding us a new research project under the National Multimodal LLM Program. We look forward to working together!
+      note: S$4.9M
+    - date: Sep 2024
+      text: Awarded a new HTX industry collaboration project for the StatNLP Group.
+      note: S$1.5M
+    - date: Jul 2024
+      text: Zhijiang Guo won the SUTD Outstanding Thesis Award.
+    - date: Jun 2024
+      text: Zhijiang Guo secured an Assistant Professor position at HKUST (GZ).
+    - date: May 2024
+      text: Guangtao Zeng secured an internship offer from MIT with Joshua Tenenbaum.
+    - date: Apr 2024
+      text: Honored to be appointed an ST Engineering Distinguished Professor. Thank you, [ST Engineering](https://www.stengg.com/)!
+    - date: Feb 2024
+      text: Excited to assume the role of Editor-in-Chief for [Computational Linguistics](https://direct.mit.edu/coli). Thank you, ACL Executive Committee, for giving me this opportunity to serve our community!
+    - date: Jan 2024
+      text: "Peiyuan Zhang, Guangtao Zeng, and Tianduo Wang completed pre-training of [TinyLlama](https://github.com/jzhang38/TinyLlama), which was [trending #1](https://huggingface.co/models) on Hugging Face as of 3 Jan 2024."
+    - date: Dec 2023
+      text: Xiaobing Sun and Jiaxi Li received an Outstanding Paper Award at EMNLP.
+    - date: Jul 2023
+      text: Sicong Leng won the ACL Area Chair Award, with multiple nominations; [top 1.6%](https://2023.aclweb.org/program/best_papers/) papers received nominations.
+    - date: Apr 2023
+      text: Recognized as a Notable Area Chair for [ICLR 2023](https://blog.iclr.cc/2023/04/05/announcing-notable-reviewers-and-area-chairs-at-iclr-2023/).
+    - date: Feb 2023
+      text: Jiale Han joined TU Darmstadt as a postdoc with Iryna Gurevych.
+    - date: Dec 2022
+      text: Allan Jie joined UNC Chapel Hill as a postdoc with Mohit Bansal.
+    - date: Aug 2022
+      text: Received an MOE AcRF Tier 2 Award for the StatNLP Group.
+      note: S$930K
+    - date: Jul 2022
+      text: Xinyu Wang won the Best Paper Award at SemEval 2022.
+    - date: Jun 2022
+      text: The StatNLP Group's 10-year NLP research was [ranked 12th](https://csrankings.org/#/index?nlp&world) globally based on CSRankings.
+    - date: May 2022
+      text: Shengqiang Zhang joined LMU Munich as a PhD student with Hinrich Schutze.
+    - date: Feb 2022
+      text: Xinyu Wang won SemEval 2022 Task 11 in 10 out of 13 tracks.
+    - date: Jan 2022
+      text: Yuxiang Zhou joined Warwick University as a postdoc with Yulan He.
+    - date: Jul 2021
+      text: Jierui Li joined the University of Texas at Austin as a PhD student with Raymond Mooney.
+
+# Service rows. `venue` supports Markdown links and multiple links separated by text.
+services:
+  title: Recent Services
+  items:
+    - role: Editor-in-Chief
+      venue: "[Computational Linguistics](https://direct.mit.edu/coli)"
+      years: 2024-
+    - role: PC Co-Chair
+      venue: "[NLPCC 2022](http://tcci.ccf.org.cn/conference/2022/); [AACL-IJCNLP 2023](https://aaclweb.org/posts/2022-11-11-Call-for-Bids-AACL-IJCNLP-2023)"
+      years: 2022-2023
+    - role: Senior Area Co-Chair
+      venue: "[EMNLP 2021](https://2021.emnlp.org/); [ACL 2022](https://www.2022.aclweb.org/); [NAACL 2022](https://2022.naacl.org/); [ACL 2024](https://2024.aclweb.org/); [EMNLP 2024](https://2024.emnlp.org/); [ICLR 2025](https://iclr.cc/); [NAACL 2025](https://2025.naacl.org/); [NeurIPS 2025](https://neurips.cc/); [EMNLP 2025](https://2025.emnlp.org/)"
+      years: 2021-2025
+    - role: Area Co-Chair
+      venue: "[ACL 2016](http://acl2016.org/); [EMNLP 2019](https://2019.emnlp.org/); [ACL 2020](https://acl2020.org/); [IJCAI 2021](https://www.ijcai.org/future_conferences); [NAACL 2021](https://2021.naacl.org/); [ACL 2021](https://2021.aclweb.org/); [AAAI 2022](https://aaai.org/Conferences/AAAI-22/); [EMNLP 2022](https://2022.emnlp.org/); [AAAI 2023](https://aaai.org/Conferences/AAAI-23/); [ICLR 2023](https://iclr.cc/); [ACL 2023](https://2023.aclweb.org/); [NeurIPS 2023](https://nips.cc/); [EMNLP 2023](https://2023.emnlp.org/); [AAAI 2024](https://aaai.org/aaai-conference/); [ICLR 2024](https://iclr.cc/); [ACL 2025](https://2025.aclweb.org/)"
+      years: 2016-2025
+    - role: Executive Committee Member
+      venue: "[Association for Computational Linguistics](http://aclweb.org/)"
+      years: 2024-2029
+    - role: Secretary
+      venue: "[Asian Federation of Natural Language Processing](http://www.afnlp.org/wp/)"
+      years: 2025-2026
+
+# Publication rows. Link a title or note with Markdown: [text](url).
+# The Google Scholar callout at the end uses `profile.scholar` above.
+publications:
+  title: Recent & Selected Publications
+  items:
+    - title: Unraveling Feature Extraction Mechanisms in Neural Networks
+      authors: Xiaobing Sun, Jiaxi Li, and Wei Lu
+      venue: EMNLP 2023
+      note: Outstanding Paper Award, Interpretability, Interactivity, and Analysis of Models for NLP Track
+      year: 2023
+    - title: "Contextual Distortion Reveals Constituency: Masked Language Models are Implicit Parsers"
+      authors: Jiaxi Li and Wei Lu
+      venue: ACL 2023
+      year: 2023
+    - title: Learning Multi-Step Reasoning by Solving Arithmetic Tasks
+      authors: Tianduo Wang and Wei Lu
+      venue: ACL 2023
+      year: 2023
+    - title: "One Network, Many Masks: Towards More Parameter-Efficient Transfer Learning"
+      authors: Guangtao Zeng, Peiyuan Zhang, and Wei Lu
+      venue: ACL 2023
+      year: 2023
+    - title: "Tell2Design: A Dataset for Language-Guided Floor Plan Generation"
+      authors: Sicong Leng, Yang Zhou, Mohammed Haroon Dupty, Wee Sun Lee, Sam C. Joyce, and Wei Lu
+      venue: ACL 2023
+      note: "Area Chair Award, with multiple award nominations: [top 1.6% submissions](https://2023.aclweb.org/program/best_papers/)."
+      year: 2023
+    - title: "Tab-CoT: Zero-shot Tabular Chain of Thought"
+      authors: Ziqi Jin and Wei Lu
+      venue: ACL 2023 Findings
+      year: 2023
+    - title: Leveraging Training Data in Few-Shot Prompting for Numerical Reasoning
+      authors: Zhanming Jie and Wei Lu
+      venue: ACL 2023 Findings
+      year: 2023
+    - title: Sampling Better Negatives for Distantly Supervised Named Entity Recognition
+      authors: Lu Xu, Lidong Bing, and Wei Lu
+      venue: ACL 2023 Findings
+      year: 2023
+    - title: Differentiable Data Augmentation for Contrastive Sentence Representation Learning
+      authors: Tianduo Wang and Wei Lu
+      venue: EMNLP 2022
+      year: 2022
+    - title: Better Few-Shot Relation Extraction with Label Prompt Dropout
+      authors: Peiyuan Zhang and Wei Lu
+      venue: EMNLP 2022
+      year: 2022
+    - title: Unsupervised Non-transferable Text Classification
+      authors: Guangtao Zeng and Wei Lu
+      venue: EMNLP 2022
+      year: 2022
+    - title: "[Implicit N-grams Induced by Recurrence](https://arxiv.org/pdf/2205.02724.pdf)"
+      authors: Xiaobing Sun and Wei Lu
+      venue: NAACL 2022
+      note: "Reveals the relationship between non-Markovian RNNs and Markovian classical n-grams. Provides explanations for observations made years ago in the community, e.g. [this](http://karpathy.github.io/2015/05/21/rnn-effectiveness/) and [this](https://nbviewer.org/gist/yoavg/d76121dfde2618422139)."
+      year: 2022
+    - title: "[Learning to Reason Deductively: Math Word Problem Solving as Complex Relation Extraction](https://arxiv.org/pdf/2203.10316.pdf)"
+      authors: Zhanming Jie, Jierui Li, and Wei Lu
+      venue: ACL 2022
+      note: "Towards system 2 learning with explainable deductive reasoning. Top 5% among all submissions according to released [ARR statistics](https://twitter.com/reviewacl?lang=en)."
+      year: 2022
+    - title: "[A Knowledge-based System for Multilingual Named Entity Recognition](https://arxiv.org/pdf/2203.00545.pdf)"
+      authors: Xinyu Wang, Yongliang Shen, Jiong Cai, Tao Wang, Xiaobin Wang, Pengjun Xie, Fei Huang, Weiming Lu, Yueting Zhuang, Kewei Tu, Wei Lu, and Yong Jiang
+      venue: SemEval 2022
+      note: "Best Paper Award; top 0.45% submissions; best system in 10 out of 13 tracks; [49 teams](https://multiconer.github.io/multiconer_1/results) worldwide."
+      year: 2022
+    - title: "[Mixed Cross Entropy Loss for Neural Machine Translation](http://proceedings.mlr.press/v139/li21n/li21n.pdf)"
+      authors: Haoran Li and Wei Lu
+      venue: ICML 2021
+      note: "Selected as a long oral paper; top 3% submissions; a new way of training non-standard structured prediction models."
+      year: 2021
+    - title: "[GraRep: Learning Graph Representations with Global Structural Information](https://dl.acm.org/doi/pdf/10.1145/2806416.2806512)"
+      authors: Shaosheng Cao, Wei Lu, and Qiongkai Xu
+      venue: CIKM 2015
+      note: "Most cited CIKM paper within a 5-year window, twice: [2014-2019](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=V-IMg2OTpU8J.2019), [2015-2020](https://scholar.google.com/citations?hl=en&vq=eng_databasesinformationsystems&view_op=list_hcore&venue=V-IMg2OTpU8J.2020)."
+      year: 2015
+    - title: "[A Probabilistic Forest-to-String Model for Language Generation from Typed Lambda Calculus Expressions](https://aclanthology.org/D11-1149.pdf)"
+      authors: Wei Lu and Hwee Tou Ng
+      venue: EMNLP 2011
+      note: "Best Paper Award; top 0.16% submissions, 1/628."
+      year: 2011
+
+# Group lists. `current` is a simple one-line list.
+# `alumni_sections` supports any number of subsections:
+# - title: visible subsection label
+# - collapsible: true wraps the subsection in an expandable details block
+# - open: true makes a collapsible subsection expanded by default
+# - entries: either simple strings or name/details objects
+group:
+  title: Group Members
+  alumni_title: Group Alumni
+  current:
+    - Guangtao Zeng (PhD student; from Sun Yat-Sen University, China; AI Singapore Scholarship)
+    - Tianduo Wang (PhD student; from Singapore University of Technology and Design; 1st Class Honors; Singapore Computer Society Excellence Award)
+    - Jiaxi Li (PhD student; from Singapore University of Technology and Design; 1st Class Honors)
+    - Calvin Tan (PhD student; from Nanyang Technological University, Singapore)
+    - Chen Huang (PhD student; from East China Normal University, China)
+    - Haong Phi Long (PhD student; from Hanoi University of Science and Technology, Vietnam)
+    - Renjie Luo (PhD student; from Beihang University, China)
+    - Peiwen Zhao (Visiting PhD student; from Beijing Institute of Technology, China)
+    - Yutian Lin (Research Assistant; from Singapore University of Technology and Design)
+    - Yanbao Wang (Research Assistant; from Singapore University of Technology and Design)
+    - Yifan Wang (Research Intern; from National University of Singapore)
+    - Cheng Wang (Research Intern; from National University of Singapore)
+  # Add, remove, reorder, or collapse alumni subsections here; the template
+  # renders this list directly without requiring layout changes.
+  alumni_sections:
+    - title: PhD Students
+      collapsible: false
+      entries:
+        - name: Zhijiang Guo
+          details: Now University of Cambridge, UK; internship at University of Edinburgh.
+        - name: Yanyan Zou
+          details: Now JD, Beijing; internship at Microsoft Research Asia.
+        - name: Hao Li
+          details: Now Tencent, Singapore; internship at Alibaba DAMO.
+        - name: Allan Jie
+          details: Now Salesforce, Singapore; internship at Allen Institute for Artificial Intelligence; ISTD Best PhD Thesis Award.
+        - name: Lu Xu
+          details: Now Huawei, Singapore; EDB IPP Industry PhD Program.
+        - name: Liying Cheng
+          details: Now Alibaba, Singapore; EDB IPP Industry PhD Program.
+        - name: Richard Sun
+          details: Now A*STAR, Singapore; EMNLP 2023 Outstanding Paper Awardee.
+        - name: Haoran Li
+          details: Now ByteDance, Beijing; internship at ByteDance AI Lab, Singapore.
+    - title: Other Alumni
+      collapsible: true
+      open: true
+      entries:
+        - Aaron Liang (Intern; from River Valley High School, Singapore)
+        - Shichen Li (Visiting fellow; from Soochow University, China)
+        - Renhang Liu (UROP; from Singapore University of Technology and Design)
+        - Ziyu Ge (UROP; from Singapore University of Technology and Design)
+        - Jerry Feng (UROP; from Singapore University of Technology and Design)
+        - Yijia Chen (UROP; from Singapore University of Technology and Design)
+        - Pratyush Saini (Intern; from Indian Institute of Technology, Delhi, India)
+        - Ruoxi Ning (Visiting fellow; from Zhejiang University, China)
+        - Peiyuan Zhang (Research assistant; to Nanyang Technological University)
+        - Sicong Leng (Research assistant; to Nanyang Technological University)
+        - Zechen Li (Visiting fellow; from Northeastern University, USA)
+        - Shuibai Zhang (Visiting fellow; from Westlake University, China)
+        - Shukai Ma (Research assistant; from University of Melbourne, Australia)
+        - Qian Yang (Visiting fellow; from Harbin Institute of Technology Shenzhen, China)
+        - Jiale Han (Visiting PhD student; to Technische Universitat Darmstadt, Germany)
+        - Yilin Liu (Visiting fellow; from University of Southern California, USA)
+        - Vanessa Tan Yun Han (Research assistant; from Singapore University of Technology and Design)
+        - Zhiyuan Zeng (Visiting fellow; to University of Zurich, Switzerland)
+        - Zhehao Zhang (Visiting fellow; from Shanghai Jiao Tong University, Zhiyuan College, China)
+        - Xinyu Wang (Visiting PhD student; from ShanghaiTech University, China)
+        - Shengqiang Zhang (Research assistant; to Ludwig Maximilian University of Munich, Germany)
+        - Zizhe Jiang (Visiting fellow; to University of Texas at Austin, USA)
+        - Shuyi Jia (UROP; to Georgia Institute of Technology, USA)
+        - Christine Liu (Visiting fellow; from University College London, UK)
+        - Qingcheng Zeng (Visiting fellow; to Northwestern University, USA)
+        - Yuxiang Zhou (Visiting PhD student; to University of Warwick, UK)
+        - Jierui Li (Research assistant; to University of Texas at Austin, USA)
+        - Jiaqi Zeng (Visiting fellow; to Carnegie Mellon University, USA)
+        - Xiaobao Wu (Visiting fellow; from Tsinghua University, China)
+        - Ankit Garg (Visiting fellow; to University of California San Diego, USA)
+        - Rui Qiao (Research assistant; to National University of Singapore)
+        - Jue Wang (Visiting fellow; from Zhejiang University, China)
+        - Xingce Bao (Visiting fellow; from Ecole Polytechnique Federale de Lausanne, Switzerland)
+        - Ivan Sekulic (Visiting fellow; from Heidelberg Institute for Theoretical Studies, Germany)
+        - Jack Wu (Visiting fellow; from York University, Canada)
+        - Jieyu Chen (Visiting fellow; to Cornell University, USA)
+        - Boyuan Zhuang (Research assistant; from University of Science and Technology of China)
+        - Jing Liao (Visiting student; from Zhejiang University, China)
+        - Ke Shi (Research assistant; to A*STAR AI, Singapore)
+        - Jiaqi Pan (Visiting fellow; to Carnegie Mellon University, USA)
+        - Rishabh Bhardwaj (Visiting student; to National University of Singapore)
+        - Leiming Du (Research assistant; to Huawei, China)
+        - Yu Jian Wu (Visiting student; to Columbia University, USA)
+        - Anh Nguyen Tuan (Visiting fellow; from Vietnam National University)
+        - Peter Phandi (Research assistant; from National University of Singapore)
+        - Utkarsh Sinha (Visiting fellow; to Columbia University, USA)
+        - Yiran Wang (Research officer; to Columbia University, USA)
+        - Amila Silva (Research assistant; to Singapore Management University)
+        - Hans Du (Visiting student; from Academia Sinica, Taiwan)
+        - Bill Lin (Visiting student; to University of Southern California, USA)
+        - Yinan Shao (Visiting student; from Harbin Institute of Technology, China)
+        - Bailin Wang (Visiting student; to University of Edinburgh, UK)
+        - Rachael Boyle (Visiting student; from University of California, Berkeley, USA)
+        - Yaqi Xie (UROP; to National University of Singapore)
+        - Siyuan Wang (UROP; to Carnegie Mellon University, USA)
+        - Aldrian Obaja Muis (Research assistant; to Carnegie Mellon University, USA)
+        - Raymond Hendy Susanto (Research assistant; from National University of Singapore)
+        - Swee Kiat Lim (Research officer; from National University of Singapore)
+        - Wei Yang (Visiting student; to University of Waterloo, Canada)
+        - Hesam Amoualian (Visiting student; from University of Grenoble Alpes, France)
+        - Shaosheng Cao (Research assistant; to AI Department, Ant Financial Services Group/Alipay, China)
+        - Liling Tan (Research assistant; from Saarland University, Germany)
+        - Moein Khajehnejad (Research officer; from Sharif University of Technology, Iran)
+        - Jonathan Lofgren (Research officer; from Uppsala University, Sweden)
+        - Bojia Qiu (Visiting student; from Zhejiang University, Chu Kochen Honors College)
+        - Wenqiang Xu (Research officer; from University of Science and Technology of China, Special Class for the Gifted Young)
+        - Tu Thanh Vu (Research officer; to University of Massachusetts Amherst, USA)
+        - Si Kai Lee (Research officer; to Columbia University, USA)
+        - Sadegh Charmchi (Research officer; to University of Alberta, Canada)
+        - Ruidan He (UROP; to National University of Singapore)
+        - Cuong Xuan Chu (Research officer; to Max Planck Institute, Germany)
+        - Lifei Chen (Research officer; to Ecole Polytechnique Federale de Lausanne, Switzerland)
+        - Sean Matthew English (Research officer; to Fraunhofer-Gesellschaft Institute, Germany)
+
+# Simple text sections. Items support Markdown links.
+grants:
+  title: Recent Research Grants
+  items:
+    - Principal Investigator, Alibaba Innovative Research Program (2018-2019), US$100K
+    - Principal Investigator, MOE Tier 2 Grant (2018-2021), S$540K
+    - Principal Investigator, DSO Collaboration Grant (2017-2019), S$500K
+    - Principal Investigator, Defence Innovative Research Programme Project (TBA), S$890K
+    - Principal Investigator, MINDEF Grant - CISDeM T3 (2014-2018), S$610K
+
+awards:
+  title: Awards
+  items:
+    - Area Chair Award, The 61st Annual Meeting of the Association for Computational Linguistics ([ACL 2023](https://2023.aclweb.org/)), 2023
+    - Best Paper Award, the 2011 Conference on Empirical Methods in Natural Language Processing (EMNLP 2011), 2011
+    - Dean's Graduate Research Excellence Award, School of Computing, National University of Singapore, 2009-2010
+    - Research Achievement Award, School of Computing, National University of Singapore, 2008-2009
+    - President's Fellowship, National University of Singapore, 2006-2007
+    - Singapore-MIT Alliance Scholarship, 2005-2006 and 2006-2009
+    - Dean's List, School of Computing, National University of Singapore, 2001-2005
+    - Singapore MOE Undergraduate Scholarship, 2000-2005
+    - 1st Prize with perfect score 140/140, National Mathematical Olympiad Competition, China, 1996
+    - 1st Prize, National Mathematical Olympiad Competition, China, 1995
+
+# Teaching rows. `course` supports Markdown links.
+teaching:
+  title: Teaching
+  items:
+    - term: 2020 Summer
+      course: "[50.040: Natural Language Processing (Undergraduate)](https://istd.sutd.edu.sg/undergraduate/courses/50040-natural-language-processing) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-040-2020.pdf)"
+    - term: 2019 Fall
+      course: "[01.112: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/01-112-2019.pdf)"
+    - term: 2019 Summer
+      course: "[50.040: Natural Language Processing (Undergraduate)](https://istd.sutd.edu.sg/undergraduate/courses/50040-natural-language-processing) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-040-2019.pdf)"
+    - term: 2018 Fall
+      course: "50.570/51.504: Machine Learning (Graduate)"
+    - term: 2018 Fall
+      course: "[01.112: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/)"
+    - term: 2018 Spring
+      course: "[01.112: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/01-112-2018-Spring.pdf)"
+    - term: 2017 Fall
+      course: "50.570: Machine Learning (Graduate) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-570-2017.pdf)"
+    - term: 2017 Fall
+      course: "[01.112: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/01-112-2017-Fall.pdf)"
+    - term: 2016 Fall
+      course: "[50.007: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-007-2016.pdf)"
+    - term: 2016 Spring
+      course: "50.570: Machine Learning (Graduate) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-570-2016.pdf)"
+    - term: 2015 Fall
+      course: "[50.007: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-007-2015.pdf)"
+    - term: 2015 Spring
+      course: "50.570: Machine Learning (Graduate) · no survey"
+    - term: 2014 Fall
+      course: "[50.007: Machine Learning (Undergraduate)](http://istd.sutd.edu.sg/undergraduate/courses/50007-machine-learning/) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-007-2014.pdf)"
+    - term: 2014 Spring
+      course: "50.570: Machine Learning (Graduate) · [Students' Feedback](http://statnlp.com/people/luwei/teaching/50-570-2014.pdf)"

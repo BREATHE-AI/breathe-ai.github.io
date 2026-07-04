@@ -1,0 +1,9 @@
+{% assign pi = include.pi %}
+<div class="pi-timeline">
+  {% for item in pi.news.items %}
+    <div class="pi-tl-item">
+      <span class="pi-tl-item__when">{{ item.date }}</span>
+      <p class="pi-tl-item__what">{% include inline-md.html text=item.text %}{% if item.note %} <b>{% include inline-md.html text=item.note %}</b>{% endif %}</p>
+    </div>
+  {% endfor %}
+</div>

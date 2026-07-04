@@ -1,0 +1,26 @@
+{% assign pi = include.pi %}
+<div class="pi-sec">
+  <div class="{% if include.aside %}pub-section{% else %}pi-block{% endif %}">
+    {% if include.aside %}
+      <aside class="pub-aside">
+        <h2 class="h2">{{ pi.publications.title }}</h2>
+      </aside>
+    {% else %}
+      <h2 class="h2">{{ pi.publications.title }}</h2>
+    {% endif %}
+    <div class="pub-list pi-pub-list">
+      {% for publication in pi.publications.items %}
+        <article class="pub-item pi-pub-item">
+          <div class="pub-topline"><span>{{ publication.year }}</span><span class="dot"></span><span>{% include inline-md.html text=publication.venue %}</span></div>
+          <h3 class="pub-title">{% include inline-md.html text=publication.title %}</h3>
+          <p class="pub-authors">{% include inline-md.html text=publication.authors %}</p>
+          {% if publication.note %}<p class="pi-pub-note">{% include inline-md.html text=publication.note %}</p>{% endif %}
+        </article>
+      {% endfor %}
+      <a class="pub-more" href="{{ pi.profile.scholar.url }}" target="_blank" rel="noreferrer">
+        <span>More publications on <span class="pub-more__accent">{{ pi.profile.scholar.label }} ↗</span></span>
+        <small>View the full publication record, citation metrics, and newly released papers.</small>
+      </a>
+    </div>
+  </div>
+</div>

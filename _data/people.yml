@@ -8,7 +8,9 @@
 # - education: add rows with degree, institution, optional department, and
 #   optional note. Use note for the degree year only, e.g. 2025 or 2027 expected.
 #   If no degree is known yet, use degree: Affiliation as a fallback.
-# - links: add label + url rows for profile pages.
+# - links: add label + url rows for profile pages. External links get ↗
+#   automatically; use show_suffix: true when an internal link should also
+#   show the same visual suffix.
 # Groups with no members should be omitted; the template also hides any empty
 # group defensively.
 
@@ -43,7 +45,8 @@ members:
             #  department: School of Computing
           links:
             - label: Homepage
-              url: https://dr.ntu.edu.sg/entities/person/Wei-Lu
+              url: wei-lu-homepage-a.html
+              show_suffix: true
             - label: Google Scholar
               url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
     - name: PhD Students

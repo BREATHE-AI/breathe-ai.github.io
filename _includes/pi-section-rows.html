@@ -1,0 +1,24 @@
+<div class="pi-sec">
+  {% if include.aside %}
+    <div class="pi-sec__grid">
+      <aside class="pi-sec__aside">
+        <h2 class="h2">{{ include.title }}</h2>
+      </aside>
+  {% else %}
+    <h2 class="h2">{{ include.title }}</h2>
+  {% endif %}
+      <ul class="pi-rows">
+        {% for item in include.items %}
+          <li class="pi-row">
+            <div class="pi-row__body">
+              <p class="pi-row__title">{% include inline-md.html text=item.role %}</p>
+              <p class="pi-row__meta">{% include inline-md.html text=item.venue %}</p>
+            </div>
+            <span class="pi-row__when">{{ item.years }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+  {% if include.aside %}
+    </div>
+  {% endif %}
+</div>

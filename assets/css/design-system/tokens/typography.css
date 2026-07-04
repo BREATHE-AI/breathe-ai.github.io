@@ -36,7 +36,7 @@
   --text-title:    clamp(2.4rem, 5.4vw, 3.9rem);  /* page titles: People / Research / Join */
   --text-h2:       clamp(1.85rem, 3.6vw, 2.7rem); /* section heads */
   --text-h3:       1.5rem;                        /* 24px — card / item titles */
-  --text-h4:       1.1875rem;                     /* 19px */
+  --text-h4:       1.25rem;                       /* 20px */
   --text-lede:     clamp(1.2rem, 1.9vw, 1.5rem);  /* opening statements (smaller than wordmark) */
   --text-body-lg:  1.25rem;                       /* 20px */
   --text-body:     1.125rem;                      /* 18px */

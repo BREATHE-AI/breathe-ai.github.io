@@ -1,0 +1,11 @@
+{% assign pi = include.pi %}
+<div class="pi-bio{% if include.centered %} pi-bio--centered{% endif %}">
+  {% for paragraph in pi.profile.bio %}
+    <p>{% include inline-md.html text=paragraph %}</p>
+  {% endfor %}
+</div>
+<div class="pi-chips{% if include.centered %} pi-chips--centered{% endif %}" aria-label="Research focus">
+  {% for item in pi.profile.focus %}
+    <span class="pi-chip">{{ item }}</span>
+  {% endfor %}
+</div>

@@ -1,0 +1,27 @@
+{% assign pi = site.data.homepage_luwei %}
+
+<nav class="pi-crumb" aria-label="Breadcrumb">
+  <a href="people.html">People</a>
+  <span class="pi-crumb__sep" aria-hidden="true">/</span>
+  <span class="pi-crumb__here">{{ pi.profile.role }}</span>
+</nav>
+
+<section class="section pi-page-section" data-screen-label="01 PI · Profile">
+  <div class="pi-profile">
+    <aside class="pi-profile__aside">
+      <figure class="pi-portrait">
+        <img src="{{ pi.profile.image.src }}" alt="{{ pi.profile.image.alt }}" />
+      </figure>
+      {% include pi-meta.html pi=pi %}
+    </aside>
+
+    <div class="pi-profile__id">
+      <p class="pi-role">{{ pi.profile.role }}</p>
+      <h1 class="pi-name">{{ pi.profile.display_name }}</h1>
+      <p class="pi-affil">{{ pi.profile.appointment }}, {{ pi.profile.department }}, {{ pi.profile.institution }}</p>
+      {% include pi-bio.html pi=pi %}
+    </div>
+  </div>
+</section>
+
+{% include pi-sections.html pi=pi %}

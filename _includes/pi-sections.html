@@ -1,0 +1,40 @@
+{% assign pi = include.pi %}
+
+<section class="section section--alt" data-screen-label="02 PI · News">
+  <div class="pi-sec">
+    <div class="pi-sec__grid">
+      <aside class="pi-sec__aside">
+        <h2 class="h2">{{ pi.news.title }}</h2>
+      </aside>
+      {% include pi-news.html pi=pi %}
+    </div>
+  </div>
+</section>
+
+<section class="section" data-screen-label="03 PI · Services">
+  {% include pi-section-rows.html title=pi.services.title items=pi.services.items aside=true %}
+</section>
+
+<section class="section section--alt" data-screen-label="04 PI · Publications">
+  {% include pi-publications.html pi=pi aside=true %}
+</section>
+
+<section class="section" data-screen-label="05 PI · Group Members">
+  {% include pi-group-members.html pi=pi section="current" aside=true %}
+</section>
+
+<section class="section section--alt" data-screen-label="06 PI · Group Alumni">
+  {% include pi-group-members.html pi=pi section="alumni" aside=true %}
+</section>
+
+<section class="section" data-screen-label="07 PI · Grants">
+  {% include pi-simple-section.html title=pi.grants.title items=pi.grants.items aside=true %}
+</section>
+
+<section class="section section--alt" data-screen-label="08 PI · Awards">
+  {% include pi-simple-section.html title=pi.awards.title items=pi.awards.items aside=true %}
+</section>
+
+<section class="section" data-screen-label="09 PI · Teaching">
+  {% include pi-teaching.html pi=pi aside=true %}
+</section>
