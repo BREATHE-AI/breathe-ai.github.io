@@ -45,7 +45,7 @@ members:
             #  department: School of Computing
           links:
             - label: Homepage
-              url: wei-lu-homepage-a.html
+              url: WeiLu.html
               show_suffix: true
             - label: Google Scholar
               url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate

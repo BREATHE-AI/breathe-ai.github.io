@@ -1,7 +1,7 @@
 # Wei Lu personal homepage content for the PI homepage prototypes.
 #
 # Source of public facts: https://statnlp.com/people/luwei/
-# This is the single content source for wei-lu-homepage-a.html.
+# This is the single content source for WeiLu.html.
 # Most text fields support Markdown links, e.g. [Google Scholar](https://scholar.google.com/).
 # Local files such as photos and PDFs should live under assets/ and be referenced
 # with a relative path, e.g. assets/img/people/wei-lu.png or assets/docs/wei-lu-cv.pdf.
