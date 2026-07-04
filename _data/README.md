@@ -4,19 +4,32 @@ This guide is for suggesting website content updates by email. You do not need a
 
 Most visible website text is stored in YAML files in this folder. A YAML file is a plain text file that works like a structured form: it contains names, dates, paragraphs, links, and file paths. For normal content updates, edit the relevant YAML file and email it back to the website maintainer.
 
-## Quick Workflow
+## Recommended Workflow
 
-1. Open the official `_data` folder:
+Use GitHub's browser editor if possible. You can treat it as a convenient web editor for reading and editing YAML files. It makes YAML much easier to read because it shows indentation, colors, and line breaks clearly.
+
+1. Open the `_data` folder directly in GitHub's browser editor:
+   [https://github.dev/BREATHE-AI/breathe-ai.github.io/tree/main/_data](https://github.dev/BREATHE-AI/breathe-ai.github.io/tree/main/_data)
+2. Click the YAML file you want to update, for example `homepage_luwei.yaml`.
+3. Edit the file in the browser. The editor shows indentation and colors, which makes YAML easier to read.
+4. When finished, right-click the edited file in the left file list and download it to your computer, usually into the `Downloads` folder.
+5. Email the downloaded YAML file back. Attach any new or replacement photos, PDFs, or CV files in the same email.
+
+If you accidentally delete or damage the file, do not worry. Open the original file again from the normal GitHub page ([https://github.com/BREATHE-AI/breathe-ai.github.io/tree/main/_data](https://github.com/BREATHE-AI/breathe-ai.github.io/tree/main/_data)), click **Raw**, copy the original content, paste it back into the browser editor to replace the damaged content, and edit again. Only downloaded files sent by email will be used for website updates.
+
+## Backup Workflow
+
+If you prefer editing on your computer, you can still use TextEdit or another plain-text editor:
+
+1. Open the `_data` folder on GitHub:
    [https://github.com/BREATHE-AI/breathe-ai.github.io/tree/main/_data](https://github.com/BREATHE-AI/breathe-ai.github.io/tree/main/_data)
-2. Click the file you want to update.
-3. Click **Raw** or **Download raw file**, then save the file to your computer.
-4. Edit the file in a plain text editor.
-   - macOS: TextEdit in plain-text mode.
-   - Windows: Notepad.
-   - Avoid Microsoft Word, because it may add hidden formatting.
-5. Email the full edited YAML file back. Attach any new or replacement photos, PDFs, or CV files in the same email.
+2. Click the YAML file you want to update.
+3. Click **Raw** or **Download raw file** and save the file to your computer.
+4. Open the file with TextEdit or another plain-text editor, edit it, and email it back.
 
-Please send the full edited file, not screenshots or copied snippets. If something is hard to edit, explain it briefly in the email.
+This local editing method works, but the file may look less readable than in the browser editor because TextEdit does not show YAML indentation and colors as clearly. Avoid Microsoft Word, because it may add hidden formatting.
+
+Please send the full edited YAML file, not screenshots or copied snippets. If something is hard to edit, explain it briefly in the email.
 
 ## Which File To Edit
 
@@ -61,7 +74,7 @@ The YAML controls text, links, and file references. The website maintainer will 
 
 - Keep the same indentation as the original file. Spaces at the beginning of a line matter.
 - Use spaces, not tabs.
-- Lines beginning with `#` are notes and are not shown on the website.
+- Lines beginning with `#` are comments/notes for editors. They are not shown on the website, and they can usually be left unchanged.
 - To add a new item, copy a similar existing item and edit the copy.
 - If formatting feels uncertain, leave a note in the email. The maintainer can clean it up.
 
