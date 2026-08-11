@@ -51,6 +51,37 @@ members:
               url: https://scholar.google.com/citations?hl=en&user=n41KN9AAAAAJ&view_op=list_works&sortby=pubdate
     - name: PhD Students
       members:
+        - name: Kin Meng Ng
+          initials: KN
+          image:
+            src: assets/img/people/kin-meng-ng.jpeg
+            alt: Kin Meng Ng
+          role: PhD Student
+          education:
+            - degree: B.E. in Computer Science and Design
+              institution: Singapore University of Technology and Design
+              note: 2026, Highest Distinction
+          links:
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/kin-meng-ng
+            - label: GitHub
+              url: https://github.com/KinMengNg
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=6_8GWXAAAAAJ&hl=en
+        - name: Wuqiang Zheng
+          initials: WZ
+          image:
+            src: assets/img/people/wuqiang-zheng.jpg
+            alt: Wuqiang Zheng
+          role: PhD Student
+          education:
+            - degree: B.S. in Data Science
+              institution: University of Science and Technology of China
+          links:
+            - label: Homepage
+              url: https://zhengwwwq.github.io/
+            - label: GitHub
+              url: https://github.com/ZhengWwwq
         - name: Yunzhou Bai
           initials: YB
           image:
@@ -67,20 +98,6 @@ members:
               url: https://openreview.net/profile?id=~Yunzhou_Bai1
             - label: LinkedIn
               url: https://www.linkedin.com/in/yunzhou-bai-300331326/
-        - name: Wuqiang Zheng
-          initials: WZ
-          image:
-            src: assets/img/people/wuqiang-zheng.jpg
-            alt: Wuqiang Zheng
-          role: PhD Student
-          education:
-            - degree: B.S. in Data Science
-              institution: University of Science and Technology of China
-          links:
-            - label: Homepage
-              url: https://zhengwwwq.github.io/
-            - label: GitHub
-              url: https://github.com/ZhengWwwq
         - name: Ziming You
           initials: ZY
           image:
@@ -101,7 +118,7 @@ members:
               url: https://github.com/zimingyou01
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-    - name: Research Staff
+    - name: Postdoctoral Researchers
       members:
         - name: Xiyan Fu
           initials: XF
@@ -150,6 +167,74 @@ members:
           links:
             - label: OpenReview
               url: https://openreview.net/profile?id=%7EChong_Li6
+        - name: Tianyuan Shi
+          initials: TS
+          image:
+            src: assets/img/people/tianyuan-shi.jpg
+            alt: Tianyuan Shi
+          role: Research Fellow
+          education:
+            - degree: Ph.D. in Computer Science and Engineering
+              institution: Sun Yat-sen University
+              note: 2026
+            - degree: B.Eng. and M.Sc. in Automation
+              institution: Chongqing University
+              note: 2021
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?hl=en&user=vZSvUCoAAAAJ
+            - label: GitHub
+              url: https://github.com/Stycoo
+    - name: Research Assistants & Associates
+      members:
+        - name: Jun Jin
+          initials: JJ
+          image:
+            src: assets/img/people/jun-jin.jpg
+            alt: Jun Jin
+          role: Research Assistant
+          education:
+            - degree: B.Eng. in Computer Science and Design
+              institution: Singapore University of Technology and Design
+              note: 2026
+          links:
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/jin-jun
+            - label: GitHub
+              url: https://github.com/JunJin1218
+        - name: Nguyen Anh Minh
+          initials: NM
+          image:
+            src: assets/img/people/nguyen-anh-minh.jpg
+            alt: Nguyen Anh Minh
+          role: Research Assistant
+          education:
+            - degree: B.S. in Mathematics and Informatics
+              institution: Hanoi University of Science and Technology
+              note: 2023
+          links:
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=l37PsIEAAAAJ&hl=vi
+            - label: GitHub
+              url: https://github.com/minhkks
+        - name: Yongchao Lyu
+          initials: YL
+          image:
+            src: assets/img/people/yongchao-lyu.jpg
+            alt: Yongchao Lyu
+          role: Research Associate
+          education:
+            - degree: M.Eng. in Computer Engineering
+              institution: National University of Singapore
+              note: 2019
+            - degree: B.Eng. in Spatial Informatics & Digitalized Technology
+              institution: University of Electronic Science and Technology of China
+              note: 2018
+          links:
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/lyuyongchao-99924817b/
+            - label: GitHub
+              url: https://github.com/lyc0004
     - name: Research Interns & Visiting Students
       members:
         - name: Xuyan Ye

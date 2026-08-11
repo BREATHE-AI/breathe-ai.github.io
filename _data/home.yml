@@ -40,6 +40,18 @@ news:
   # Optional image fields render a thumbnail below the news text. Omit image
   # entirely for text-only updates.
   items:
+    - date: Aug 2026
+      title: New researchers join BREATHE AI
+      summary: We are pleased to welcome Yunzhou Bai, Wuqiang Zheng, and Kin Meng Ng as PhD students; Chong Li and Tianyuan Shi as postdoctoral researchers; and Jun Jin, Nguyen Anh Minh, and Yongchao Lyu as research staff.
+      links:
+        - label: People
+          url: people.html
+    - date: Jul 2026
+      title: Welcome our visiting students
+      summary: We are delighted to welcome Mingzhe Xuan and Xuyan Ye as research interns and visiting students.
+      links:
+        - label: People
+          url: people.html
     - date: Apr 2026
       title: Welcome, Xiyan Fu, Ziming You, and Xiaoyan Yu.
       summary: We are delighted to welcome Xiyan Fu, Ziming You, and Xiaoyan Yu as the first members helping shape the lab at NTU.
