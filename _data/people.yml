@@ -101,23 +101,23 @@ members:
               url: https://github.com/zimingyou01
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-        - name: Kin Meng Ng
-          initials: KN
-          image:
-            src: assets/img/people/kin-meng-ng.jpeg
-            alt: Kin Meng Ng
-          role: PhD Student
-          education:
-            - degree: B.E. in Computer Science and Design
-              institution: Singapore University of Technology and Design
-              note: 2026, Highest Distinction
-          links:
-            - label: LinkedIn
-              url: https://www.linkedin.com/in/kin-meng-ng
-            - label: GitHub
-              url: https://github.com/KinMengNg
-            - label: Google Scholar
-              url: https://scholar.google.com/citations?user=6_8GWXAAAAAJ&hl=en
+        # - name: Kin Meng Ng
+        #   initials: KN
+        #   image:
+        #     src: assets/img/people/kin-meng-ng.jpeg
+        #     alt: Kin Meng Ng
+        #   role: PhD Student
+        #   education:
+        #     - degree: B.E. in Computer Science and Design
+        #       institution: Singapore University of Technology and Design
+        #       note: 2026, Highest Distinction
+        #   links:
+        #     - label: LinkedIn
+        #       url: https://www.linkedin.com/in/kin-meng-ng
+        #     - label: GitHub
+        #       url: https://github.com/KinMengNg
+        #     - label: Google Scholar
+        #       url: https://scholar.google.com/citations?user=6_8GWXAAAAAJ&hl=en
     - name: Postdoctoral Researchers
       members:
         - name: Xiyan Fu
