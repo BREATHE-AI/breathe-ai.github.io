@@ -187,6 +187,24 @@ members:
               url: https://github.com/Stycoo
     - name: Research Assistants & Associates
       members:
+        - name: Yongchao Lyu
+          initials: YL
+          image:
+            src: assets/img/people/yongchao-lyu.jpg
+            alt: Yongchao Lyu
+          role: Research Associate
+          education:
+            - degree: M.Eng. in Computer Engineering
+              institution: National University of Singapore
+              note: 2019
+            - degree: B.Eng. in Spatial Informatics & Digitalized Technology
+              institution: University of Electronic Science and Technology of China
+              note: 2018
+          links:
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/lyuyongchao-99924817b/
+            - label: GitHub
+              url: https://github.com/lyc0004
         - name: Jun Jin
           initials: JJ
           image:
@@ -217,24 +235,6 @@ members:
               url: https://scholar.google.com/citations?user=l37PsIEAAAAJ&hl=vi
             - label: GitHub
               url: https://github.com/minhkks
-        - name: Yongchao Lyu
-          initials: YL
-          image:
-            src: assets/img/people/yongchao-lyu.jpg
-            alt: Yongchao Lyu
-          role: Research Associate
-          education:
-            - degree: M.Eng. in Computer Engineering
-              institution: National University of Singapore
-              note: 2019
-            - degree: B.Eng. in Spatial Informatics & Digitalized Technology
-              institution: University of Electronic Science and Technology of China
-              note: 2018
-          links:
-            - label: LinkedIn
-              url: https://www.linkedin.com/in/lyuyongchao-99924817b/
-            - label: GitHub
-              url: https://github.com/lyc0004
     - name: Research Interns & Visiting Students
       members:
         - name: Xuyan Ye
