@@ -101,23 +101,23 @@ members:
               url: https://github.com/zimingyou01
             - label: Google Scholar
               url: https://scholar.google.com/citations?user=XvDkA78AAAAJ&hl=en
-        # - name: Kin Meng Ng
-        #   initials: KN
-        #   image:
-        #     src: assets/img/people/kin-meng-ng.jpeg
-        #     alt: Kin Meng Ng
-        #   role: PhD Student
-        #   education:
-        #     - degree: B.E. in Computer Science and Design
-        #       institution: Singapore University of Technology and Design
-        #       note: 2026, Highest Distinction
-        #   links:
-        #     - label: LinkedIn
-        #       url: https://www.linkedin.com/in/kin-meng-ng
-        #     - label: GitHub
-        #       url: https://github.com/KinMengNg
-        #     - label: Google Scholar
-        #       url: https://scholar.google.com/citations?user=6_8GWXAAAAAJ&hl=en
+        - name: Kin Meng Ng
+          initials: KN
+          image:
+            src: assets/img/people/kin-meng-ng-2026.jpg
+            alt: Kin Meng Ng
+          role: PhD Student
+          education:
+            - degree: B.E. in Computer Science and Design
+              institution: Singapore University of Technology and Design
+              note: 2026, Highest Distinction
+          links:
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/kin-meng-ng
+            - label: GitHub
+              url: https://github.com/KinMengNg
+            - label: Google Scholar
+              url: https://scholar.google.com/citations?user=6_8GWXAAAAAJ&hl=en
     - name: Postdoctoral Researchers
       members:
         - name: Xiyan Fu
@@ -152,7 +152,7 @@ members:
         - name: Chong Li
           initials: CL
           image:
-            src: assets/img/people/chong-li.jpg
+            src: assets/img/people/chong-li-2026.jpg
             alt: Chong Li
           role: Research Fellow
           education:
@@ -170,7 +170,7 @@ members:
         - name: Tianyuan Shi
           initials: TS
           image:
-            src: assets/img/people/tianyuan-shi.jpg
+            src: assets/img/people/tianyuan-shi-2026.jpg
             alt: Tianyuan Shi
           role: Research Fellow
           education:
@@ -208,7 +208,7 @@ members:
         - name: Jun Jin
           initials: JJ
           image:
-            src: assets/img/people/jun-jin.jpg
+            src: assets/img/people/jun-jin-2026.jpg
             alt: Jun Jin
           role: Research Assistant
           education:
