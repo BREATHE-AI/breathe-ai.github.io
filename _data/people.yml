@@ -266,6 +266,21 @@ members:
               url: https://xuyan923r.github.io/
             - label: GitHub
               url: https://github.com/Xuyan923r
+        - name: James Shieh
+          initials: JS
+          image:
+            src: assets/img/people/james-shieh.jpg
+            alt: James Shieh
+          role: Research Intern & Visiting Student
+          education:
+            - degree: Undergraduate student in Management Information System
+              institution: National Central University
+              note: 2026
+          links:
+            - label: GitHub
+              url: https://github.com/james01379
+            - label: LinkedIn
+              url: https://www.linkedin.com/in/james-shieh-663256258/
         - name: Mingzhe Xuan
           initials: MX
           image:
@@ -276,7 +291,7 @@ members:
             - degree: B.Sc. in Statistics
               institution: University of Science and Technology of China
               department: Special Class for the Gifted Young
-              note: 2026
+              note: 2028 expected
           links:
             - label: GitHub
               url: https://github.com/Mingzhe-Xuan
