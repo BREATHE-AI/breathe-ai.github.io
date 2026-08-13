@@ -237,6 +237,19 @@ members:
               url: https://github.com/minhkks
     - name: Research Interns & Visiting Students
       members:
+        - name: Zheyan Hou
+          initials: ZH
+          image:
+            src: assets/img/people/zheyan-hou.jpg
+            alt: Zheyan Hou
+          role: Research Intern & Visiting Student
+          education:
+            - degree: B.Sc. in Data Science and Big Data Technology
+              institution: Southern University of Science and Technology
+              note: 2027 expected
+          links:
+            - label: Homepage
+              url: https://k1koli.github.io
         - name: Xuyan Ye
           initials: XY
           image:
